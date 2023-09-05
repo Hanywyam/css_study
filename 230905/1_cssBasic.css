@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/* css 주석 방식 */
+/* 
+css 기본 구조
+선택자 selector {
+  속성 property: 값 value; <- 선언문
+}
+*/
+
+li{ /* 타입(태그) 선택자: html 요소를 그대로 가져와 사용. li 시작부터 끝까지 토마토color가 적용 */
+  color: tomato;
+}

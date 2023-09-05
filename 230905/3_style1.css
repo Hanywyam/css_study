@@ -1,0 +1,41 @@
+@charset "UTF-8"
+
+/* 같은 이름 혹은 같은 종류의 선택자 혹은 같은 종류의 속성인 경우 */
+h1 {  /* 타입 선택자 */
+  color: #053b50;
+  color: blueviolet;  /* 같은 속성이 적용된 경우 아래쪽에 작성된 값이 우선 적용 */
+}
+h1 {  /* 같은 이름의 선택자는 사실 두번쓰면 안됨 */
+  color: lightpink;
+}
+
+/* 같은 선택자가 아닌 다른 종류 선택자인 경우
+!important > (직접,inline > ) #id(5) > .class(3) > type(1) 순으로 우선 순위를 갖는다. 
+복합 선택자일때 각 점수를 합해 큰 값이 표현된다. */
+
+#box1 {  /* 아이디 선택자(5) */
+  background-color: lightskyblue;
+}
+.box {  /* 클래스 선택자(3) : 한 문서 안에서 같은 이름을 여러 번 사용할 수 있기 때문에 주로 꾸밈 값을 줄 때나 공통된 값 적용시 사용. 요즘은 특별한 일 없을때 대부분 클래스명을 사용하는 편*/
+  background-color: orange;
+}
+section {  /* 타입 선택자(1) */
+  background-color: #ef9595;  /* 배경색 */
+}
+
+.bg1{
+  /* 이름은 다르지만 같은 클래스 선택자이기 때문에 .box보다 .bg1이 아래 있어서 값이 적용.
+  .box 앞으로 이동시 .box값 적용됨 */
+  background-color: blue;
+}
+.text_color{
+  color: #fff;
+}
+
+#id_color{
+  color: red;
+}
+.box3 {
+  color: aquamarine !important;
+  /* !important 기본 우선 순위가 무시되며 무조건 적용. 꼭 필요한 경우에만 주의해서 작성. 남용금지 */
+}
