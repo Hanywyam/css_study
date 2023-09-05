@@ -5,8 +5,10 @@
 #### 1. css 기초 ####
 
 * style sheet 언어. HTML 문서의 레이아웃과 스타일을 적용 할 수 있다.
+
 * css 기본 구조 
 `선택자(selector) { 속성 (property) : 값 (value); }` <- 기본 구조의 선언문
+
 * css 선언방식
 ​	* 외부 선언
 		* `<head>` 안에 `<link>`로 선언. 
@@ -33,11 +35,11 @@
 #### 2. 글자 색상 color ####
 
 * color 특성
-	* color name: orange ->color name으로 작성
-	* hex: #FF5F00 ->hex R(fc)G(00)B(ff) 6자리가 기본
-	* rgb: rgb(0,55,150)  ->rgb(red,green,blue) 최대 255값까지 표현 
-	* rgba(50,100,250,0.7) ->rgba(red,green,blue,alpha) 마지막 자리수는 백분율값으로 불투명도 0~1 사이의 값을 가짐.
-	* hsla(217, 97%, 47%,0.8) ->color:hsla(색상hue, 채도saturation%, 명도lightness%, 불투명도alpha)
+	* `color name: orange` ->color name으로 작성
+	* `hex: #FF5F00` ->hex R(fc)G(00)B(ff) 6자리가 기본
+	* `rgb: rgb(0,55,150)`  ->rgb(red,green,blue) 최대 255값까지 표현 
+	* `rgba(50,100,250,0.7)` ->rgba(red,green,blue,alpha) 마지막 자리수는 백분율값으로 불투명도 0~1 사이의 값을 가짐.
+	* `hsla(217, 97%, 47%,0.8)` ->color:hsla(색상hue, 채도saturation%, 명도lightness%, 불투명도alpha)
 
 #### ​3. css 명령어 우선순위 ####
 
