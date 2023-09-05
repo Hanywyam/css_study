@@ -12,7 +12,7 @@
 * css 선언방식
     * 외부 선언
     	* `<head>` 안에 `<link>`로 선언. 
-	* css 문서를 만들어 `<link rel="stylesheet" href="파일.css 경로">`로 연결
+    	* css 문서를 만들어 `<link rel="stylesheet" href="파일.css 경로">`로 연결
     * 내부 선언
     	* `<head>` 안에 `<style>`을 사용하여 작성
     	* `style` 태그 안은 CSS 영역.
