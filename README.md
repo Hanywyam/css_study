@@ -10,10 +10,10 @@
 `선택자(selector) { 속성 (property) : 값 (value); }` <- 기본 구조의 선언문
 
 * css 선언방식
-​	* 외부 선언
-		* `<head>` 안에 `<link>`로 선언. 
-		* css 문서를 만들어 `<link rel="stylesheet" href="파일.css 경로">`로 연결
-	* 내부 선언
+    * 외부 선언
+    	* `<head>` 안에 `<link>`로 선언. 
+	* css 문서를 만들어 `<link rel="stylesheet" href="파일.css 경로">`로 연결
+ * 내부 선언
 		* `<head>` 안에 `<style>`을 사용하여 작성
 		* `style` 태그 안은 CSS 영역.
 	* 직접(인라인) 선언
