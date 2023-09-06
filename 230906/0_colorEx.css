@@ -1,0 +1,27 @@
+@charset "utf-8";
+body {
+  background-color: rgb(18, 189, 61);
+}
+h2.bg{ /* 종속 선택자: 띄어쓰기 없이 작성. 앞의 선택자 중에 뒤의 선택자까지 가지고 있는 선택자. 
+  AA.bb{ }: AA선택자 중 bb선택자를 갖고 있는 선택자.*/
+  background-color: azure;
+}
+#box1{
+  color: deeppink;
+}
+#box2{
+  color: blueviolet;
+}
+#box3{
+  color: cornflowerblue;
+}
+#box4{
+  color: aqua;
+}
+.inline{
+  color: #fff;
+  background-color: salmon;
+}
+.block{
+  background-color: skyblue;
+}
