@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>width+height</title>
+  <style>
+    /* 
+    블록 요소(p, div, h1, header, main, article, form, ul...)
+      ㄴ가로 값의 경우 부모 요소의 가로 값을 받음
+      ㄴ일반적인 흐름에서는 블록 요소 옆에 다른 요소가 올 수 없음
+      ㄴ자식으로 블록, 인라인 요소 등 대부분이 올 수 있음
+      ㄴ세로 값의 경우 자식 요소의 높이 값을 그대로 가져 옴
+      ㄴwidth, height로 제어 가능
+
+    인라인요소(span, img, a, em, input, strong...)
+      ㄴ가로 값의 경우 자식(컨텐츠)의 값을 가져 옴
+      ㄴ인라인 요소 옆에 다른 인라인 요소가 올 수 있음
+      ㄴ자식으로 인라인 요소만 올 수 있음
+      ㄴ세로 값의 경우 자식 요소의 높이 값을 그대로 가져옴
+      ㄴwidth, height로 제어 불가능
+    */
+
+    .container{
+      background-color: #7091f5;
+      /* 고정 너비 width: 500px; height: 300px; */
+      /* 가변 너비 ->요즘은 사용하는 디바이스가 다양하기때문에 더 많이 씀 */
+      width: 70%;      /* % :상대단위. 부모를 기준으로 100분의 70 */
+      /* height: 50%;     세로 %는 부모의 높이 값이 정의되어 있는 경우에만 적용 됨. 기본값일 때는 적용되지 않는다. */
+      height: 400px;
+    }
+    /* .container.block_box1 : 종속 선택자 : 띄어쓰기 없이 사용. 클래스 선택자 container 들 중에 block_box1 클래스를 가지고 있는 선택자 */
+    .container .block_box1{/* 하위 선택자 : 기준 선택자 하위에 포함된 선택자. 띄어쓰기로 구분. .container 하위에 있는 .block_box1 선택자 */
+      background-color: #96c291;
+      /* width:300px; height:100px;       적용ㅇ */
+      width: 70%; height: 70%;
+    }
+    .container .inline_box1{
+      background-color: #d67bff;
+      width:300px; height:100px;      /*  적용X */
+    }
+
+    .block_box2{
+      background-color: #9a3b3b;
+      height: 50px;
+    }
+    .inline_box2{
+      background-color: #97eb36;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>가로 세로 영역 제어 width, height</h1>
+  <div class="container">
+    <div class="block_box1">블록 요소</div>
+    <span class="inline_box1">인라인 요소</span>
+  </div>
+
+  <p class="block_box2"></p>
+  <span class="inline_box2"></span>
+</body>
+</html>

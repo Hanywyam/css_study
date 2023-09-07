@@ -101,7 +101,11 @@
 	* `dashed`: 밑줄에 점선
 	* `none`: 효과 전체 삭제
 
-* `text-align`: 들여쓰기 / 내쓰기
+* `text-indent`: 들여쓰기/ 내쓰기. 들여쓰기보다는 내쓰기를 주로 많이 쓰인다.
+	* `text-indent: 100px;` 첫 문장만 들여쓰기
+	* `text-indent: -120px;` 첫 문장만 내쓰기. 웹 문서 바깥쪽으로 이동.
+
+* `text-align`: 문자 정렬
 	* `left`: 왼쪽
 	* `right`: 오른쪽
 	* `center`: 중앙
@@ -120,3 +124,83 @@
 
 * `letter-spacing`: 글자와 글자 사이 간격. 자간.
 * `word-spacing`: 단어와 단어 사이 간격. 어간.
+
+## 230907 ##
+
+#### font 와 text2 ####
+
+상속값 vs 직접 입력된 값이 있을 때
+-> 직접 적용된 값이 우선으로 스타일이 적용되지 않는다.
+
+#### 1. 마우스 이벤트: <a> 태그 스타일 주기 #### 
+
+* :, ::
+	* 가상 선택자로 다양한 종류가 있으며 주로 실제하는 요소와 함께 작성.
+	* 예) 의사 클래스, 의사 요소, 수열 선택자...
+	* :link, :visited, :hover, :focus, :checked ...
+
+```css
+    a:link{ 링크 상태일 때 (기본)
+      color: aquamarine;
+    }
+    a:visited{ 방문했을 때
+      color: yellow;
+    }
+    a:hover{ 마우스를 위에 올렸을 때
+      text-decoration: line-through;
+      color: #FF3Fa4;
+    }
+    a:active{ 클릭했을 때
+      background-color: orange;
+      color: #fff;
+    }
+```
+* 모든 이벤트에 효과를 나타낼 수 있지만, 이렇게 사용하진 않는다.
+* 주로 사용하는 방법.
+
+```css
+    a{
+      color:inherit; /* 상속 */
+      text-decoration: none;
+    }
+    a:hover{
+      background-color: orange;
+      color: #fff;
+    }
+```
+* `inherit`을 이용해 상속된 기본 스타일을 모두 삭제한다.
+
+#### 2. <form> 요소 스타일 주기 #### 
+* form 관련 요소들은 기본 스타일이 존재하기 때문에 변경하고자 하는 요소에 직접 적용
+
+#### 3. 배운 내용을 활용하여 Ex #### 
+
+#### 4. 인라인 세로 정렬 vertical-align #### 
+* 서체 및 인라인 요소 세로 정렬 기준
+* 글씨와 이미지 및 input의 정렬 상태가 맞지 않는다면, 이미지 요소 및 input에 vertical-align적용
+
+#### 5. 가로 세로 영역 제어 width, height #### 
+1. 블록 요소(p, div, h1, header, main, article, form, ul...)
+ - 가로 값의 경우 부모 요소의 가로 값을 받음
+ - 일반적인 흐름에서는 블록 요소 옆에 다른 요소가 올 수 없음
+ - 자식으로 블록, 인라인 요소 등 대부분이 올 수 있음
+ - 세로 값의 경우 자식 요소의 높이 값을 그대로 가져 옴
+ - width, height로 제어 가능
+
+2. 인라인요소(span, img, a, em, input, strong...)
+ - 가로 값의 경우 자식(컨텐츠)의 값을 가져 옴
+ - 인라인 요소 옆에 다른 인라인 요소가 올 수 있음
+ - 자식으로 인라인 요소만 올 수 있음
+ - 세로 값의 경우 자식 요소의 높이 값을 그대로 가져옴
+ - width, height로 제어 불가능
+
+* 고정 너비
+	* `width: 500px; height: 300px;`
+* 가변 너비 
+	* `width: 70%;`
+	* % :상대단위. 부모를 기준으로 100분의 70
+	* 요즘은 사용하는 디바이스가 다양하기때문에 더 많이 씀.
+	* `height: 50%;`
+	* 세로 %는 부모의 높이 값이 정의되어 있는 경우에만 적용 됨. 기본값일 때는 적용되지 않는다.
+
+

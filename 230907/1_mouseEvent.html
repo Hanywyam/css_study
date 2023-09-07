@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>mouseEvent</title>
+  <style>
+    ::selection{
+      background-color: #FF3Fa4;
+      color:#fff;
+    }
+    body{/* 서체변경, 사이즈, 서체 색상, 행간 조절 */
+      background-color: #c8c8c8;
+      font-family: 'pretendard','휴먼엑스포','맑은 고딕', 돋움, sans-serif;
+      font-size: 16px;
+      color: tomato;
+      line-height: 1.6;
+    }
+    h1::selection{
+      background-color: #BC7AF9;
+    }
+    /* 
+      :, ::
+      가상 선택자로 다양한 종류가 있으며 주로 실제하는 요소와 함께 작성.
+      예) 의사 클래스, 의사 요소, 수열 선택자...
+      :link, :visited, :hover, :focus, :checked ...
+    
+
+    a:link{ 링크 상태일 때 (기본)
+      color: aquamarine;
+    }
+    a:visited{ 방문했을 때
+      color: yellow;
+    }
+    a:hover{ 마우스를 위에 올렸을 때
+      text-decoration: line-through;
+      color: #FF3Fa4;
+    }
+    a:active{ 클릭했을 때
+      background-color: orange;
+      color: #fff;
+    }
+    이렇게 잘 안씀...
+    보통은 아래와 같이 많이 사용.
+    */
+
+    a{
+      color:inherit; /* 상속 */
+      text-decoration: none;
+    }
+    a:hover{
+      background-color: orange;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>마우스 이벤트 mouse event</h1>
+  <ul>
+    <li><a href="https://naver.com" target="_blank">네이버</a></li>
+    <li><a href="https://daum.net" target="_blank">다음</a></li>
+    <li><a href="https://instagram.com" target="_blank">인스타그램</a></li>
+    <li><a href="https://google.com" target="_blank">구글</a></li>
+    <li><a href="https://facebook.com" target="_blank">페이스북</a></li>
+    <li><a href="https://twitter.com" target="_blank">트위터</a></li>
+  </ul>
+</body>
+
+</html>
