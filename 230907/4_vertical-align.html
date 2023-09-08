@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <title>인라인 세로 정렬 vertical-align</title>
   <style>
-    img{
+    p {
       background-color: #4092fd;
+      color: #fff;
+      font-size: 25px;
+      font-weight: bold;
     }
+    .six-months{      /* 현재 요소와 자손들 모두 top 기준. 단, 텍스트는 행간이 존재하기 때문에 상단 여백이 남는다. */
+      vertical-align: top;
+    }
+    .one-year{       /* 기본값 */
+      vertical-align: baseline;
+    }
+    .two-years1{      /* 현재 요소와 자손들 모두 bottom 기준 */
+      vertical-align: bottom;
+    }
+    .two-years2{      /* 부모 기준(baseline 기준으로 글자 높이의 반) */
+      vertical-align: middle;
+    }
+    .two-years3{}
+
   </style>
 </head>
+
 <body>
   <h1>인라인 세로 정렬 vertical-align</h1>
   <ul>
     <li>서체 및 인라인 요소 세로 정렬 기준</li>
     <li>글씨와 이미지 및 input의 정렬 상태가 맞지 않는다면, 이미지 요소 및 input에 vertical-align적용</li>
   </ul>
-  <img src="./images/six-months.gif" alt="top">six-months: top
-  <img src="./images/one-year.gif" alt="baseline">one-year: baseline
-  <img src="./images/two-years.gif" alt="bottom">two-years: bottom
-  <img src="./images/two-years.gif" alt="middle">two-years: middle
-  <img src="./images/two-years.gif" alt="empty">
+  <p><img src="./images/six-months.gif" alt="top" class="six-months">six-months: Top</p>
+  <p><img src="./images/one-year.gif" alt="baseline" class="one-year">one-year: baseline</p>
+  <p><img src="./images/two-years.gif" alt="bottom" class="two-years1">two-years: bottom</p>
+  <p><img src="./images/two-years.gif" alt="middle" class="two-years2">two-years: middle</p>
+  <p><img src="./images/two-years.gif" alt="empty" class="two-years3"></p>
+
 </body>
+
 </html>

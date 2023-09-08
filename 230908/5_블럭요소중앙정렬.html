@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>블럭요소중앙정렬</title>
+  <style>
+    body{
+      font-family: 'pretendard','나눔고딕','맑은 고딕',돋움,sans-serif;
+      margin: 0;
+    }
+    h1{
+      background-color: #dd00dd;
+      color: #fff;
+      margin: 0;
+      padding: 10px;
+    }
+    .box{
+      width: 400px; height: 60px;
+      background-color: skyblue;
+      border: 10px solid #4747c4;
+      text-align: center;
+      /* 인라인요소 중앙 정렬. 상속 */
+    }
+    .box .txt{      /* 하위 선택자: 꼭 띄어쓰기 */
+      padding: 10px;
+      background-color: orange;
+      /* text-align: center; */
+    }
+    .box2 .txt{
+      width: 50%
+    }
+  </style>
+</head>
+<body>
+  <h1>블럭 요소의 중앙 정렬</h1>
+  <p class="box box1">
+    <span class="txt">인라인 요소 및 컨텐츠의 중앙 정렬</span>
+  </p>
+
+  <div class="box box2">
+    <div class="txt">블록 요소의 중앙 정렬</div>
+  </div>
+</body>
+</html>
