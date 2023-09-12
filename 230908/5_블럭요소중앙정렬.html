@@ -18,16 +18,27 @@
       width: 400px; height: 60px;
       background-color: skyblue;
       border: 10px solid #4747c4;
-      text-align: center;
-      /* 인라인요소 중앙 정렬. 상속 */
+      text-align: center;       /* 인라인요소 중앙 정렬. 상속 */
     }
     .box .txt{      /* 하위 선택자: 꼭 띄어쓰기 */
       padding: 10px;
       background-color: orange;
       /* text-align: center; */
     }
+    .box2{
+      /* 블록 요소 중앙 정렬
+        1. 요소의 가로 값이 필요.
+        2. 일반적인 흐름에서는 left+right값은 항상 auto로 설정.
+      */
+      margin: 0 auto 0 auto;      /* top right bottom left */
+      margin: 20px auto;          /* top+bottom=20, right+left=auto */
+      margin: auto;               /* 일반적인 상황의 auto=>가로 중앙 정렬만, 세로 중앙 정렬은 하지 않는다. */
+      margin: auto 0;            /* 세로는 오토가 먹지 않아서 값이 변하지 않음 */
+      margin: 20px auto 0;       /* top right+left bottom */
+    }
     .box2 .txt{
-      width: 50%
+      width: 50%;
+      margin: 0 auto;
     }
   </style>
 </head>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>overflowEx</title>
+  <style>
+    body{
+      text-align: center;
+    }
+    img{
+      width: 400px;
+    }
+
+    .img1{
+      border-radius: 50%;
+      border:4px solid red;
+    }
+
+    .wrapper{
+      background-color: #ddd;
+      border:4px solid red;
+      width: 300px; height: 300px;
+      margin: 50px auto;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .wrapper img{
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+  </style>
+  
+  <!-- 내가 한 코드
+    <style>
+    body{
+      text-align: center;
+    }
+
+    img{
+      width: 400px;
+      border: 3px solid #000;
+    }
+
+    div{
+      overflow: hidden;
+      margin: 0 auto;
+      width: 400px; height: 400px;
+      border: 3px solid #000;
+      border-radius: 50% 50%;
+    }
+  </style>
+   -->
+</head>
+<body>
+  <img src="./_.png" alt="overflow" class="img1">
+
+  <div class="wrapper"><img src="./_.png" alt="overflow"></div>
+</body>
+</html>

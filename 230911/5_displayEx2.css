@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+body{
+  margin: 0;
+}
+
+.global_navi{
+  background-color: mediumaquamarine;
+  padding-left: 0;
+  margin: 0;
+}
+
+.global_navi li{  
+  display: inline-block;  
+}
+
+.global_navi li a{
+  background-color: mediumaquamarine;
+  color: yellow;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  
+  /* padding: 10px 30px; */
+  display: block;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.global_navi li a:hover{
+background-color: mediumslateblue;
+color: #fff;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>요소의 실제크기2</title>
+  <style>
+    .box{
+      background-color: #ddd;
+      font-size: 16px;
+    }
+    .box1 {
+      color: #fff;
+      background-color: #FF4000;
+      width: 400px; height: 300px;
+      outline: 10px solid #000;
+      margin: 50px auto;      /* auto는 크기에서 제외 */
+    }
+    .box2 {
+      border: #000 3px solid;
+      background-color: #FF8000;
+      width: 300px; height: 300px;
+      margin: 0 auto;
+      padding-top: 100px; padding-left: 20px;
+    }
+    .box3 {
+      background-color: #FFFF00;
+      outline: 4px solid#000;
+      width: 300px; height: 400px;
+      margin: 20px auto 0;
+      padding: 20px 10px 0 30px;
+    }
+    .box4 {
+      background-color: #3ADF00;
+      border: #ff006e dotted 2px;
+      border-top: none;
+      width: 400px; height: 200px;
+      outline: rgba(281,112,214,.4) 30px solid;
+      margin: 20px auto 0;
+      padding: 10px 20px 0 0;
+    }
+    .box5 {
+      color: #fff;
+      background-color: #0040FF;
+      width: 600px; height: 250px;
+      padding: 50px 20px;
+      border: 10px double dodgerblue;
+      border-right-width: 5px;
+    }
+    .box6{
+      color: #ff8400;
+      background-color: #A901DB;
+      width: 150px; height: 200px;
+      margin: 50px auto 0;
+      padding: 10px 50px 50px;
+      border: #000 solid 4px;
+      border-top-width: 10px ;
+      border-bottom-width: 5px ;
+   
+
+    /* 어절 기준 줄바꿈 제어(띄어쓰기 기준) */
+      word-break: normal;
+      word-break: break-all;     /* 어절에 맞춰 줄바꿈. 단, 영어 한정. */
+      word-break: keep-all;      /* 어절을 유지하며 줄바꿈. 한글에 적합 */
+    }
+  </style>
+</head>
+<body>
+  <h1>요소의 실제크기2</h1>
+  <div class="box box1">
+    <h3>BOX1</h3>
+    <p>너비: w(400)+m(0)+p(0)+b(0)=400px</p>
+    <p>높이: h(300)+m(T50+B50)+p(0)+b(0)=400px</p>
+  </div>
+  <div class="box box2">
+    <h3>BOX2</h3>
+    <p>너비: w(300)+m(0)+p(L20)+b(3+3) =326px</p>
+    <p>높이: h(300)+m(0)+p(T100)+b(3+3) =406px</p>
+  </div>
+  <div class="box box3">
+    <h3>BOX3</h3>
+    <p>너비: w(300)+m(0)+p(L10+R30)+b(0) =340px</p>
+    <p>높이: h(400)+m(T20+B0)+p(T20+B0)+b(0) =440px</p>
+  </div>
+  <div class="box box4">
+    <h3>BOX4</h3>
+    <p>너비: w(400)+m(0)+p(L20)+b(2+2)=424px</p>
+    <p>높이: h(200)+m(T20+B0)+p(T10)+b(0+2)=232px</p>
+  </div>
+  <div class="box box5">
+    <h3>BOX5</h3>
+    <p>너비: w(600)+m(0)+p(L20+R20)+b(L10+R5)=655px</p>
+    <p>높이: h(250)+m(0)+p(T50+B50)+b(10+10)=370px</p>
+  </div>
+  <div class="box box6">
+    <h3>BOX6</h3>
+    <p>너비: w(150)+m(0)+p(L50+R50)+b(L4+R4) =258px</p>
+    <p>높이: h(200)+m(50)+p(T10+B50)+b(T10+B5) =325px</p>
+    <p>제2항의 재판관 중 3인은 국회에서 선출하는 자를, 3인은 대법원장이 지명하는 자를 임명한다. 모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를 가진다.</p>
+  </div>
+</body>
+</html>

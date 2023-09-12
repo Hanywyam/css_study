@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+.gnb{
+  /* background-color: #ddd; */
+  text-align: center;
+}
+
+.gnb li{
+  /* background-color: orangered; */
+  display: inline-block;
+}
+
+.gnb li a{
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 18px;
+  background-color: orange;
+  margin: 0 5px;
+  border: 3px solid #000;
+  padding: 10px 20px;
+  /* 클릭할 수 있는 영역을 넓히려면 a에 넣는게 좋다. */
+
+  display: block;
+  /* 블럭 요소로 변경해야 제대로 인식이 가능. */
+}
+
+.gnb li a:hover{  /* 가상 선택자는 꼭 붙여서 써야 한다. */
+  background-color: orangered;
+  color: #fff;
+}

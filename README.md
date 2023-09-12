@@ -178,6 +178,10 @@
 #### 4. 인라인 세로 정렬 `vertical-align` #### 
 * 서체 및 인라인 요소 세로 정렬 기준
 * 글씨와 이미지 및 input의 정렬 상태가 맞지 않는다면, 이미지 요소 및 input에 vertical-align적용
+	* top :현재 요소와 자손들 모두 top 기준. 단, 텍스트는 행간이 존재하기 때문에 상단 여백이 남는다.
+	* baseline :기본값
+	* bottom :현재 요소와 자손들 모두 bottom 기준
+	* middle :부모 기준(baseline 기준으로 글자 높이의 반)
 
 #### 5. 가로 세로 영역 제어 width, height #### 
 1. 블록 요소(p, div, h1, header, main, article, form, ul...)
@@ -206,11 +210,29 @@
 
 ﻿## 230908 ##
 
-230907: 4. 인라인 세로 정렬 vertical-align 정리필요
+### 박스 모델: 실제 콘텐츠 영역. 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다. ###
+
 1. 테두리 border
 2. 둥근 모서리 border-radius
 3. 안쪽 여백 padding
 4. 바깥 여백 margin
 5. 블럭 요소 중앙 정렬
 
+
+## 230911 ##
+
+0. margin+paddingEx
+1. 넘치는 컨텐츠 제어 overflow
+2. overflowEx
+3. 요소 성격 변경 display+visibility+opacity
+4. displayEx1
+5. displayEx2
+
+
+## 230912 ##
 ﻿
+1. 요소의 실제크기1
+2. 요소의 실제크기2
+3. box-sizing
+4. box-sizingEx
+

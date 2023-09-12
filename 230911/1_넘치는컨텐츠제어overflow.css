@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+body {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+table th,
+table td {
+  background-color: #ffbb5c;
+  width: 200px;
+}
+
+table td p {
+  height: 140px;
+  background-color: #ddd;
+}
+
+/* 다 같은 선택자
+  table > tbody > tr > td > .box1
+  table tbody tr td .box1
+  table > tbody .box1
+*/
+table .box1 {
+  overflow: inherit;
+  /* 상속은 현재 부모나 조상 요소에 overflow가 적용된 게 없으면 상속 받지 못함 */
+  /* overflow: scroll; */
+}
+
+table .box2 {
+  overflow: visible;
+  /* 기본값. 이미 갖고 있는 값. */
+}
+
+table .box3{
+  overflow: hidden;
+  /* ★숨김★ 많이사용 */
+}
+table .box4{
+  overflow: auto;
+  /* ★자동★ 많이사용 */
+}
+
+table .box5 {
+  overflow: scroll;
+  /* 스크롤. 내용이 넘치지 않아도 스크롤이 생김. */
+}
+
+h2{  
+  margin: 50px 0 0;
+}
+
+h2 + p{
+  /* 인접형제 선택자: 기준 요소 바로 뒤에 나오는 하나의 형제 요소 */
+  background-color: #ffdbaa;
+  width: 300px; height: 100px;
+}
+
+.box6{
+  /* x축 스크롤 */
+  overflow-x: scroll;  /* 그냥썼더니 y축 스크롤이 생김.. */
+  overflow-y: hidden;  /* 1. 일단 y축 없애줌 */
+
+/* 2. 글자의 띄어쓰기 기준으로 줄바꿈 처리 */
+  white-space: wrap;   /* 기본값. */
+  white-space: nowrap; /* br요소로 직접 줄바꿈 시키는 것 외엔 자동 줄바꿈 되지 않음 */
+}
+
+.box7{
+  /* y축 스크롤 */
+  overflow-y: scroll;  /* 무조건 스크롤 */
+  overflow-y: hidden;  /* 넘치면 숨기기 */
+  overflow-y: auto;    /* 넘치면 스크롤 */
+}
