@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>tableStyle</title>
+  <style>
+    table{
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;      /* 각각의 셀 안에서 중앙 정렬 */
+      margin: 50px auto;       /* table은 페이지에서 중앙정렬하고 싶을 때 width값없이 마진값으로만 해야함. */
+    }
+
+    /* table (> tbody )> tr > td{ 
+      background-color: orange;
+    } */
+
+    table td{
+      border: 3px solid #999;
+      width: 100px; height: 100px;
+    }
+
+    table.nox1{            /* 종속 선택자 */
+      
+      /* 컨텐츠가 없는 경우 셀 처리 방법: table 요소에 넣어줘야 적용됨. */
+      empty-cells: show;   /* 셀 남김. 기본값. */
+    }
+
+    table.nox1 tr td{      /* 하위 선택자 */
+      border-color: #1fad7e;
+      color: magenta;      
+    }
+
+    table.nox2{
+      empty-cells: hide;   /* 셀 숨김. */
+    }
+
+    table.nox2 ~ table td {
+      /* 일반 형제 : .nox2 뒤에 오는 모든 형제 관계의 table의 하위로 있는 td */
+      border-color: #64ccc5;
+    }
+
+    table.nox3{
+      /* 셀과 셀 사이의 간격. 테이블 요소에만 적용되는 전용 속성. */
+      border-spacing: 50px;
+      border-spacing: 10px 50px;      /*  X축 Y축 순으로 적용.  */
+      
+    }
+    
+    table.nox4{
+      border-spacing: 0;
+      border-collapse: separate;
+      /* 기본값. 겹치는 셀 테두리 값 그대로 둠. */
+    }
+
+    table.nox5{
+      border-collapse: collapse;       
+      /* 겹치는 셀 테두리 값 제어 */
+    }
+
+  </style>
+</head>
+<body>
+  <h1>table Style</h1>
+  <table class="nox1">
+    <tbody>
+      <tr>
+        <td></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="nox2">
+    <tbody>
+      <tr>
+        <td></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="nox3">
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="nox4">
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="nox5">
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

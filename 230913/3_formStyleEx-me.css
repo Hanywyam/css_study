@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+
+body{
+  font-family: 'pretendard','나눔고딕','맑은 고딕',돋움,sans-serif;
+  font-size: 18px;
+  line-height: 2;
+  text-align: right;
+}
+form{
+  margin: 0 auto;
+  width: 60%;
+  padding: 50px;
+  background-color: #ddd;
+}
+form fieldset{
+  width: 45%;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 3px solid navy;
+  border-radius: 15px;
+}
+legend.title{
+  background-color: navy;
+  color: #fff;
+  text-align: left;      
+  margin: 0 0 10px 10px;
+  padding: 2px 15px;
+}
+div input{      
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+div input:hover{
+  border: 1px solid orange;
+}
+
+div input:active{
+  background-color: orange;
+}
+
+button{
+  padding: 5px 8px;
+  border: none;
+  color: #fff;
+  background-color: navy;
+}
+
+button:hover{      
+  border: none;
+  background-color: orange;
+}

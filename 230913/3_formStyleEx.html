@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>formStyleEx</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- CDN 가까운 위치에서 가져와 사용 -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="./5_formStyleEx-me.css"> -->
+  <!-- 선생님 CSS code -->
+  <style>
+    form{
+      font-family: 'IBM Plex Sans KR', '맑은 고딕','돋움',sans-serif;
+      font-weight: 400;
+      background-color: #ddd;
+      max-width: 500px;    /* 최대값 설정. 설정값 이상으로는 커지지 않음. */
+      min-width: 300px;    /* 최소값 설정. 설정값 이하로는 작아지지 않음. */
+      margin: 10px auto;
+      overflow:hidden;
+    }
+
+    form fieldset{
+      border: 3px solid #87a2fb;
+      border-radius: 15px;
+      background-color: #fff;
+      margin: 50px auto;
+      /* 
+      마진상쇄 현상: 일반적인 흐름에서,
+      자식의 margin-top과 부모의 margin-top이 만나면 둘 중 큰 값이 부모에게 적용
+      해결방법 -> 부모 요소에 overflow:hidden; 입력하면 상쇄현상이 사라짐.
+      경우에 따라서 쓸 수 없는 때가 있음.(스크롤이 필요하다거나..등등)
+      */
+      width: 70%;
+      padding: 20px;
+    }
+
+    form legend{
+      background-color: #87a2fb;
+      color: #fff;
+      font-weight: 700;
+      padding: 3px 14px;
+      border-radius: 10px;
+    }
+
+    form input{
+      width: 150px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    텍스트 필드 마우스 이벤트
+    ㄴ기본일때는 border-bottom만
+    ㄴ마우스 올렷을때는 border 전부
+    ㄴ클릭했을 때는 배경색 
+    버튼: 마우스 이벤트
+   -->
+   
+   <form>
+    <fieldset>
+      <legend class="title">회원가입</legend>
+      <div class="input">
+        <label for="user_name">이름: </label>
+        <input type="name" name="userName" id="user_name" autofocus>
+      </div>
+
+      <div class="input">
+        <label for="user_email">이메일: </label>
+        <input type="email" name="userEmail" id="user_email">
+      </div>
+
+      <button type="submit" class="button">가입</button>
+      <button type="reset" class="button">취소</button>    
+    </fieldset>
+   </form>
+
+   <!-- 
+    botton과 a 태그의 구분
+    - html에서는 두 태그가 구분이 가능하지만 css이후부터는 구분하기가 쉽지 않다. 두 태그를 구분하여 사용하는데, 그 성격을 알아보자.
+
+    <botton>
+      폼과 관련된 값을 서버로 전송 할 때 사용
+      사용자와의 상호작용이 필요할 때 사용(값을 서버에 전송하고 그 결과를 사용자에게 피드백) -> 커뮤니케이션
+
+    <a>
+      다른 페이지로의 이동이 필요할 때
+      페이지간의 이동(더보기, 새창 띄우기, 서브페이지, 외부 페이지 이동...)
+      이벤트 팝업...
+    -->
+</body>
+</html>
