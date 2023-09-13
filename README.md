@@ -426,6 +426,7 @@ border-bottom-style: double;
 - `word-break: keep-all;` 어절을 유지하며 줄바꿈. 한글에 적합.
 
 
+
 ## 230913 ##
 
 #### 1. 리스트 스타일 축약형 ####
