@@ -215,7 +215,7 @@
 
 * **박스 모델: 실제 콘텐츠 영역. 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다.**
 - 박스 영역의 값 적용 순서는 top-right-bottom-left 시계방향 순 이다.
-
+```
 		`top`
 	┌──────────────────┐
 	│     margin       │
@@ -229,7 +229,7 @@
 	│ └──────────────┘ │
 	└──────────────────┘
 		`bottom`
-
+```
 
 ## 1. 테두리 border ##
 - 방향 지정 없이 입력 가능.
@@ -272,7 +272,7 @@ border-bottom-style: double;
 - ex1과 ex2는 같은 값이다.
 
 - **`border` vs `otuline`**
-- `border와 달리, `outline`은 요소의 바깥 부분에 그려지고, 요소가 가지는 실제 크기에 영향을 주지 않음. 
+- `border`와 달리, `outline`은 요소의 바깥 부분에 그려지고, 요소가 가지는 실제 크기에 영향을 주지 않음. 
 - 다른 요소의 영역을 침범할 우려가 있어서 잘 사용하지 않는다.
 ```css
 .box{
@@ -285,7 +285,7 @@ border-bottom-style: double;
 ```
 
 #### 2. 둥근 모서리 border-radius ####
-- `top-left`, `top-right`, `bottom-right`, `bottom-left`순으로 각모서리마다 다른값을 줄 수 있다.
+- top-left, top-right, bottom-right, bottom-left순으로 각모서리마다 다른값을 줄 수 있다.
 	- `border-radius: 50px 20px 50px 20px;`
 - 서로 마주보고 있는 값을 한자리로 인식해서 적용.
 	- `border-radius: 50px 20px;`
