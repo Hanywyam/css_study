@@ -156,6 +156,9 @@
       background-color: orange;
       color: #fff;
     }
+    [required]:focus{ 포커스(커서가 보이는 상태)되었을 때
+      background-color: #ffcc70;
+    }
 ```
 * 모든 이벤트에 효과를 나타낼 수 있지만, 이렇게 사용하진 않는다.
 * 주로 사용하는 방법.
@@ -463,5 +466,46 @@ border-bottom-style: double;
 ﻿
 0_1 테이블 스타일 연습1 - 숙제
 0_2 테이블 스타일 연습2 - 숙제
+0_3 테이블 스타일 연습3 - 숙제
 
 
+
+## 230914 ##
+
+#### 1. accent-color 속성 ####
+- `form`에 들어가는 `input`값에는 기본적인 color 스타일 적용이 안된다.
+- input type=checkbox, radio, range, progress 컨트롤 값 제어.
+`accent-color: 색상;`
+
+> ﻿﻿모든 브라우저에서 CSS code 사용 가능한지 확인하는 site https://caniuse.com/
+> ﻿최신 기술의 경우 적용이 안되는 경우가 있어서 확인 필요.
+
+#### 2. :before :after ####
+- 해당 요소로 작성한 내용은 드래그가 되지 않는다.
+- 구분선을 넣거나, 아이콘을 넣어 버튼으로 사용한다?
+- 값으로 작성되는 "부분"은 텍스트 컨텐츠의 영역으로 코드값이 적용되지 않는다.
+- `content` 생략 불가능. ""로 내용을 비워둘 순 있지만, 값은 절대 뺄 수없다. 무조건 작성.
+	- `:before`, `::before`
+		- 기준 요소 안의 컨텐츠 영역 앞쪽에 적용. 의사 요소
+	- `:after`, `::after`
+		- 기준 요소 안의 컨텐츠 영역 뒤쪽에 적용.
+
+#### 3. em ####
+- 알파벳 M을 기준으로 만들어진 단위
+- 부모의 `font-size`를 기준으로 값 설정
+- 브라우저 기본 폰트 사이즈: 16px
+- 1em = 16px, 2em = 32px
+- '나'를 감싸고 있는 부모를 기준으로 설정되는 상대적인 사이즈값이 계산된다.
+- 브라우저마다 상대적인 값으로 표현된다.
+- 다만, 값이 계속 상속되는 상대적인 값으로 제어가 까다롭다.
+
+#### 4. rem ####
+rem 단위값은 root, 즉 최상위 요소 html의 font-size를 기준으로 설정한다.
+```css
+    html {    /* <- rem 기준. 최상위 root 요소 */
+      font-size: 24px;
+    }
+    body {    /* body는 html의 자식 요소. body 값에 font-size를 넣어도 rem에 적용되지 않는다. */
+      font-size: 20px;
+    }
+```

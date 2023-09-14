@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>em1</title>
+  <style>
+    body {
+      font-weight: bold;
+      font-size: 22px;       /* 예제2 폰트사이즈 22px 적용 */
+    }
+    /* 
+      * : 전체 선택자. 각 요소 요소에 적용되는 선택자로 실제 사용시 주의. 
+      -> 필요 없는 모든 곳에 적용되기 때문에 불편하긴 함.
+      전체적용되니까 편하긴 한데 왠만해선 잘 안쓰는게 좋음.
+
+    * {
+      text-decoration: line-through;
+    }    
+    */
+    .wrapper * {
+      border: 3px solid #000;
+      display: block;
+      padding: 20px;
+      margin: 20px;
+    }
+
+    .wrapper {
+      border: 3px solid #000;
+      font-size: 1em;
+      /* 
+      1)
+        브라우저 기본 폰트 사이즈=16px
+        1em => 16px
+      2)
+        부모인 body 폰트 사이즈 22px
+        1em => 22px
+      */
+    }
+
+    .wrapper > h2 {
+      font-size: 1.2em;
+      /* 
+      1)
+        부모인 .wrapper 폰트 사이즈 1em == 16px
+        1.2em => 16*1.2=19px
+        단위 환산은 http://pxtoem.com/ 참고.
+      2)
+        부모인 body 폰트 사이즈 22px
+        1.2em => 26px
+      */    
+    }
+
+    .wrapper > h2 >span {
+      font-size: 1em;
+      /* 
+        부모인 h2 현재 폰트 사이즈 19px이기 때문에
+        1em => 19px  자식인 span도 같은 값을 가진다.
+      2)
+        부모인 h2 현재 폰트 사이즈 26px
+        1em => 26px
+      */        
+    }
+
+    .wrapper > p {
+      font-size: 1em;
+      /* 1em => 22px */
+    }
+
+    .wrapper > .box {
+      font-size: 0.8em;
+      /* 
+        1em => 22px
+        0.8em => 17px
+      */
+    }
+
+    .wrapper > .box > p {
+      font-size: 1.1em;      
+      /* 
+        1em => 17px
+        1.1em => 18px
+      */
+    }
+
+    .wrapper > .box > p > span {
+      font-size: 2em;      
+      /* 
+        1em => 18px
+        2em => 36px
+      */
+    }
+
+  </style>
+</head>
+<body>
+  <h1>em 단위 1</h1>
+  <ul>
+    <li>알파벳 M을 기준으로 만들어진 단위</li>
+    <li>부모의 "폰트 사이즈"를 기준으로 값 설정</li>
+    <li>브라우저 기본 폰트 사이즈: 16px</li>
+    <li>'나'를 감싸고 있는 부모를 기준으로 설정되는 상대적인 사이즈값</li>
+  </ul>
+
+  <div class="wrapper">.wrapper 1em ==
+    <h2>
+      h2 1.2em ==
+      <span>span 1em ==</span>
+    </h2>
+
+    <p>p 1em ==</p>
+  
+    <div class="box">.box 1em ==
+      <p>p 1em ==
+        <span>span 1em ==</span>
+      </p>
+    </div>    
+  </div>
+
+</body>
+</html>

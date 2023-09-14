@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>em2</title>
+  <style>
+    body {
+      font-size: 26px;
+      /* 
+        font-size 변경시, 
+        em 단위로 설정한 값은 기준값이 변해서 함께 변한다.
+       */
+    }
+
+    .container {
+      background-color: orange;
+      /* width: 600px; height: 400px; */
+      width: 37.5em; height: 25em;
+      margin: 1.875em auto;      
+    }
+
+    
+    .container .wrapper{
+      font-size: 1.2em;
+    }
+
+    .container .box {
+      background-color: tomato;
+      /* width: 400px; height: 200px; */
+      width: 25em; height: 12.5em;
+      margin: 0.625em auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>em단위 2</h1>
+  <ul>
+    <li>나를 감싸고 있는 <strong>부모 요소의 font-size</strong>를 기준으로 계산</li>
+  </ul>
+
+  <div class="container">
+    .container
+    .wrapper
+    <div class="box">.box</div>
+  </div>
+</body>
+</html>

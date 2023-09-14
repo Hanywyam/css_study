@@ -3,8 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>tableStyleEx1</title>
-  <link rel="stylesheet" href="./3_tableStyleEx1me.css">
+  <!-- <link rel="stylesheet" href="./0_1tableStyleEx1me.css"> -->
+  <!-- 선생님 CSS code -->
   <style>
+    /* 테두리는 각 개별로 주셨음!!!(이마탁) */
+    body{
+      text-align: center;      
+    }
+
+    table{
+      margin: 0 auto;
+      border-collapse: collapse;
+      border: 3px solid #ffb200;
+      border-top: none;
+    }
+
+    table th, td{      /* 다중 선택자. 타입(1) + 타입(1) = 2점 */
+      border: 1px solid #000;   
+      width: 100px;
+    }
+
+    table th{
+      background-color: aqua;
+    }
+
+    table .sub_title{      /* 타입(1) + 클래그 (3) = 4점 */
+      width: 70px;
+    }
+
+    table caption{
+      background-color: #277bc0;
+      color: #fff;
+      font-weight: bold;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 14px 14px 0 0;
+      border: 3px solid #ffb200;
+      border-bottom: none;
+    }
   </style>
 </head>
 <body>
@@ -16,7 +52,7 @@
       
     <tbody>
       <tr class="tr2">
-        <th>구분</th>
+        <th class="sub_title">구분</th>
         <th>월요일</th>
         <th>화요일</th>
         <th>수요일</th>
@@ -24,7 +60,7 @@
         <th>금요일</th>
       </tr>
       <tr class="tr2">
-        <th>1교시</th>
+        <th class="sub_title">1교시</th>
         <td rowspan="2">기초드로잉</td>
         <td rowspan="2">색채학</td>
         <td></td>
@@ -32,26 +68,26 @@
         <td></td>
       </tr>
       <tr class="tr2">
-        <th>2교시</th>
+        <th class="sub_title">2교시</th>
         <td rowspan="3">html</td>
         <td></td>
         <td rowspan="2">포트폴리오제작</td>
       </tr>
       <tr class="tr2">
-        <th>3교시</th>
+        <th class="sub_title">3교시</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
       <tr class="tr2">
-        <th>4교시</th>
+        <th class="sub_title">4교시</th>
         <td rowspan="2">포토그래픽</td>
         <td></td>
         <td rowspan="2">구성요소제작</td>
         <td></td>
       </tr>
       <tr class="tr2">
-        <th>5교시</t>
+        <th class="sub_title">5교시</t>
         <td></td>
         <td></td>
         <td></td>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>before+after</title>
+  <style>
+    p {
+      border: 1px solid #000;
+    }
+
+    p::before {
+      content: "설명: ";
+            /* 생략 불가능. ""을 비워둘 순 있지만, 무조건 작성. */
+      background-color: antiquewhite;
+    }
+
+    p::after {
+      content: "";
+      background-color: #d2de32;
+    }
+
+    ol .box1::before{
+      content: "https://google.com 주소: ";
+      color: #d6d6d6;
+    }
+    
+    ol .box2::before{
+      content: "https://naver.com 주소: ";
+      background-color: orange;
+      color: #fff;
+      margin-right: 20px;
+      padding-right: 10px;
+    }
+    
+    ol .box3::before{
+      content: "https://kakao.com 주소: ";
+      background-color: #d6d6d6;
+      display: block;
+      width: 50%;
+      border-right: 4px solid orange;      /* 구분선으로도 사용 */
+      padding: 2px 6px;
+      margin: 6px;
+    }
+
+    /* 구분선을 넣는 또 다른 방법 */
+    ul .box1 {
+      position: relative;
+    }
+
+    ul .box1::after {
+      content: "";
+      display: inline-block;
+      width: 2px; height: 12px;
+      background-color: orangered;
+      position: absolute;
+      top: 0; bottom: 0; left: 50px;
+      margin: auto;
+    }
+
+    ul .box2::after{
+      content: " 👼🏼 ";
+      /* 아이콘을 넣어 버튼??으로도 사용한다. */
+    }
+
+    ul .box3::after{
+      /* 값으로 작성되는 부분 ""은 텍스트 컨텐츠의 영역으로 코드값 적용X */
+      content: "&lt";
+    }
+    
+  </style>
+</head>
+<body>
+  <h2>:before, ::before</h2>
+  <p>기준 요소 안의 컨텐츠 영역 앞쪽에 적용. 의사 요소</p>
+  <ol>
+    <li class="box1">구글</li>
+    <li class="box2">네이버</li>
+    <li class="box3">카카오</li>
+  </ol>
+
+  <h2>:after, ::after</h2>
+  <p>기준 요소 안의 컨텐츠 영역 뒤쪽에 적용</p>
+  <ul>
+    <li class="box1">구글</li>
+    <li class="box2">네이버</li>
+    <li class="box3">카카오</li>
+  </ul>
+</body>
+</html>
