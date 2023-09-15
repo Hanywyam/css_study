@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flex2_flex-wrap</title>
+  <style>
+    body { margin:0; font-size: 2em; font-weight: bold; text-align: center; }
+    .wrapper {
+      border:6px solid #000;
+      width: 80vw;
+      margin: 2vw auto;
+    }
+    .wrapper .item1 { background-color: #3DB2FF;}
+    .wrapper .item2 { background-color: #FFB830;}
+    .wrapper .item3 { background-color: #FF2442;}
+
+    #container {/* flex-container */
+      display: flex;
+      flex-direction: row;
+
+      /* 플렉스 아이템을 한 줄 또는 여러 줄 배치. 줄바꿈 */
+      flex-wrap: nowrap;/* 기본값. 플렉스 아이템 한 줄 배치 */
+      flex-wrap: wrap;/* 줄바꿈 */
+      flex-wrap: wrap-reverse;/* 역방향 줄바꿈 */
+    }
+    #container .item {
+      width: 50%;
+      /* 
+        flex-item은 flex-container의 영역을 넘기지 않는 기본성격을 가짐 
+        자동으로 줄바꿈 안됨
+      */
+      height: 20vh;
+    }
+  </style>
+</head>
+<body>
+  <h1>flex2 : flex-wrap</h1>
+  <div class="wrapper" id="container"><!-- flex-container -->
+    <div class="item item1">item1</div><!-- flex-item -->
+    <div class="item item2">item2</div><!-- flex-item -->
+    <div class="item item3">item3</div><!-- flex-item -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flex5_justify-content</title>
+  <style>
+    body {
+      margin: 0; font-size: 2em; font-weight: bold; text-align: center;
+    }
+
+    .wrapper {
+      border: 6px solid #000;
+      width: 80vw;
+      margin: 2vw auto;
+
+      display: flex;
+      /* 주축 방향을 가로, 줄바꿈X 
+      flex-direction: row;
+      flex-wrap: nowrap;
+      */
+
+      flex-flow: row nowrap;
+    }
+
+    .wrapper .item1 {
+      background-color: #3DB2FF;
+    }
+
+    .wrapper .item2 {
+      background-color: #FFB830;
+    }
+
+    .wrapper .item3 {
+      background-color: #FF2442;
+    }
+
+    #container1 {
+      /* 주축 기준 플렉스 아이템 정렬 */
+      justify-content: flex-start;    /* 기본값. 주축의 시작점 기준 정렬 */
+      justify-content: flex-end;      /* 주축의 끝점 기준 정렬 */      /* 주축 기준 중앙 정렬 */
+      justify-content: space-around;
+      /* 주축 기준으로 여백 포함 동일한 간격으로 정렬 */
+      justify-content: space-between;
+      /* 주축 기준으로 양끝에 맞춰 아이템을 정렬하고 여백은 동일한 값으로 부여하는 정렬 */
+      justify-content: space-evenly;
+      /* 주축 기준으로 아이템과 여백을 다 동일하게 정렬 */
+    }
+
+    #container2 {
+      height: 40vh;
+      /* 주축 세로 */
+      flex-direction: column;
+      justify-content: flex-end;
+      justify-content: center;
+      justify-content: space-around;
+      justify-content: space-between;
+      justify-content: space-evenly;
+    }
+    /* 
+    container1(가로) <-> container2(세로)
+    정렬방향이 서로 다름.
+    주축에 따라서 정렬하는 방향이 달라진다. 
+    */
+  </style>
+</head>
+
+<body>
+  <h1>flex5: justify-content</h1>
+  <div class="wrapper" id="container1"><!-- flex-container -->
+    <div class="item item1">item1</div><!-- flex-item -->
+    <div class="item item2">item2</div><!-- flex-item -->
+    <div class="item item3">item3</div><!-- flex-item -->
+  </div> 
+  <div class="wrapper" id="container2"><!-- flex-container -->
+    <div class="item item1">item1</div><!-- flex-item -->
+    <div class="item item2">item2</div><!-- flex-item -->
+    <div class="item item3">item3</div><!-- flex-item -->
+  </div> 
+</body>
+</html>

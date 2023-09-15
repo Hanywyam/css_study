@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flexEx2</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    .container{
+      font-weight: bold;
+      font-size: 1.4rem;
+      list-style: none;
+      padding: 0;
+      border: 3px solid #000;
+      width: 70vw; height: 70vh;
+      margin: calc(15vh - 6px) auto;
+      /* CSS 함수 : 
+      minmax(), clac(), min(), max()... 
+      안에 사칙은 띄어쓰기로 입력해야 한다.  
+      */
+
+      display: flex;
+      /*
+      flex-direction: row;
+      flex-wrap: wrap;
+       
+      align-content: center; 
+      교차축 기준 여러 아이템을 하나의 그룹으로 두고 정렬
+      align-items: center;
+      교차축 기준 개별 아이템 정렬
+      justify-content: center;
+      */
+
+      flex-flow: column;      /* 주축 세로, nowrap 기본값 생략 */
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container .box {
+      width: 50%;
+      height: 15%;      
+      /* line-height: 15%; 적용X. h=px값에 한 줄일 때만 적용 가능 */
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container .box1{background-color: #016A70;}
+    .container .box2{background-color: #FFFFDD;}
+    .container .box3{background-color: #D2DE32;}
+    .container .box4{background-color: #A2C579;}
+    .container .box5{background-color: #6d973d;}
+
+    /* 내가 쓴 css style
+    body {
+      margin: 0;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;      
+    }
+
+    .container {
+      list-style: none;
+      border: 6px solid #000;
+      width: 60vw; height: 80vh;
+      margin: 5vw auto;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;        
+      align-items: center;
+    }
+
+    .box {
+      width: 30vh; height: 120px;
+      line-height: 120px;
+    } */
+  </style>
+</head>
+<body>
+  <ul class="container" id="wrapper"> <!-- flex-container -->
+    <li class="box box1">             <!-- flex-item / flex-container -->
+      item1 <br>item                                  <!-- flex-item  -->
+    </li>
+    <li class="box box2">item2 <br>item</li>
+    <li class="box box3">item3 <br>item</li>
+    <li class="box box4">item4 <br>item</l>
+    <li class="box box5">item5 <br>item</li>
+  </ul>
+</body>
+</html>

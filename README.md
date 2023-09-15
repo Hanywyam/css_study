@@ -490,7 +490,7 @@ border-bottom-style: double;
 	- `:after`, `::after`
 		- 기준 요소 안의 컨텐츠 영역 뒤쪽에 적용.
 
-#### 3. em ####
+#### 3. 단위 em ####
 - 알파벳 M을 기준으로 만들어진 단위
 - 부모의 `font-size`를 기준으로 값 설정
 - 브라우저 기본 폰트 사이즈: 16px
@@ -499,7 +499,7 @@ border-bottom-style: double;
 - 브라우저마다 상대적인 값으로 표현된다.
 - 다만, 값이 계속 상속되는 상대적인 값으로 제어가 까다롭다.
 
-#### 4. rem ####
+#### 4. 단위 rem ####
 rem 단위값은 root, 즉 최상위 요소 html의 font-size를 기준으로 설정한다.
 ```css
     html {    /* <- rem 기준. 최상위 root 요소 */
@@ -509,3 +509,27 @@ rem 단위값은 root, 즉 최상위 요소 html의 font-size를 기준으로 �
       font-size: 20px;
     }
 ```
+
+5. 단위 viewport
+6. vw VS percent
+
+## 230915 ##
+
+**flex**
+
+1. flex-direction
+2. flex-wrap
+3. flex-flow
+4. gap
+5. justufy content
+6. align-items
+7. align-content
+8. align-self
+
+flexEx1
+flexEx2
+flexEx3
+flexEx4
+flexEx5
+flexEx6
+flexEx7
