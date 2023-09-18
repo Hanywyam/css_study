@@ -4,6 +4,53 @@
   <meta charset="UTF-8">
   <title>flexEx3</title>
   <style>
+    body {
+      margin: 0;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .container {
+      background-color: #ddd;
+      display: flex;
+      flex-direction: column;
+      /* height: 100vh; */
+    }
+
+    .container header {
+      background-color: violet; 
+      height: 14vh;
+    }
+    .container nav {
+      background-color: blueviolet; 
+      height: 6vh;
+    }
+    .container main {
+      background-color: plum; 
+      color: #fff; 
+      display: flex;
+       /* 
+       스크롤 없이 화면을 맞추고 싶을 때
+       전체(.container)100vh - (header)14vh - (nav)6vh  
+       */
+      height: calc(100vh - 14vh - 6vh);     
+    }
+    .container aside {
+      background-color: pink; 
+      width: 30%;
+    }
+    .container section {
+      background-color: magenta; 
+      width: 70%;
+    }
+    /* 
+    화면에서 100 의 값이 필요할 때는 
+    vw가 아닌 % 값을 주는게 넘치지 않는다. 
+    */
+  </style>
+  <!-- 내가 쓴 css style
+    난 스크롤이 생겼다...
+    <style> 
     body{margin: 0; font-weight: bold;}
     
     #container {      
@@ -34,14 +81,24 @@
     .wrapper .item3 {background-color: pink;}
     .wrapper .item4 {background-color: #ff006a;}
 
-  </style>
+  </style> -->
 </head>
 <body>
+  <div class="container">      <!-- flex container -->
+    <header>header</header>    <!-- flex item -->
+    <nav>nav</nav>             <!-- flex item -->
+    <main>                     <!-- flex item / flex container -->
+      <aside>aside</aside>                 <!-- flex item -->
+      <section>section</section>           <!-- flex item -->
+    </main>
+  </div>
+  <!-- 내가 쓴 html
   <div class="wrapper" id="container">
     <div class="item item1">header </div>
     <div class="item item2">nav </div>
     <div class="item item3">aside </div>
     <div class="item item4">section </div>
   </div>
+   -->
 </body>
 </html>

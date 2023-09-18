@@ -4,6 +4,42 @@
   <meta charset="UTF-8">
   <title>flexEx7</title>
   <style>
+    body {
+      margin: 0;
+      font-weight: bold;
+      font-size: 1.2;
+      text-transform: capitalize;
+      text-align: center;
+    }
+
+    .gnb {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: #8cabff;
+
+      display: flex;
+      /* justify-content: space-evenly; li에 width 값을 주면 쓸 필요X */
+    }
+
+    .gnb li {
+      width: 20%;      /* 100% / 메뉴 5개 = 20% */
+    }
+
+    .gnb li a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      /* height: 40px; 컨텐츠가 바뀌면 대처가 어려움 */
+      padding: 0.5rem 0;      /* 컨텐츠가 바껴도 유동적으로 대처가 가능 */
+    }
+
+    .gnb li a:hover {
+      background-color: #4477ff;
+      color: #fff;
+    }
+
+    /* 내가 쓴 css style
     body{margin: 0;}
 
     ul{list-style: none;}
@@ -23,9 +59,19 @@
       justify-content: space-between;  
       align-items: center;    
     }
+     */
   </style>
 </head>
 <body>
+  <menu class="gnb">
+    <li><a href="#">home</a></li>
+    <li><a href="#" class="active">Company</a></li>
+    <li><a href="#">product</a></li>
+    <li><a href="#">service</a></li>
+    <li><a href="#">board</a></li>
+  </menu>
+
+  <!-- 내가 쓴 html
   <ul class="wrapper" id="container">
     <li class="item item1"><a href="#">Home</a></li>
     <li class="item item2"><a href="#">Company</a></li>
@@ -33,5 +79,6 @@
     <li class="item item4"><a href="#">Product</a></li>
     <li class="item item5"><a href="#">Board</a></li>
   </ul>
+   -->
 </body>
 </html>

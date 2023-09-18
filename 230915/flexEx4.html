@@ -6,6 +6,74 @@
   <style>
     body {
       margin: 0;
+    }
+    
+    /* 방법 1.
+    .wrapper {
+      display: flex;
+      align-items: flex-end;
+      height: 100vh;
+    }
+
+    footer {
+      background-color: #a8df8e;
+      width: 1400px;        //고정값.
+      width: 72.917vw;      //가변값. 반응형 사이트 제작시
+                               1400/1920*100 직접계산 또는
+      https://web-development.space/tools/px-to-vw/ 에서 값을 구할 수 있음.
+      브라우저 기준으로 작업 시
+      viewport width = 1920
+      
+      margin: 0 auto;
+      padding: 20px 30px;
+      padding: 1.042vw 1.563vw; // 20/1920*100, 30/1920*100
+      box-sizing: border-box;
+    }   
+    */
+
+     .wrapper {
+      display: flex;
+      height: 100vh;
+     }
+
+     footer{
+      background-color: #a8df8e;
+      width: 72.917vw;
+      padding: 1.042vw 1.563vw; 
+      box-sizing: border-box;
+
+      /* 방법 2.
+      align- self: flex-end;
+      플렉스 아이템에 직접 적용.
+      */
+
+      /* 방법 3.
+      플렉스 아이템에 직접 적용.
+      margin을 통해 개별적으로 위치 지정 가능. 다양한 값을 줄 수 있어서 조절이 편리하며 더 섬세하게 조정이 가능헤서 많이 사용한다.
+
+      margin: auto; 
+      (좌)center (우)center 중앙정렬.
+      margin-left: auto;
+      여백이 왼쪽으로 들어가기 때문에 아이템은 오른쪽 배치
+      margin-right: auto;
+      여백이 오른쪽으로 들어가기 때문에 아이템은 왼쪽 배치 
+      margin-bottom: auto;
+      여백이 아래쪽으로 들어가기 때문에 아이템은 위쪽 배치
+      margin-top: auto;
+      여백이 위쪽으로 들어가기 때문에 아이템은 아래쪽 배치
+      */
+      margin: 5rem auto 2rem;
+      margin: auto auto 0;
+
+     }
+    footer h2 {
+      margin: 0;
+      /* h2가 기본으로 갖고 있는 마진값으로 body의 마진을 없애도 상단에 여백이 생긴다. */
+    }
+
+    /* 내가 쓴 css style
+    body {
+      margin: 0;
       font-size: 0.8rem;      
     }
 
@@ -26,12 +94,20 @@
       flex-flow: column;
       justify-content: center;
     }
-
+     */
   </style>
 </head>
 <body>
+  <div class="wrapper">     <!-- flex-container -->
+    <footer>                <!-- flex-item -->
+      <h2>footer</h2>
+      <p>국가안전보장회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 대통령은 국무총리·국무위원·행정각부의 장 기타 법률이 정하는 공사의 직을 겸할 수 없다.</p>
+    </footer>
+  </div>
+  <!-- 내가 쓴 html
   <div class="wrapper" id="container">    
     <div class="item"><strong>footer</strong><br>국가안전보장회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 대통령은 국무총리·국무위원·행정각부의 장 기타 법률이 정하는 공사의 직을 겸할 수 없다.</div>
   </div>
+   -->
 </body>
 </html>

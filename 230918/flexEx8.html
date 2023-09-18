@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flexEx8</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    .container {
+      border: 3px solid #000;
+      margin: 0 auto;
+      width: 660px; height: 500px;
+
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      /* justify-content: center; align-content: center; */
+      justify-content: space-evenly; align-content: space-evenly;
+    }
+
+    .container figure {
+      margin: 0;      /* fig 기본값 삭제 */
+    }
+
+    .container figure img {
+            /* 인라인은 base-line이 기본으로 여백이 생김 */
+      /* display: block;      1. 블록으로 변경하거나 */
+      vertical-align: top; /* 2. 인라인값 유지하고 싶을때는 버티컬로 정렬 */
+    }
+
+    .container figure figcaption {
+      background-color: #61677a;
+      color: #fff;
+      text-transform: capitalize;
+      padding: 5px 0;
+    }
+
+    /* 내가 쓴 css style
+    body {
+      text-align: center;
+    }
+
+    .container {
+      background-color: blueviolet;
+      width: 80%; height: 50%;
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+      margin: 5px auto;
+    }
+
+    .container .item {
+      background-color: magenta;
+      display: flex;
+      flex-flow: column wrap;
+    }
+
+    .item1, .item2, .item3, .item4 {
+    }
+    */
+  </style>
+</head>
+<body>
+  <h1>상하 정렬 갤러리</h1>
+  <div class="container">    <!-- flex-container -->
+    <figure>                 <!-- flex-item -->
+      <img src="https://placehold.co/300X200/6f61c0/fff?text=img1" alt="title1">
+      <figcaption>title1</figcaption>
+    </figure>
+    <figure>
+      <img src="https://placehold.co/300X200/cece5a/fff?text=img2" alt="title2">
+      <figcaption>title2</figcaption>
+    </figure>
+    <figure>
+      <img src="https://placehold.co/300X200/3e001f/fff?text=img3" alt="title3">
+      <figcaption>title3</figcaption>
+    </figure>
+    <figure>
+      <img src="https://placehold.co/300X200/a1ccd1/fff?text=img4" alt="title4">
+      <figcaption>title4</figcaption>
+    </figure>
+  </div>
+
+
+
+  <!-- 내가 쓴 html
+  <h1>상하 정렬 갤러리</h1>
+  <div class="container">
+    <figure class="item">
+      <figcaption class="item1">
+        <img src="https://placehold.co/300X200?text=img1" alt="title1">
+      </figcaption>
+      <p>Title1</p>
+      <figcaption class="item2">        
+        <img src="https://placehold.co/300X200?text=img2" alt="title2">
+      </figcaption>
+      <p>Title2</p>
+    </figure>
+
+    <figure class="item">
+      <figcaption class="item3">        
+        <img src="https://placehold.co/300X200?text=img3" alt="title3">
+      </figcaption>
+      <p>Title3</p>
+      <figcaption class="item4">        
+        <img src="https://placehold.co/300X200?text=img4" alt="title4">
+      </figcaption>
+      <p>Title4</p>
+    </figure>
+  </div>
+   -->
+</body>
+</html>
