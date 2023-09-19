@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flexEx7</title>
+  <style>
+    body {
+      margin:0;
+      font-weight: bold;
+      font-size: 1.2;
+      text-transform: capitalize;
+      text-align: center;
+    }
+    .gnb {
+      list-style: none;
+      padding: 0; margin: 0;
+      background-color: #8CABFF;
+
+      display: flex;
+      /* justify-content: space-evenly; */
+    }
+    .gnb li {
+      width: 20%;/* 100% / 메뉴 5개 */
+      
+    }
+    .gnb li a {
+      text-decoration: none;
+      color:inherit;
+      display: block;
+      /* height: 60px; */
+      padding: 0.5rem 0;
+    }
+    .gnb li a:hover {
+      background-color: #4477CE;
+      color:#fff;
+    }
+  </style>
+</head>
+<body>
+  <menu class="gnb">
+    <li><a href="#">home</a></li>
+    <li><a href="#" class="active">company</a></li>
+    <li><a href="#">product</a></li>
+    <li><a href="#">servie</a></li>
+    <li><a href="#">board</a></li>
+  </menu>
+</body>
+</html>

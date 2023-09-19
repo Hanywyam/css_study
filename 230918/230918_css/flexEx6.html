@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flexEx6</title>
+  <style>
+    body {
+      margin: 0;
+      text-align: center;
+    }
+    header {/* flex-container */
+      display: flex;
+      background-color: #33BBC5;
+    }
+    header h1 {/* flex-item */
+      background-color: #614BC3;
+      color:#C8FFE0;
+      margin: 0;
+      font-size: 1.5rem;
+      width: 4rem; height: 10vh;
+      /* aspect-ratio: 2 / 1; */
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    header form {
+      /* width:calc(100% - 4rem - 3rem); */
+      display: flex;
+      align-items: center;
+      /* flex-grow: 1; */
+    }
+    header form * {
+      outline: none;
+      font-size: 1.1rem;
+      font-family: '나눔고딕', '맑은 고딕', 돋움, sans-serif;
+      border:1px solid #000;
+      height: 30px;
+    }
+    header form input[type="search"] {
+      width: 200px;
+      padding: 5px;
+      border-right:none;
+      margin:10px;
+      margin-right: 0;
+    }
+    header form [type=submit]:hover {
+      background-color: #614BC3;
+      color:#fff;
+      cursor: pointer;
+    }
+    header nav {
+      background-color: #85E6C5;
+      width: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+  <header><!-- flex-container -->
+    <h1><!-- flex-item / flex-contaienr -->
+      로고<!-- flex-item -->
+    </h1>
+    <form>
+      <input type="search" id="search">
+      <button type="submit">검색</button>
+    </form>
+    <nav>메뉴</nav>
+  </header>
+</body>
+</html>

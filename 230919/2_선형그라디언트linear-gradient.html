@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>선형그라디언트 linear-gradient</title>
+  <style>
+    h1 {
+      text-align: center;
+      word-break: keep-all;
+    }
+
+    .container {
+      list-style: none;
+      padding: 0;
+      background-color: #ddd;
+      font-weight: bold;
+      font-size: 20px;
+      overflow: hidden;      /* 마진 상쇄현상 해결 */
+    }
+
+    .container .box {  
+      border: 2px solid #000;
+      width: 80%; 
+      min-width: 400px;
+      height: 200px;
+      margin: 20px auto;
+    }
+
+    .box1 {
+      background-image: linear-gradient(orange, violet);
+    }
+    .box2 {
+      /* to bottom 아래쪽으로. 기본값 */
+      background-image: linear-gradient(to bottom, tomato, lightblue);
+      /* to top 위쪽으로.  */
+      background-image: linear-gradient(to top, tomato, lightblue);
+      /* to right 오른쪽으로.  */
+      background-image: linear-gradient(to right, tomato, lightblue);
+    }
+    .box3 {
+      background-image: linear-gradient(to right bottom, rgba(194,51,115,0.5), #279eff);
+    }
+    .box4 {
+      /* 각도로 그라디언트 조절 */
+      background-image: linear-gradient(-125deg,yellow, orange, #94add7);
+    }
+    .box5 {
+      /* 색의 영역을 %로 조절할 수 있다. */
+      background-image: linear-gradient(60deg, #75c2f6 30%, #f31559 80%);
+    }
+    .box6 {
+      /* 투명 그라디언트 */
+      background-image: linear-gradient(90deg, transparent, #6528f7);
+      /* 50% 영역까지 투명 */
+      background-image: linear-gradient(90deg, transparent 50%, #6528f7);
+    }
+    .box7 {
+      /* 그라디언트 패턴화 */
+      background-image: repeating-linear-gradient(#a076f9 0, #d7bbf5 30px);
+      background-image: repeating-linear-gradient(#a076f9 0, #d7bbf5 15%);
+    }
+    .box8 {
+      /* 선명한 스프라이트. 시작, 끝, 시작, 끝 */
+      background-image: repeating-linear-gradient(#468b97 0, #468b97 30px, #f1c938 30px, #f1c938 60px);
+    }
+    .box9 {
+      background-image: repeating-linear-gradient(90deg, #fcafaf 0, #fcafaf 30px, #ff8989 30px, #ff8989 60px, #ff6666 60px,#ff6666 90px);
+    }
+    .box10 {
+      background-image: repeating-linear-gradient(90deg, #fcafaf 0, #fcafaf 30%, #ff8989 30%, #ff8989 60%, #ff6666 60%,#ff6666 90%);
+    }
+
+    .radial1 {
+      /* 영역 범위 내 원형 그라디언트, 원의 모양이 영역에 다르게 따라 보인다. */
+      background-image: radial-gradient(maroon, orange);
+    }
+
+    .radial2 {
+      /* circle 영역의 비율과 상관없이 정원의 형태로 그라디언트 생성 */
+      background-image: radial-gradient(circle, maroon 10%, orange 70%);
+    }
+
+    .radial3 {
+      /* 정원 스트라이프 */
+      background-image: repeating-radial-gradient(circle, #3aa6b9 0, #3aa6b9 30px, #ff9eaa 30px, #ff9eaa 90px);
+    }
+
+  </style>
+</head>
+<body>
+  <h1>선형 그라디언트 linear-gradient</h1>
+  <ul class="container">
+    <li class="box box1">background-image: linear-gradient(1색상, 2색상)</li>
+    <li class="box box2">background-image: linear-gradient(방향, 1색상, 2색상)</li>
+    <li class="box box3">background-image: linear-gradient(방향, 1색상, 2색상)</li>
+    <li class="box box4">background-image: linear-gradient(1색상, 2색상, 3색상, 4색상)</li>
+    <li class="box box5">background-image: linear-gradient(방향, 1색상 위치%, 2색상 위치%, 3색상 위치%)</li>
+    <li class="box box6">background-image: linear-gradient(transparent, 1색상)</li>
+    <li class="box box7">background-image: repeating-linear-gradient (방향, 색상 위치, 색상 위치)</li>
+    <li class="box box8">repeating-linear-gradient(1색상 0, 1색상 30px, 2색상 30px, 2색상 60px)</li>
+    <li class="box box9">background-image: linear-gradient(1색상, 2색상)</li>
+    <li class="box box10">background-image: linear-gradient(1색상, 2색상)</li>
+  </ul>  
+
+  <h1>원형 그라디언트 radial-gradient</h1>
+  <ul class="container">
+    <li class="box radial1">radial-gradient(1색상, 2색상)</li>
+    <li class="box radial2">radial-gradient(circle, 1색상, 2색상) 정 원의 그라디언트</li>
+    <li class="box radial3">repeating-radial-gradient(1색상, 2색상)</li>
+  </ul>
+</body>
+</html>

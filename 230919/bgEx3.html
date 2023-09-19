@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>bgEx3</title>
+  <style>
+    /* teacher css style     */
+    form {
+      border: 3px solid #000;
+      border-radius: 20px;
+      width: 400px;
+      margin: 50px auto;
+      padding: 30px;
+    }
+
+    form input {
+      outline: none;
+      display: block;
+      border-radius: 50px;
+      border: 1px solid #000;
+      width: 80%; 
+      padding: 10px;
+      margin: 10px auto;
+      font-size: 1.1rem;
+      /* 방법1
+      padding: 10px 10px 10px 50px;
+      box-sizing: border-box;
+       */
+      text-indent: 40px;       /* 방법2 들여쓰기 */
+
+      
+      background-repeat: no-repeat;
+      background-position: 10px 50%;
+      background-size: 20px;
+    }
+
+    form input[type=text] {
+      background-image: url(./images/user-solid.svg);
+    }
+    form input[type=email] {
+      background-image: url(./images/envelope-solid.svg);
+    }
+    form input[name=userTel] {
+      background-image: url(./images/phone-solid.svg);
+    }
+
+    form input:hover, form input:focus {
+      background-color: aliceblue;
+    }
+    form input::placeholder {
+      color: turquoise;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    /* 내가 쓴 css style
+    form {
+      width: 450px;
+      padding: 40px 10px;
+      border: 3px solid #000;
+      border-radius: 15px;
+      margin: 30px auto;
+      box-sizing: border-box;
+
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    label {      
+      margin: 5px;
+      padding: 10px;
+      border: 1px solid #000;
+      border-radius: 30px;
+    }
+
+    input {
+      border: none;
+      padding-left: 30px;
+    }
+
+    #userName {
+      background-image: url(./images/user-solid.svg);
+      background-repeat: no-repeat;
+      background-position: 5px 0;
+    }
+
+    #userEmail {
+      background-image: url(./images/envelope-solid.svg);
+      background-repeat: no-repeat;
+      background-position: 5px 0;
+    }
+
+    #userNumber {
+      background-image: url(./images/phone-solid.svg);
+      background-repeat: no-repeat;
+      background-position: 5px 0;
+    }
+
+    label:hover {
+      background-color: #fc0;
+    }
+   */
+  </style>
+</head>
+<body>
+  <form>
+    <label for="userName">
+      <input type="text" name="userName" id="userName" placeholder="이름을 입력하세요" autofocus>
+    </label>
+    <label for="userEmail">
+      <input type="email" name="userEmail" id="userEmail" placeholder="이메일을 입력하세요">
+    </label>
+    <label for="userNumber">
+      <input type="tel" name="userTel" id="userNumber" placeholder="연락처를 입력하세요">
+    </label>
+  </form>
+</body>
+</html>

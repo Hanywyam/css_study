@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>background</title>
+  <style>
+    body{
+      /* 
+      background-image: url(./images/plants.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed; 브라우저를 기준으로 배경이미지를 고정하기 때문에 body의 높이값과 상관없이 위치함.
+      background-position: 50%;
+
+
+      backgroung 축약형:
+       background: 50% #a8df8e url(./images/plants.jpg) no-repeat fixed;
+       
+       
+      순서 상관없이 작성 가능하나, 
+      background-size 작성 시 반드시 포지션 / 사이즈 순서로 작성해야 한다.
+       */
+       background: #a8df8e url(./images/plants.jpg) no-repeat fixed 100% 0 / cover;
+    }
+    .wrapper {
+      width: 400px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>배경 축약 background</h1>
+    <p>background-image 속성을 사용하면 원하는 곳에 배경이미지를 넣을 수 있습니다.</p>
+    <p>background-image 속성을 사용하면 원하는 곳에 배경이미지를 넣을 수 있습니다.</p>
+  </div>
+</body>
+</html>

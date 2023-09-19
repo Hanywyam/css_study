@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>수열선택자Ex</title>
+  <style>
+    .gnb {
+      text-align: center;
+      list-style: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 0;
+      margin: 50px auto;
+      width: 80%;
+
+      display: flex;
+    }
+
+    .gnb li {
+      width: 11.1111%;
+    }
+
+    .gnb li a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    /* 2, 4, 6, 8 a에 색 적용  */
+    .gnb li:nth-child(even) a {
+      background-color: #f78ca2;
+    }
+    /* 1, 5, 9 a에 색 적용 -> 4개 중에 1번째로 수열 적용 */
+    .gnb li:nth-child(4n+1) a {
+      background-color: #fc0;
+    }
+    /* 3, 7 a에 색 적용 -> 4개 중에 3번째로 수열 적용  */
+    .gnb li:nth-child(4n+3) a {
+      background-color: #008ca2;
+    }
+
+    .gnb li:first-child a {
+      border-radius: 30px 0 0 30px;
+    }
+
+    .gnb li:last-child a {
+      border-radius: 0 30px 30px 0;
+    }
+
+    .gnb li:hover a {
+      background-color: #ff3fa4;
+      color: #fff;
+      /* cursor: pointer; */
+    }
+
+  </style>
+</head>
+<body>
+  <ul class="gnb">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#">9</a></li>
+  </ul>
+</body>
+</html>
