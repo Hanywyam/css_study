@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flexItem_flex-shrink</title>
+  <style>
+    h1 {
+      background-color: tomato;
+      color: #fff;
+      display: inline;
+      padding: 3px;
+      border-bottom: 5px double #000;
+    }
+    ul {
+      list-style: none;
+      margin: 10px; padding: 0;
+      background-color: #ddd;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: center;
+      display: flex;
+      width: 800px; height: 60px;
+    }
+    ul li:nth-child(1) {background-color: #FFBFBF;}
+    ul li:nth-child(2) {background-color: #FFCC29;}
+    ul li:nth-child(3) {background-color: #D0BFFF;}
+    ul li {width: 300px;}
+
+    .box1 li {
+      /* 기본값. 값이 넘쳐도 컨테이너가 넘치지 않게 한다. */
+      width: 500px;
+      flex-shrink: 1;      
+    }
+    .box2 li {
+      /* 원래 item이 갖고 있는 값을 그대로 적용.
+      width값 그대로 적용. 즉, 넘치는 경우 컨테이너를 넘김  */
+      flex-shrink: 0;
+    }
+
+    .box3 li:nth-child(1) {flex-shrink: 1;}
+     /* li:300px - (300/5)*1 == 240px */
+    .box3 li:nth-child(2) {flex-shrink: 2;}
+     /* li:300px - (300/5)*2 == 180px */
+    .box3 li:nth-child(3) {flex-shrink: 2;}
+
+    .box4 li:nth-child(1) {flex-shrink: 0;}
+    /* 아이템 크기 변경 없음. 기본값(width값) 유지 */
+    .box4 li:nth-child(2) {flex-shrink: 2;}
+    /* li:300px - {300-(300/3)}*2 = 100 */
+    .box4 li:nth-child(3) {flex-shrink: 1;}
+    /* li:300px - (300/3)*1 = 200 */
+  </style>
+</head>
+<body>
+  <h1>flexItem: flex-shrink 감소 비율</h1>
+  <h2>1. flex-shrink: 1; 기본값. 
+    숫자가 클수록 아이템의 크기는 더 작아짐</h2>
+  <p>flex-shrink: 1; 기본값. 아이템이 컨테이너를 넘기지 않음</p>
+  <ul class="box1">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+  
+  <h2>2. flex-shrink: 0;</h2>
+  <ul class="box2">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+  
+  <h2>3. flex-shrink: 1; flex-shrink: 2;</h2>
+  <ul class="box3">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+  
+  <h2>4. flex-shrink: 1; flex-shrink: 2;</h2>
+  <ul class="box4">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flexItem_order</title>
+  <style>
+    .container {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+      border: 6px solid #000;
+      width: 80vw; height: 60vh;
+      margin: 50px auto;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .container .item {
+      width: 10%; padding: 0.4rem;
+    }
+    /* 
+      order: 
+      flex-item 에 적용되는 속성으로 아이템 배치 순서를 변경할 수 있다.
+      반응형 웹을 만드는 경우, 레이어의 위치를 변경해야 할 때 사용.
+      PC-table-mobile 배치를 각자 다르게 줄 수도 있다.
+    */
+
+    .container .item1 {background-color: #00AF91; order:7;}
+    .container .item2 {background-color: #F58634; order:2;}
+    .container .item3 {background-color: #FFCC29; order:1;}
+    .container .item4 {background-color: #A8DF8E; order:5;}
+    .container .item5 {background-color: #F3FDE8; order:4;}
+    .container .item6 {background-color: #FFBFBF; order:6;}
+    .container .item7 {background-color: #D0BFFF; order:3;}
+  </style>
+</head>
+<body>
+  <h1>flex item : order</h1>
+  <p>order: 
+    flex-item 에 적용되는 속성으로 아이템 배치 순서를 변경할 수 있다.
+    반응형 웹을 만드는 경우, 레이어의 위치를 변경해야 할 때 사용.
+    PC-table-mobile 배치를 각자 다르게 줄 수도 있다.
+  </p>
+  <ul class="container">
+    <li class="item item1">item1</li>
+    <li class="item item2">item2</li>
+    <li class="item item3">item3</li>
+    <li class="item item4">item4</li>
+    <li class="item item5">item5</li>
+    <li class="item item6">item6</li>
+    <li class="item item7">item7</li>
+  </ul>
+</body>
+</html>

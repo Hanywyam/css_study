@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flexItem_flex-basis</title>
+  <style>
+    h1 {
+      background-color: tomato;
+      color: #fff;
+      display: inline;
+      padding: 3px;
+      border-bottom: 5px double #000;
+    }
+    ul {
+      list-style: none;
+      margin: 10px; padding: 0;
+      background-color: #ddd;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: center;
+      display: flex;
+      width: 600px; height: 60px;
+    }
+    ul li:nth-child(1) {background-color: #A3E4DB;}
+    ul li:nth-child(2) {background-color: #FFF8F3;}
+    ul li:nth-child(3) {background-color: #FED1EF;}
+    ul li {
+      width: 300px;
+      flex-grow: 0;   /* 기본값. 컨테이너 영역이 남아도 아이템 채우지 않음. */
+      flex-shrink: 1; /* 기본값. 아이템 크기가 커도 컨테이너를 넘기지 않음. */
+    }
+
+    .box1 li {flex-basis: auto;}
+    .box2 li {flex-basis: 0;}    /* 컨텐츠 제외, 영역 삭제. width값 대신 작성하기도 함. 플렉스 아이템의 컨텐츠를 제외한 영역을 기준으로 grow와 shrink 설정. */
+    .box3 li {flex-basis: 150px;}
+    .box4 li {flex-basis: 300px;}/* 현재, flex-shrink: 1; 적용되어 있어
+    값이 넘쳐도 컨테이너를 넘지 못함. */
+  </style>
+</head>
+
+<body>
+  <h1>flexItem: flex-basis 기준 비율</h1>
+  <h2>1. flex-basis: auto; 기본값. 아이템 컨텐츠 크기에 맞춰 grow 비율 설정</h2>
+  <ul class="box1">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+
+  <h2>2. flex-basis: 0;</h2>
+  <ul class="box2">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+
+  <h2>3. flex-basis: 150px;</h2>
+  <ul class="box3">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+
+  <h2>4. flex-basis: 300px;</h2>
+  <ul class="box4">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+</body>
+</html>
