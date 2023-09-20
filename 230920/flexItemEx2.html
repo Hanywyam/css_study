@@ -5,16 +5,35 @@
   <title>flexItemEx2</title>
   <style>
     body {
+      text-align: center;
       background-color: #ddd;
     }
 
     .container {
-      width: 90vw; height: 60vh;
-      margin: 0 auto;
+      width: 70vw; height: auto;
+      margin: 100px auto;
     }
 
     .container ul {
-      /* width: 800px; height: 500px; */
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+
+      width: 70vw; height: auto;
+    }
+
+    .wrapper .box {
+      background-color: #fff;
+      border: 1px solid #000;
+      border-collapse: collapse; 
+      padding: 10px;
+      flex-shrink: 1;
+      flex-basis: auto;
+    }
+
+    /* 
+    .container ul {
+      width: 800px; height: 500px;
       text-align: center;
       list-style: none;
       display: flex;
@@ -29,8 +48,8 @@
       width: 0;
       flex-grow: 1;
       flex-basis: auto;
-    }
-/* 
+    } */
+
     .container li:nth-child(1) {flex-grow: 1;}
     .container li:nth-child(2) {flex-grow: 1;}
     .container li:nth-child(3) {flex-grow: 1;}
@@ -42,12 +61,12 @@
     .container li:nth-child(9) {flex-grow: 1;}
     .container li:nth-child(10) {flex-grow: 1;}
     .container li:nth-child(11) {flex-grow: 1;}
-     */
+   
   </style>
 </head>
 <body>
   <div class="container">
-    <ul>
+    <ul class="wrapper">
       <li class="box box1">추억과 비둘기, 밤이 옥 까닭입니다</li>
       <li class="box box2">별빛이 별에도</li>
       <li class="box box3">시와 쓸쓸함과 어머님</li>
