@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+/* 
+@import 다른 문서를 가져올 때
+@import url();
+
+웹폰트란?
+  사용자의 폰트 설치와 상관없이 웹에서 항상 원하는 서체를 사용할 수 있게 하는 폰트
+
+현재 웹폰트 사용: 사용자의 컴퓨터에 설치되지 않은 글꼴을 서버에 올려 놓은 후 해당 사이트에 접속하는 컴퓨터에 다운되어 보여지게 함.
+
+  @font-face {
+    font-family: '사용자 지정 이름';
+    src: local(), -> 많이 쓰는 서체는 사용. 생략이 가능하다.
+         url() format();
+  }
+
+  - 설정 : 내가 웹폰트를 사용하기 위한
+  @font-face {
+    font-family: '사용자 지정 이름'; <- 스타일 문서에 적용할 이름으로 내가 설정할 수 있음
+    src: local('로컬 서체 이름을 내가 설정한 이름 아님'),
+      url('경로') format('파일포맷);
+    font-style: normal; 
+    font-weight: 400;
+    font-display: swap; 로딩 상태에 따른 동작 설정
+      swap; FOUT 방식. 로딩되는 동안 기본 서체로 보이고 완료되면 웹폰트 적용. 웹폰트 로딩 여부와 관계없이 항상 글자 보임
+      auto; 브라우저 기본값
+      block; FOIT 방식. 웹폰트가 로딩되지 않으면 텍스트를 렌더링하지 않음. 로딩 완료 후 글자 보임
+    unicode-range: 유니코드로 지정한 글자에만 웹폰트를 적용. 등록한 글자가 텍스트에 없으면 다운로드 요청 하지 않기 때문에 불필요한 다운로드를 하지 않음 
+  }
+
+  참고 site: font-weight mapping
+  https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#common_weight_name_mapping
+
+
+  subset font: 한글의 경우 조합이 많아서 11172자 -> 2350자로 최적화해준다.
+  참고 site: 웹 폰트 사용과 최적화의 최근 동향(naver)
+  https://d2.naver.com/helloworld/4969726
+*/
+
+
+
+/* 
+https://fonts.google.com/ 에서 Selected families > @import 카피해왓습니다.
+가져온 폰트 주석으로 메모. (아래)
+font-family: 'Lobster', cursive;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@400;700&family=Shadows+Into+Light&display=swap');
+
+/* 
+font converter
+갖고 있는 ttf 또는 otf 폰트를 woff woff2 로 변환하여 설정.
+  woff = web open format의 약자.
+  woff woff2 용량이 엄청 가벼운 서체 파일. 웹에서 버겁지 않아 많이 사용.
+  왠만한 서버에서 사용이 가능하다.
+*/
+
+@font-face {  /* 이건 적용이 아니라 설정이야. '돋움', 'sans-serif' 이런거 적용 안함!
+  font-family에 서체 이름은 내가 정하는 이름이지만 보통 서체이름으로 설정한다.*/
+  font-family: 'GmarketSans';
+  src: local('GmarketSansTTFLight'), 
+  url(./font/GmarketSansTTFLight.woff2) format('woff2');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {  
+  font-family: 'GmarketSans';
+  src: local('GmarketSansTTFMedium'), 
+  url(./font/GmarketSansTTFMedium.woff2) format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {  
+  font-family: 'GmarketSans';
+  src: local('GmarketSansTTFBold'), 
+  url(./font/GmarketSansTTFBold.woff2) format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* 
+font-family의 이름은 갖지만, font-weight 로 구분하여 사용한다.
+*/

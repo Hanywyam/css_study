@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- 익스플로어 호환 위해 씀 -->
+  <title>title</title>
+  <meta name="description" content="웹사이트를 만들어 봅시다">
+  <!-- og -->
+  <meta property="og:title" content="webEx">
+  <meta property="og:url" content="https://kimmiri.github.io/og">
+  <meta property="og:image" content="https://kimmiri.github.io/og/images/bok_choi.jpg">
+  <meta property="og:description" content="웹사이트 연습 페이지입니다">
+  <meta property="og:type" content="website">
+
+  <!-- favicon -->
+  <!-- link:favicon 치면 자동생성
+     → <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    하지만 다르게 할거임.
+    파비콘 site: https://realfavicongenerator.net/
+    사이트에서 이미지 업로드하면 파비콘이랑 기타등등 파일과 코드도 만들어줌.
+    만들어준 파일 저장소에 정리하고, 코드 복붙 후 href 파일 경로 수정.
+    .webmanifest 도 열어서 "src" 파일 경로 수정.
+    -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <!-- 
+      .webmanifest 또는 .manifast 란?
+      웹 기술 모음집의 일부로 앱 스토어를 거치지 않고 장치의 홈 화면에 설치
+      사전 다운로드를 통해 오프라인에서도 동작
+      웹 앱 정보를 JSON 텍스트 파일로 제공
+      주로 아이콘, 작성자, 버전, 설명 등의 필요한 리소스 등을 작성.
+    -->
+
+    <!-- 초기화 css: 모든 타입의 기본 성격을 초기화가 될 수 있도록 설정해주는 파일.
+      페이지별로 구성을 할 때, reset.css는 메인 뿐만 아니라 모든 문서에 필요하다.
+      common 또는 reset 폴더를 만들어서 모든 구성에 연결해서 사용한다.
+    -->
+    <link rel="stylesheet" href="../common/reset.css">
+
+    <!-- 웹폰트 설정 css -->
+    <link rel="stylesheet" href="../common/font.css">
+    <!-- 내가 작성한 header, footer css -->
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./footer.css">
+    <!-- 내가 작성한 css: 항상 헤드 젤 마지막에 작성! -->
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  
+  <!-- 방법1: 큰 사이트의 경우 
+
+  <div class="container">
+    <header></header>
+    <nav></nav>
+    <div class="contents"></div>
+    <footer></footer>
+  </div>
+
+  -->
+
+<!-- 
+  방법2: 헤더 - 메인 - 푸터 로 간단하게 제작.
+
+  컨텐츠 마크업(영역 구분)후 주석을 달아 구조 이름을 메모로 남겨 정리하면 보기 좋다.
+  참고 사이트 29cm > view-source:https://www.29cm.co.kr/home/
+ -->
+
+  <!-- header 영역 -->
+  <div class="container">
+    <header>
+      <h1><em>kim's kitchen</em> cooking class</h1>
+      <menu class="global_menu">
+        <li><a href="#">홈</a></li>
+        <li><a href="#">소개</a></li>
+        <li><a href="#">교실</a></li>
+        <li><a href="#">케이터링</a></li>
+        <li><a href="#">연락처</a></li>
+      </menu>
+    </header>
+  
+    <!-- main 영역 -->
+    <main>
+      <!-- 
+        article: 하나만 두고 봤을때 독립적으로 볼 수 있는 내용.
+        제목태그를 꼭 써야한다.
+     -->
+      <article>
+        <div class="box">
+          <figure>
+            <img src="./images/bok-choi.jpg" alt="샐러드">
+            <figcaption>oriental salad</figcaption>
+          </figure>
+          <div class="txt_wrapper">
+            <h2>채식주의자</h2>
+            <h3>런던에서의 5주 코스</h3>
+            <p>5주간 채식주의자 음식에 대해 소개하고 쌀과 국수 요리를 가르친다.</p>
+          </div>
+        </div>
+  
+        <div class="box">
+          <figure>
+            <img src="./images/teriyaki.jpg" alt="teriyaki">
+            <figcaption>teriyaki</figcaption>
+          </figure>
+          <div class="txt_wrapper">
+            <h2>소스 마스터 클래스</h2>
+            <h3>1일 워크샵</h3>
+            <p>1일 집중 코스에서는 다양한 요리에서 사용할 수 있는 가장 맛잇는 소스를 만드는 방법을 살펴본다.</p>
+          </div>
+        </div>
+      </article>
+  
+      <aside>
+        <h2>인기요리법</h2>
+        <ul class="recipe">
+          <li><a href="#">후라이드</a></li>
+          <li><a href="#">고추바사삭</a></li>
+          <li><a href="#">뿌링클</a></li>
+          <li><a href="#">간지</a></li>
+        </ul>
+        <h2>연락처</h2>
+        <address>경기 수원시 팔달구 매산동</address>
+      </aside>
+    </main>
+  
+    <!-- footer 영역 -->
+    <footer>
+      &copy; Kim's Kitchen 김씨네 키친
+    </footer>
+  </div>
+</body>
+</html>

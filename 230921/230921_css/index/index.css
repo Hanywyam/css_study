@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/**** main ****/
+.container main {
+  display: flex;
+}
+
+.container main article{
+background-color: #f1eee9;
+/*  다 같은 비율 값. 아래 aside와 같이 1/2/3순서대로 적용.
+width: 650px;
+width: 69%;   650/932*100 :가변형 웹사이트의 경우 픽셀 -> 퍼센트 값으로 변경 
+width: 69;
+*/
+width: 7;
+padding: 30px 20px;
+}
+
+.container main article .box {
+  display: flex;
+  margin-bottom: 40px;
+  line-height: 2;
+}
+
+.container main article .box figure {
+  background-color: #fff;
+  border: 1px solid red;
+  text-align: right;
+  color: #9c999c;
+  font-style: italic;
+  font-size: 14px;
+  padding: 5px;
+  margin-right: 20px;
+}
+
+.container main article .box figure figcaption {
+  margin-top: 5px;
+}
+
+.container main article .box .txt_wrapper {
+  width: 280px;
+}
+
+.container main article .box .txt_wrapper h2 {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.container main article .box .txt_wrapper h3 {
+  font-weight: 500;
+  margin: 5px 0;
+  color: red;
+}
+
+.container main aside{
+  /*
+  width: 282px;   container:932px - article: 650px 
+  width: 31%; 
+  flex-grow: 31;
+  */
+  flex-grow: 3;
+}
+
+.container main aside h2 {
+  color: red;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 30px 20px;
+}
+
+.container main aside .recipe a {
+  display: block;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #e4010b;
+  padding: 20px 0 12px 20px;
+}
+
+.container main aside .recipe a:hover {
+  background-color: #e4010b;
+  color: #fff;
+
+}
+
+.container main aside address {
+  margin: 30px 20px;
+  font-weight: 500;
+}
+
