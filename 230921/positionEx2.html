@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>positionEx2</title>
+  <style>
+    html {
+      scroll-behavior: smooth;  /* 부드러운 스크롤 
+      스크립트에서 원하는 위치로 이동이 잘 안되서 사용은 잘 안함... */
+    }
+    
+    p {
+      line-height: 1.7;
+      width: 450px;
+      text-align: justify;
+    }
+
+    p em {
+      font-size: 1.6rem;
+      font-style: normal;
+      padding: 2px;
+      background-color: orangered;
+      color: #fff;
+    }
+
+    .blank {
+      height: 300vh;
+    }
+
+    .btn{
+      width: 50px; height: 50px;
+      line-height: 50px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: rgba(255, 69, 0, 0.7);
+      color: #000;
+      padding: 20px;
+      margin: 20px;
+      border-radius:50% 50%;
+
+      position: fixed;
+      bottom: 0 ; right: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>positionEx2</h1>
+  <p>fixed 값을 사용하는 요소 역시 absolute 값을 사용하는 요소처럼 문서 흐름과는 상관없이 좌표로 위치를 결정하지만, 기준이 되는 요소가 <em>부모요소가 아니라 브라우저가 기준</em>이 된다.
+  </p>
+  <p>한번 배치되면 fixed라는 이름처럼 브라우저 창을 스크롤 하더라도 계속 고정되어 표시된다.</p>
+  <div class="blank"></div>
+  <a href="#" class="btn">위로</a>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>positionEx1</title>
+  <style>
+    body {
+      line-height: 1.5;
+      margin: 0;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    body * {
+      /* 연습용. 실무?에서는 common만들어서 설정하기 */
+      margin: 0; padding: 0;
+      list-style: none;
+    }
+
+    .container {
+      background-color: skyblue;
+      width: 400px; height: 400px;
+      margin: 10% auto;
+
+      position: relative;
+      /* 위치 특성값과 함께 작성하지 않으면 기존 흐름을 유지한 채 */
+    }
+
+    .container .box {
+      width: 50px; height: 50px;
+      line-height: 50px;
+      background-color: orange;
+      position: absolute;
+    }
+
+    .container .box1 {
+      top: 0; left: 0;
+    }
+    .container .box2 {
+      top: 0; right: 0;
+  }
+    .container .box3 {
+     bottom: 0; left: 0;
+  }
+    .container .box4 {
+     bottom: 0; right: 0;
+  }
+    .container .box5 {
+    /* 값이 정확하게 나와있을 때만 쓸 수 있음.
+    top: 50%; left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    */
+    top: 0;    bottom: 0; left: 0; right: 0;
+    margin: auto;
+  /* 
+    높이 값이 지정되어 있어야만 세로 중앙 정렬이 가능.
+    높이 값이 없을 때는 transform으로 해야 한다.
+  */
+  }
+
+  </style>
+</head>
+<body>
+  <ul class="container">
+    <li class="box box1">1</li>
+    <li class="box box2">2</li>
+    <li class="box box3">3</li>
+    <li class="box box4">4</li>
+    <li class="box box5">5</li>
+  </ul>
+</body>
+</html>
