@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+body, ul, h1, h2, a {
+  margin: 0; padding: 0;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;  
+  font-size: 1.2rem;
+}
+
+
+/* header 영역 */
+header {
+  background-color: #8f2d56;
+  color: #fff;
+  width: 100vw; height: 110px;
+
+  position: fixed;
+  top: 0; left: 0;
+}
+
+header .wrapper1 {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+
+/* login join */
+header #input_box {
+  font-size: 1rem;
+  width: 120px; height: 27px;
+  padding: 1px 20px;
+  background-color: #d81159;
+  display: flex;
+  position: absolute;
+  right: 0; top: 0;
+}
+
+header #input_box a:hover {
+  color: #ffbc42;
+}
+
+/* header #input_box:nth-child(1)::after {
+  display: inline-block;
+  width: 2px; height: 12px;
+  background-color: #fff;
+  position: absolute;
+  top: 0; bottom: 0; left: 50px;
+  margin: auto;
+} */
+
+header .wrapper2 {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;  
+}
+
+/* logo */
+header h1 {
+  background-color: #ffbc42;
+  color: #8f2d56;
+  text-align: center;
+  width: 120px; height: 60px;
+}
+
+/* navigation bar */
+header nav {
+  font-family: 'Lobster', cursive;
+  text-transform: capitalize;
+}
+
+header nav .gnb {
+  width: 520px; height: 60px;
+  display: flex;
+  flex-grow: 1;
+  position: sticky;
+  right: 0;
+}
+
+header nav .gnb li {
+  width: 25%;
+}
+
+header nav .gnb li a {
+  background-color: #006ba6;
+  display: block;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+}
+
+header nav .gnb li a:hover {
+  background-color: #28b4ff;
+}
+
+
+/* main 영역 */
+h2 {
+  margin-top: 100px;
+  font-size: 3rem;
+  height: 300vh;
+}

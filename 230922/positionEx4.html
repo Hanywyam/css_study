@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>positionEx4</title>
+  <style>
+    body, h1, h2, p {
+      margin: 0; padding: 0;
+    }
+    .container {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    .container header, footer {
+      background-color: navy;
+      height: 150px;
+      padding: 20px;
+    }
+
+    .container .box2 {
+      background-color: #ddd;
+      width: 100%; 
+      display: flex;
+    }
+
+    .container .ctt1 {
+      background-color: red;
+      width: 70%;
+      height: 300vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .container .ctt2 {
+      background-color: skyblue;
+      width: 30%; 
+      height: 200px;
+      padding: 20px;
+      box-sizing: border-box;
+
+      position: sticky;
+      top: 0;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="box1">
+      <h1>layout_sticky1</h1>
+      <p>header</p>
+    </header>
+
+    <main class="box2">
+      <p class="ctt1">main contents</p>
+      <p class="ctt2">sticky sidebar</p>
+    </main>
+
+    <footer class="box3">
+      <p>footer</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>z-index</title>
+  <style>
+    body {
+      margin: 0; 
+      height: 300vh;
+    }
+    .container {
+      background-color: #a2c579;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box ;
+
+      position: fixed;
+      top: 0; left: 0;
+      z-index: 1000;
+    }
+    .container h1 {
+      background-color: #d2de32;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .wrapper {
+      list-style: none;
+      margin: 200px auto;
+      padding: 0;
+      width: 400px; height: 400px;
+      background-color: #ddd;
+      font-weight: bold;
+      font-size: 2rem;
+
+      position: relative;
+      /* 위치 속성 없이 작성 시 일반적인 흐름을 가지기 때문에 기준으로 많이 사용 */
+    }
+
+    .wrapper .box {
+      color: #fff;
+      width: 200px; height: 200px;
+      position: absolute;
+    }
+
+    /* 
+    z-index
+    : 숫자가 클수록 위쪽에 위치한다.
+      9, 99, 999, 9999.... 또는 1, 10, 100, 1000... 값으로 준다.(관습적)
+     */
+    .wrapper .box1 {background-color: #053b50; top: 10px; left: 10px;
+      z-index: 1;
+    } 
+    .wrapper .box2 {background-color: #176b87; top: 40px; left: 40px;
+      z-index: 100;
+    } 
+    .wrapper .box3 {background-color: #64ccc5; top: 70px; left: 70px;
+      z-index: 10;
+    } 
+    .wrapper .box4 {background-color: #016a70; top: 100px; left: 100px;
+    } 
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>position, flex, grid 요소의 계층 순위 결정</h1>
+    <ul>
+      <li>요소에 포지션 값 적용시 포토샵의 레이어처럼 계층이 생김<br>이때 겹치는 순서를 정의</li>
+      <li>숫자가 클수록 위쪽에 위치. 단위값 없음.</li>
+    </ul>
+  </div>
+
+  <ul class="wrapper">
+    <li class="box box1">box1</li>
+    <li class="box box2">box2</li>
+    <li class="box box3">box3</li>
+    <li class="box box4">box4</li>
+  </ul>
+
+</body>
+</html>
