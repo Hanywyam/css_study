@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>position_sticky2</title>
+  <style>
+    body, h1, h2 { margin: 0;}
+    header, footer {background-color: #ff6969; height: 100px; padding: 20px;}
+
+    .contents {
+      border: 6px solid #000;
+      display: flex;
+    }
+
+    .contents article { /*flex-item / flex- container */
+      background-color: #ddd;
+      flex-grow: 3;
+      padding: 20px;
+      height: 220vh;
+
+      display: flex;
+      align-items: flex-start;
+
+      position: relative;
+    }
+
+    /* 교차축 기본값 = strech -> 높이값이 있으면 적용되지 않는다. 
+      align-items: flex-start; 컨텐츠 기본값으로 정렬됨.
+    */
+
+    .contents aside { /*flex-item */
+      background-color: #c70039;
+      color: #fff;
+      flex-grow: 1;
+      padding: 20px;
+
+      height: 400vh;
+    }
+
+    .contents article .relative {
+      background-color: #004225;
+      color: #fff;
+
+      position: relative;
+      /* top: 50px; 다른 목적으로 쓸 데가 많아서 top값은 잘 쓰지 않는다.*/
+      /* 원래 있던 위치에서 이동. */
+    }
+    .contents article .fixed {
+      background-color: #ffb000;
+      position: fixed;
+      /* flex와 fixed 동시 적용시 fixed 우선 적용 */
+      top: 165px; left: 200px;
+      /* 브라우저 기준 고정 */
+    }
+    .contents article .absolute {
+      background-color: #ffcf9d;
+      position: absolute;
+      /* flex와 absolute 동시 적용시 absolute 우선 적용 */
+      top: 20px; left: 260px;
+    }
+    .contents article .sticky {
+      background-color: #ff3fa4;
+      position: sticky;
+      /* 위치 값이 없을 때:
+      어떤 값도 주지 않으면 일반적인 값을 따라간다.
+      위치값이 없으면 relative와 같은 값을 갖고 있어서, 그 옆에 정렬되어 있는거임. 
+      부모 요소가 스크롤에 따라 화면 밖으로 넘어가면 함께 넘어감.
+      */
+      top: 20px; left: 380px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>position_sticky2</h1>
+    <h2>header</h2>
+  </header>
+  <div class="contents">
+    <article>
+      <h2 class="relative">relative</h2>
+      <h2 class="fixed">fixed</h2>
+      <h2 class="absolute">absolute</h2>
+      <h2 class="sticky">sticky</h2>
+    </article>
+    <aside>
+      <h2>aside</h2>
+    </aside>
+  </div>
+  <footer>
+    <h2>footer</h2>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+body {
+  font-family: 'spoqaHanSan', -apple-system, BlinkMacSystemFont, '맑은 고딕', 돋움, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+main {
+  background-color: #ddd;
+  height: 200vh;
+  font-weight: 700;
+  font-size: 4rem;
+  padding-top: 200px;
+}
+
+/**** css nav ****/
+h1 {
+  background-color: #6528f7;
+  color: #fff;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+/**** 대메뉴 ****/
+.main_menu {
+  position: sticky;
+  top: 0;
+
+  background-color: #a076f9;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+.main_menu > li {
+  flex-basis: 200px;
+}
+
+/* 각각의 대메뉴 제목 부분 */
+.main_menu > li > a{  /* 바로 밑에 있는 li의 a에만 값이 적용 */
+  display: block;
+  font-style: 1.5rem;
+  height: 50px; line-height: 50px;
+  min-width: 120px;
+  /* width: 200px; */
+
+  border-right: #FFF solid 1px;
+}
+
+.main_menu > li:last-child a {
+  border-right: none;
+}
+
+.main_menu > li > a:hover {
+  background-color: #d7bbf5;  
+  color: #fff;
+}
+
+/**** 소메뉴 ****/
+.main_menu li .sub_menu{
+  display: none;
+}
+
+/* 각 대메뉴에 마우스를 올리면 해당 대메뉴의 소메뉴가 나타남 */
+.main_menu > li:hover > .sub_menu {
+  display: block;
+}
+
+.main_menu li .sub_menu a {
+  display: block;
+  background-color: #ede4ff;
+  border-bottom: 1px solid #000;
+  height: 30px; line-height: 30px;
+}
+
+.sub_menu li:last-child a {
+  border-bottom: none;
+}
+
+.main_menu li .sub_menu a:hover {
+  background-color: #6528f7;
+  color: #fff;
+}

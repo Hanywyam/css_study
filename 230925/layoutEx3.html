@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>layoutEx3</title>
+  <style>
+    body {margin: 0;padding: 0;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    /* 1) background 축약형 먼저 작성 */
+    section {
+      width: 100%; height: 100vh;
+      background: no-repeat 50% / cover;
+    }
+
+    /* 2) 적용되는 배경 값 뒤에 작성해야 오류가 발생하지 않는다. */
+    section:nth-child(1) {background-image: url(./img/antelope-canyon-1128815_1280.jpg);}
+    section:nth-child(2) {background-image: url(./img/astronomy-1867616_1280.jpg);}
+    section:nth-child(3) {background-image: url(./img/forest-3622519_1280.jpg);}
+    section:nth-child(4) {background-image: url(./img/poppies-174276_1280.jpg);}
+    section:nth-child(5) {background-image: url('https://picsum.photos/id/38/1200/700');}
+    /* lorem image / lorem picsum / place images / placeholder
+    임시 이미지 사이트. 온라인으로 불러오는 이미지로 로딩 시간이 필요.(느림) */
+
+    h2 {
+      background-color: skyblue;
+      margin: 0 auto;
+      width: 50%; height: 50px;
+      line-height: 50px;
+      border-radius: 0 0 15px 15px;
+
+      position: sticky;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h2>title1</h2>
+    <!-- <img src="./img/antelope-canyon-1128815_1280.jpg" alt="배경이미지"> -->
+  </section>
+  <section>
+    <h2>title2</h2>
+    <!-- <img src="./img/astronomy-1867616_1280.jpg" alt="배경이미지"> -->
+  </section>
+  <section>
+    <h2>title3</h2>
+    <!-- <img src="./img/forest-3622519_1280.jpg" alt="배경이미지"> -->
+  </section>
+  <section>
+    <h2>title4</h2>
+    <!-- <img src="./img/ocean-3605547_1280.jpg" alt="배경이미지"> -->
+  </section>
+  <section>
+  <h2>title5</h2>
+</section>
+</body>
+</html>
