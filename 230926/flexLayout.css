@@ -98,14 +98,20 @@ header p {
   margin-left: 6px;
 }
 
-h2 {
-  font-size: 3rem;
-}
-
+/* section */
 section {
   display: flex;
   justify-content: center;
 }
 
-.txt-box {}
-.bg-box {}
+section h2 {
+  font-size: 3rem;
+}
+
+section .txt-box {}
+section .bg-box {
+  /* width: ; */
+  /* flex-grow: ; */
+  text-indent: -9999px;   /* 화면 밖으로 보내서 안보이게 */
+  background: url(./images/unsplash1.jpg) no-repeat 50% / cover;
+}
