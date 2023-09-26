@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* font connect */
+@import url(../common/pretendardvariable.css);
+/* 
+font-family: 'Fugaz One', cursive;
+font-family: 'Victor Mono', monospace;
+ */
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Victor+Mono:ital@0;1&display=swap');
+
+/* css 변수 선언 */
+@import url(./cssVariable.css);
+
+html {
+  /* rem의 기준 */
+  font-size: 18px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/**** 구조적인 마크업에 필요한 styling ****/
+
+body {
+  /* css 변수 적용 var() 
+  : cssVariable.css 변수 파일 만들고,
+    @import로 여기에 파일 연결하고,
+    적용하고자 하는 곳에 
+    var(입력값); 넣으면 됨. 깔끔. */
+  font-family: var(--font-ko);
+  font-weight: 400;
+  background-color: #fafaf0;
+  color: #767671;
+  text-transform: capitalize;
+  line-height: 1.6;
+  /* 한글 기준 줄바꿈. 문장이 자동 줄바꿈 될 때 어절을 기준으로 줄바꿈. 
+  요즘 폰트 기본 설정. */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.min-width {
+  /* 한정된 width값 설정 */
+  margin: 10% auto;
+  width: 70%;
+  min-width: 1200px;
+  /* height: 400px; 한정된 높이값은 절대 주지 않는다.
+  작은 컨텐츠는 높이값을 줘도 되지만,
+  영역별로 높이값은 절대 넣지 않는다. 호환이 어려움. */
+}
+
+.italic {
+  font-style: italic;
+}
+
+header h1 {
+  font-family: var(--font-en-f);
+  font-weight: 400;
+  font-size: 8rem;
+}
+
+header p {
+  width: 80%;
+}
+
+.ghost-btn, button[type=submit] {
+  background-color: transparent;
+  /* button 배경색 투명으로 변경 */
+  cursor: pointer;
+  /* button 커서 기본값 변경 */
+  border: 3px solid #767671;
+  border-radius: 30px;
+  padding: 10px 40px;
+  /* 글자값이 다를 때는 padding 추천
+  글자값이 같을 때는 width 값도 괜춘 */
+  text-transform: uppercase;
+  letter-spacing: 2px;  /* 자간 */
+
+  /* 인라인태그 성질 변경 */
+  display: inline-flex;
+  align-items: center;
+  margin: 5vh 0;
+
+}
+
+/* 방법 1)
+.ghost-btn:hover, button[type=submit]:hover { 
+   방법 2) */
+:is(.ghost-btn, button[type=submit]):hover {  /* 선택자가 많을 때 사용 */
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+:is(.ghost-btn, button[type=submit]):hover span { /* 하위 선택자 */
+  transition: 0.3s;  /* 움직임의 변화. 스르륵 변함. */
+  margin-left: 6px;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.txt-box {}
+.bg-box {}
