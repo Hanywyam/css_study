@@ -11,55 +11,74 @@
   <link rel="stylesheet" href="./pigmaIndex.css">
 </head>
 
+<!-- body 시작 -->
 <body>
   <div class="index_container">
 
 <!-- header 영역 -->
+  <div class="header_wrapper">
     <header>
-      <!-- logo 영역 -->
-      <h1><a href="./pigmaIndex.html">logo</a></h1>
       <!-- navigation 영역 -->
       <nav>
         <ul>
-          <li><a href="#">about</a></li>
-          <li><a href="#">service</a></li>
-          <li><a href="#">protfolio</a></li>
-          <li><a href="#">board</a></li>
-          <li><a href="#">contact</a></li>
-          <li><a href="#">element</a></li>
-          <li><a href="#">shop</a></li>
+          <li class="main_menu">
+            <a href="#">menu</a>
+            <ul class="sub_menu">
+              <li><a href="#">about</a></li>
+              <li><a href="#">service</a></li>
+              <li><a href="#">protfolio</a></li>
+              <li><a href="#">board</a></li>
+              <li><a href="#">contact</a></li>
+              <li><a href="#">element</a></li>
+              <li><a href="#">shop</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
-      <a href="#">contact us</a>
+      <!-- logo 영역 -->
+      <h1>
+        <a href="./pigmaIndex.html">
+          <img src="./homepage/logo.png" alt="logo" class="logo">
+        </a>
+      </h1>
+      <!-- utill 영역 -->
+      <div class="utill">
+        <a href="#">contact us</a>
+      </div>
     </header>
+  </div>
 
 <!-- main 영역 -->
     <main>
       <!-- 메인 컨텐츠 이미지(롤링) -->
       <div class="main_contents">
+        <!-- img / css 에서 bg로 넣어볼까..고민
         <ul>
           <li><a href="#"><img src="./homepage/hero-1.jpg" alt="main_image1"></a></li>
           <li><a href="#"><img src="./homepage/hero-3.jpg" alt="main_image2"></a></li>
         </ul>
+         -->
       </div>
 
       <!-- 서브 컨텐츠 best / new -->
       <div class="sub_contents">
         <h2><a href="#">best</a></h2>
         <h2><a href="#">new</a></h2>
-        <ul>
-          <li><a href="#"><img src="./homepage/img-7.jpg" alt="sub_con-img1"></a></li>
-          <li><a href="#"><img src="./homepage/img-8.jpg" alt="sub_con-img2"></a></li>
-          <li><a href="#"><img src="./homepage/img-9.jpg" alt="sub_con-img3"></a></li>
-        </ul>
+        <div class="sub_con-img">
+          <ul>
+            <li><a href="#"><img src="./homepage/img-7.jpg" alt="sub_con-img1"></a></li>
+            <li><a href="#"><img src="./homepage/img-8.jpg" alt="sub_con-img2"></a></li>
+            <li><a href="#"><img src="./homepage/img-9.jpg" alt="sub_con-img3"></a></li>
+          </ul>
+        </div>
       </div>      
       
       <!-- youtube 영역 -->
-      <article>
+      <article class="youtube_container">
         <h6>유투브 영역</h6>
 
         <!-- youtube 글상자 -->
-        <section class="youtube">
+        <section class="youtube_wrapper">
           <h3>Youtube Play Slider</h3>
           <p>세상을 바꿀수 있다고 생각하는 제대로 정신나간 사람들이 세상을 변화시킨다.</p>
           <!-- youtube url -->
@@ -88,19 +107,19 @@
       </article>
 
       <!-- 이미지 + 설명 영역 -->
-      <article>        
+      <article class="img_container">        
         <h6>이미지 설명 영역</h6>
         <!-- img / copy 1 -->
         <section>
-          <div class="wrapper">
-            <img src="./homepage/img-5.jpg" alt="decoImg1">
+          <div class="img_wrapper1">
+            <!-- <img src="./homepage/img-5.jpg" alt="decoImg1"> -->
             <h3>ALL OVER THE WORLD<em>DIGITAL MARKETING.</em></h3>            
           </div>
         </section>
 
         <!-- img 목록 -->
         <section>
-          <div class="imgWrapper">
+          <div class="img_wrapper2">
             <ul>
               <li><img src="./homepage/img-1.jpg" alt="imgWrapper"></li>
               <li><img src="./homepage/img-2.jpg" alt="imgWrapper"></li>
@@ -120,23 +139,23 @@
         </section>
 
         <!-- 포인트 설명 -->
-        <section>
-          <img src="./homepage/img-4.jpg" alt="decoImg2">
-           <div class="wrapper1">
+        <section class="txt_wrapper">
+          <!-- <img src="./homepage/img-4.jpg" alt="decoImg2"> -->
+           <div class="txt_wrapper1">
             <h3>10월</h3>
             <p>투자금 회수기간</p>
             <p>Development</p>
            </div>
-           <div class="wrapper2">
+           <div class="txt_wrapper2">
             <h3>40%</h3>
             <p>수익률</p>
             <p>Branding</p>
           </div>
-           <div class="wrapper3">
+           <div class="txt_wrapper3">
             <h3>300만원</h3>
             <p>평균임대료</p>
           </div>
-           <div class="wrapper4">
+           <div class="txt_wrapper4">
             <h3>20평</h3>
             <p>평균 운영평수</p>
             <p>Marketing</p>
@@ -145,19 +164,19 @@
       </article>
 
       <!-- 벤다이어그램(직군영역설명) -->
-      <article>
+      <article class="jobVenn_wrapper">
         <h6>벤다이어그램(직군영역설명)</h6>
         <section>
           <h3>We'd love to build something amazing</h3>
-          <div class="Venn_diagram">
+          <div class="job_Venn1">
             <h4>Owner&CEO</h4>
             <p>We'd love to build something amazing</p>
           </div>
-          <div class="Venn_diagram">
+          <div class="job_Venn2">
             <h4>Graphic Designer</h4>
             <p>We'd love to build something amazing</p>
           </div>
-          <div class="Venn_diagram">
+          <div class="job_Venn3">
             <h4>Senior Programmer</h4>
             <p>We'd love to build something amazing</p>
           </div>
@@ -165,7 +184,7 @@
       </article>
 
       <!-- process / table -->
-      <article>
+      <article class="processTable">
         <h6>프로세스 / 테이블</h6>
         <section>
           <h2><a href="#">PROCESS</a></h2>
@@ -200,7 +219,7 @@
       </article>
 
       <!-- store map -->
-      <article>
+      <article class="map_wrapper">
         <h4>store map</h4>
         <ul>
           <li><a href="#">서울</a></li>
@@ -230,26 +249,30 @@
     <footer>
       <!-- instagram -->
       <div class="instagram_box">
-        <a href="#">@dyami</a>
-        <ul>
-          <li><img src="./homepage/insta-01.jpg" alt="insta-01"></li>
-          <li><img src="./homepage/insta-02.jpg" alt="insta-02"></li>
-          <li><img src="./homepage/insta-03.jpg" alt="insta-03"></li>
-          <li><img src="./homepage/insta-04.jpg" alt="insta-04"></li>
-          <li><img src="./homepage/insta-05.jpg" alt="insta-05"></li>
-          <li><img src="./homepage/insta-06.jpg" alt="insta-06"></li>
-          <li><img src="./homepage/insta-07.jpg" alt="insta-07"></li>
-          <li><img src="./homepage/insta-08.jpg" alt="insta-08"></li>
-          <li><img src="./homepage/insta-09.jpg" alt="insta-09"></li>
-          <li><img src="./homepage/insta-10.jpg" alt="insta-10"></li>
-          <li><img src="./homepage/insta-11.jpg" alt="insta-11"></li>
-          <li><img src="./homepage/insta-12.jpg" alt="insta-12"></li>
-        </ul>
+        <p><a href="#">@dyami</a></p>
+        <div class="instagram_img">
+          <ul>
+            <li><img src="./homepage/insta-01.jpg" alt="insta-01"></li>
+            <!-- <li><img src="./homepage/insta-02.jpg" alt="insta-02"></li> -->
+            <!-- <li><img src="./homepage/insta-03.jpg" alt="insta-03"></li> -->
+            <!-- <li><img src="./homepage/insta-04.jpg" alt="insta-04"></li> -->
+            <!-- <li><img src="./homepage/insta-05.jpg" alt="insta-05"></li> -->
+            <!-- <li><img src="./homepage/insta-06.jpg" alt="insta-06"></li> -->
+            <!-- <li><img src="./homepage/insta-07.jpg" alt="insta-07"></li> -->
+            <!-- <li><img src="./homepage/insta-08.jpg" alt="insta-08"></li> -->
+            <!-- <li><img src="./homepage/insta-09.jpg" alt="insta-09"></li> -->
+            <!-- <li><img src="./homepage/insta-10.jpg" alt="insta-10"></li> -->
+            <!-- <li><img src="./homepage/insta-11.jpg" alt="insta-11"></li> -->
+            <!-- <li><img src="./homepage/insta-12.jpg" alt="insta-12"></li> -->
+          </ul>
+        </div>
       </div>
-
-      <p>Copyrights ⓒ 2021 All Rights Reserved by DYAMI.</p>
-      <p>Terms of Use / Privacy Policy</p> 
-      <address>from.dyami@gmail.com 1234-5678</address>
+      <!-- copy / adress -->
+      <div class="adresBox">
+        <p>Copyrights ⓒ 2021 All Rights Reserved by DYAMI.</p>
+        <p>Terms of Use / Privacy Policy</p> 
+        <address>from.dyami@gmail.com 1234-5678</address>
+      </div>
     </footer>
   </div>
 </body>
