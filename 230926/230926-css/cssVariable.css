@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* cssVariable.css */
+
+/* 전역 선언 */
+:root {
+  /* 변수 설정 */
+  --font-en-v : 'Victor Mono', -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", monospace;
+  --font-en-f : 'Fugaz One', -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", cursive;
+  --font-ko : "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", Dotum, sans-serif;
+}

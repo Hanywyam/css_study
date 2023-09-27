@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+/* 'Fugaz One', cursive;'Victor Mono', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Victor+Mono:ital@0;1&display=swap');
+@import url(../common/pretendardvariable.css);
+
+/* css 변수 선언 */
+@import url(./cssVariable.css);
+
+html {/* rem 기준 */
+  font-size: 18px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+input, button {
+  outline: none;
+}
+
+body {
+  /* css 변수 적용 var() */
+  font-family: var(--font-ko);
+  font-weight: 400;
+  background-color: #fafaf0;
+  color:#767671;
+  text-transform: capitalize;
+  line-height: 1.6;
+  /* 한글 기준 줄바꿈. 문장이 자동 줄바꿈 될 때 어절을 기준으로 줄바꿈 */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.min-width {
+  margin: 10% auto;
+  width:70%;
+  min-width:1200px;
+}
+.italic {
+  font-style: italic;
+}
+
+header h1 {
+  font-family: var(--font-en-f);
+  font-weight: 400;
+  font-size: 8rem;
+}
+header p {
+  width: 80%;
+}
+
+.ghost-btn, button[type=submit] {
+  border:3px solid #767671;
+  border-radius: 30px;
+  padding: 10px 40px;
+  margin: 5vh 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: transparent;/* button */
+  cursor: pointer;/* button */
+
+  display: inline-flex;
+  align-items: center;
+
+  transition: 0.3s;/* 움직임의 변화 */
+}
+/* .ghost-btn:hover, button[type=submit]:hover  */
+:is(.ghost-btn:hover, button[type=submit]):hover {
+  background-color: #000;
+  border-color: #000;
+  color:#fff;
+}
+:is(.ghost-btn:hover, button[type=submit]):hover span {
+  transition: 0.3s;
+  margin-left:8px;
+}
+
+
+/* section */
+section {
+  display: flex;
+  justify-content: center;
+}
+section:nth-child(even) {
+  background-color: #dbdfea;
+}
+section h2 {
+  font-size: 3rem;
+}
+section .txt-box {
+  width: 35%;
+  padding: 4%;
+}
+section .bg-box {
+  width: 65%;
+  aspect-ratio: 6 / 4;
+  /* flex-grow: ; */
+  text-indent: -9999px;
+  background: url(./images/unsplash1.jpg) no-repeat 50% / cover;
+}
+
+section .inner-box {
+  width: 30%;
+  margin: 14vh 4vw;
+}
+
+/* .box2 {
+  flex-direction: row-reverse;
+} */
+
+section:nth-child(4) .bg-box {
+  order:1;
+  background-image: url(./images/unsplash2.jpg);
+}
+section:nth-child(4) .txt-box {
+  order:2;
+}
+
+/* footer */
+footer h2 {
+  font-size: 8rem;
+}
+footer form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer form input[type=email] {
+  border: 3px solid #767671;
+  border-radius: 30px;
+  padding: 10px 40px;
+  margin-right:20px;
+  font-size: 1.1rem;
+  font-family: var(--font-ko);
+  background-color: transparent;
+
+  flex-grow: 1;
+}
+
+footer .sns-group {
+  display: flex;
+}
+footer .sns-group li {
+  transition: 0.2s;
+}
+footer .sns-group li:hover {
+  transform: translateY(-10px);
+}
+footer .sns-group li  a {
+  display: block;
+  border:3px solid #767671;
+  border-radius: 50%;
+  width: 80px; height: 80px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .sns-group li a svg {
+  height:45%;
+  fill: #767671;
+}

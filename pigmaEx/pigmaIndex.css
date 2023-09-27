@@ -7,18 +7,23 @@ h6 { display: none;}
 body {
   font-size: 1rem;
   line-height: 1.7;
+  text-align: center;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  min-width:380px;
+  max-width: 545px;
 }
 
 
 /**** header 영역 ****/
 .header_wrapper {
-  width: 100%; height: 100px;
+  width: 100%; 
 }
 
 header {
-  width: 100%; height: 100px;
+  width: 100%; 
   margin: 0 auto;
-  padding: 15px;
+  padding: 0 12px 0;
   box-sizing: border-box;
 
   display: flex;
@@ -27,39 +32,163 @@ header {
 }
 
 /* logo 영역 */
-header h1 .logo {object-fit: contain;}
-
-/* navigation 영역 */
-header nav {
-  background-color: #ddd;
-  width: 30px; height: 30px;
-  line-height: 30px;
+header h1 {
   text-align: center;
 }
 
-header nav .main_menu {}
+header h1 .logo {
+  width: 80%;
+  object-fit: contain;
+}
+/* navigation 영역 */
+header nav {
+}
+
+header nav .main_menu a {
+  display: block;
+  width: 50px; height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+header nav .main_menu .svg_bars {
+  fill: #464646;
+  width: 60%; height: 60%;
+  margin: 10px;
+}
 
 header nav .sub_menu {
+  /* 클릭하면 드롭 되게 바꿔야 함. */
   display: none;
 }
 
 /* utill 영역 */
 header .utill {
   background-color: #146D63;
-  width: 56px; height: 46px;
+  width: 50px; height: 42px;
+  line-height: 42px;
   border-radius: 30px;
   text-align: center;
 }
 
-
-/**** main 영역 ****/
-main {
-  background-color: #ddd;
+header .utill a {
+  display: block;
+  margin: 0 auto;
 }
 
+header .utill  .svg_chat {
+  fill: #fff;
+}
+
+
+
+/**** main 영역 ****/
+main {}
+
+/* .sub_ctts /  .processTable : h2 설정 */
+main .title_bt {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+}
+
+main .title_bt h2 {
+  padding: 65px 10px 80px;
+  box-sizing: border-box;
+}
+
+main .title_bt:nth-child(1) h1::after {
+  content: "";
+  background-color: #d2de32;
+}
+
+/* main 1 : 메인 컨텐츠 이미지 */
+main .main_overlay_bg .main_bg {
+  text-indent: -9999px;
+  width: 100%; height: 422px;
+  background: url(./homepage/hero-1.jpg) no-repeat 50% / cover;
+  background: url(./homepage/hero-3.jpg) no-repeat 50% / cover;
+}
+
+main .main_ctts {
+  position: relative;
+}
+
+main .main_arrow {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 45%;
+}
+
+main .main_arrow a {
+  display: block;
+  width: 50px; height: 50px;
+  line-height: 50px;
+}
+
+main .main_arrow .svg_arr {
+  fill:rgba(255, 255, 255, 0.5);
+  width: 40%;  height: 40%;
+}
+
+/* main 2 : 서브 컨텐츠 이미지 */
+.sub_ctts-img {
+  width: 100%;
+  min-height: 360px;
+
+  position: relative;
+}
+
+.sub_ctts-img img {
+  width: 90%;
+  object-fit: cover;
+
+  display: block;
+  margin: 0 auto;
+
+  position: absolute;
+  top: 0;  left: 0; right: 0; margin: auto;
+}
+
+.sub_ctts .sub_ctts_bt button {
+  border: 0;
+  background-color: transparent;
+
+  fill: #146D63;
+  width: 10px; height: 10px;
+  padding: 20px 10px;
+  margin-bottom: 10px; 
+}
+
+
+
+
+
+
+
+
+main .youtube_ctn {
+  background-color: #F8F9FA;
+}
+
+main .jobVenn_wrap {
+  background-color: #146D63;
+}
+
+main .processTable {
+  background-color: #F8F9FA;
+}
+
+
 /* 일단 이미지 숨김 */
-.sub_con-img {display: none;}
-.img_wrapper2 {display: none;}
+.img_wrap2 {display: none;}
 
 
 /**** footer 영역 ****/

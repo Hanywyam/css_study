@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>css변수</title>
+  <style>
+    /* 전역 선언 */
+    :root {
+      /* 설정 */
+      --color: #0E21A0;
+      --bg-color-main:#E4F1FF;
+      --bg-color-sub:#D2DE32;
+      --bg-color-point:#FF3FA4;
+      --bgImg : url(./images/wednesday.png);
+      --bg : var(--bgImg) no-repeat 50% / cover;
+      --margin-center: 50px auto;
+    }
+    /* 적용 */
+    body {
+      background-color: var(--bg-color-main);
+      color: var(--color);
+    }
+
+    /* 지역 선언 */
+    ul {
+      /* 
+        태그 안에서 변수 선언하는 경우 이 태그 하위까지만 적용 
+        전역과 지역이 중복되는 경우 지역이 우선
+      */
+      --color: #900C3F;
+      --bg-color-main: #33BBC5;
+      --border: 3px solid #000;
+
+      background-color: var(--bg-color-main);
+    }
+    ul li {
+      color: var(--color);
+    }
+
+    dt {
+      /* ul의 하위가 아니기 때문에 전역으로 설정된 값을 적용 */
+      color: var(--color);
+      border: var(--border);
+    }
+
+    .bg {
+      background: var(--bg);
+      background-size: contain;
+      width: 50%;
+      height: 40vh;
+    }
+  </style>
+</head>
+<body>
+  <h1>css 변수 variable</h1>
+  <ul>
+    <li>사용자 지정 속성</li>
+    <li>사용자가 정의하는 속성과 값으로 재사용 할 수 있는 임의의 값</li>
+    <li>공통으로 사용되는 값에 css 변수를 설정하여 코드의 반복 사용 줄임</li>
+  </ul>
+
+  <dl>
+    <dt>전역 설정</dt>
+    <dd>:root { --variable-name: value; }</dd>
+    <dd>:root { --variable: value;}</dd>
+
+    <dt>지역 설정</dt>
+    <dd>dt { --variable-name: value; }</dd>
+    <dd>지정된 요소와 하위 요소에서만 적용</dd>
+
+    <dt>사용</dt>
+    <dd>property: var(--variable-name);</dd>
+    <dd>property: var(--variable);</dd>
+  </dl>
+
+  <div class="bg"></div>
+</body>
+</html>

@@ -6,7 +6,7 @@
   <!-- reset css -->
   <link rel="stylesheet" href="./common/reset.css">
   <!-- font css -->
-  <link rel="stylesheet" href="./common/SpoqaHanSan.css">
+  <link rel="stylesheet" href="../common/pretendardvariable.css">
   <!-- viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- 내가 작성한 css -->
@@ -24,7 +24,10 @@
       <nav>
         <ul>
           <li class="main_menu">
-            <a href="#">menu</a>
+            <a href="#">
+              <!-- bars svg -->
+              <svg class="svg_bars" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </a>
             <ul class="sub_menu">
               <li><a href="#">about</a></li>
               <li><a href="#">service</a></li>
@@ -45,42 +48,68 @@
       </h1>
       <!-- utill 영역 -->
       <div class="utill">
-        <a href="#">contact us</a>
+        <a href="#">
+          <!-- chat svg -->
+          <svg class="svg_chat" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4l0 0 0 0 0 0 0 0 .3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"/></svg>
+        </a>
       </div>
     </header>
   </div>
 
 <!-- main 영역 -->
     <main>
-      <!-- 메인 컨텐츠 이미지(롤링) -->
-      <div class="main_contents">
-        <!-- img / css 에서 bg로 넣어볼까..고민
-        <ul>
-          <li><a href="#"><img src="./homepage/hero-1.jpg" alt="main_image1"></a></li>
-          <li><a href="#"><img src="./homepage/hero-3.jpg" alt="main_image2"></a></li>
-        </ul>
-         -->
-      </div>
+      <!-- main 1 : 메인 컨텐츠 이미지(롤링) -->
+      <article class="main_ctts">
+        <div class="main_overlay_bg">
+          <div class="main_bg bg1">말린 오렌지 슬라이스</div>
+          <!-- <div class="main_bg bg2">딸기 아이스크림 컵</div> -->
+        </div>
 
-      <!-- 서브 컨텐츠 best / new -->
-      <div class="sub_contents">
-        <h2><a href="#">best</a></h2>
-        <h2><a href="#">new</a></h2>
-        <div class="sub_con-img">
+        <ul class="main_arrow">
+          <li><a href="#">
+            <svg class="svg_arr" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></a>
+          </li>
+          <li><a href="#">
+            <svg class="svg_arr" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
+          </li>
+        </ul>
+      </article>
+
+      <!-- main 2 : 서브 컨텐츠 best / new -->
+      <div class="sub_ctts">
+        <div class="title_bt">
+          <h2><a href="#">best</a></h2>
+          <h2><a href="#">new</a></h2>
+        </div>
+        <div class="sub_ctts-img">
           <ul>
-            <li><a href="#"><img src="./homepage/img-7.jpg" alt="sub_con-img1"></a></li>
-            <li><a href="#"><img src="./homepage/img-8.jpg" alt="sub_con-img2"></a></li>
-            <li><a href="#"><img src="./homepage/img-9.jpg" alt="sub_con-img3"></a></li>
+            <li>
+              <a href="#">
+              <img src="./homepage/img-7.jpg" alt="sub_con-img1">
+              </a></li>
+            <li>
+              <a href="#"><img src="./homepage/img-8.jpg" alt="sub_con-img2">
+              </a></li>
+            <li>
+              <a href="#"><img src="./homepage/img-9.jpg" alt="sub_con-img3">
+              </a></li>
           </ul>
+        </div>
+        <div class="sub_ctts_bt">
+          <button><svg class="svg_bt" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg></button>
+          
+          <button><svg class="svg_bt" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg></button>
+          
+          <button><svg class="svg_bt" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg></button>
         </div>
       </div>      
       
-      <!-- youtube 영역 -->
-      <article class="youtube_container">
+      <!-- main 3 : youtube 영역 -->
+      <article class="youtube_ctn">
         <h6>유투브 영역</h6>
 
         <!-- youtube 글상자 -->
-        <section class="youtube_wrapper">
+        <section class="youtube_wrap">
           <h3>Youtube Play Slider</h3>
           <p>세상을 바꿀수 있다고 생각하는 제대로 정신나간 사람들이 세상을 변화시킨다.</p>
           <!-- youtube url -->
@@ -108,12 +137,12 @@
         </section>
       </article>
 
-      <!-- 이미지 + 설명 영역 -->
-      <article class="img_container">        
+      <!-- main 4 : 이미지 + 설명 영역 -->
+      <article class="img_ctn">        
         <h6>이미지 설명 영역</h6>
         <!-- img / copy 1 -->
         <section>
-          <div class="img_wrapper1">
+          <div class="img_wrap1">
             <!-- <img src="./homepage/img-5.jpg" alt="decoImg1"> -->
             <h3>ALL OVER THE WORLD<em>DIGITAL MARKETING.</em></h3>            
           </div>
@@ -121,7 +150,7 @@
 
         <!-- img 목록 -->
         <section>
-          <div class="img_wrapper2">
+          <div class="img_wrap2">
             <ul>
               <li><img src="./homepage/img-1.jpg" alt="imgWrapper"></li>
               <li><img src="./homepage/img-2.jpg" alt="imgWrapper"></li>
@@ -140,7 +169,7 @@
           </div>
         </section>
 
-        <!-- 포인트 설명 -->
+        <!-- main 5 : 포인트 설명 -->
         <section class="txt_wrapper">
           <!-- <img src="./homepage/img-4.jpg" alt="decoImg2"> -->
            <div class="txt_wrapper1">
@@ -165,8 +194,8 @@
         </section>
       </article>
 
-      <!-- 벤다이어그램(직군영역설명) -->
-      <article class="jobVenn_wrapper">
+      <!-- main 6 : 벤다이어그램(직군영역설명) -->
+      <article class="jobVenn_wrap">
         <h6>벤다이어그램(직군영역설명)</h6>
         <section>
           <h3>We'd love to build something amazing</h3>
@@ -185,12 +214,14 @@
         </section>
       </article>
 
-      <!-- process / table -->
+      <!-- main 7 : process / table -->
       <article class="processTable">
         <h6>프로세스 / 테이블</h6>
         <section>
-          <h2><a href="#">PROCESS</a></h2>
-          <h2><a href="#">TABLE</a></h2>
+          <div class="title_bt">
+            <h2><a href="#">PROCESS</a></h2>
+            <h2><a href="#">TABLE</a></h2>
+          </div>
           <ol>
             <li>
               <h4>Choose your Plan</h4>
@@ -220,7 +251,7 @@
         </section>
       </article>
 
-      <!-- store map -->
+      <!-- main 8 : store map -->
       <article class="map_wrapper">
         <h4>store map</h4>
         <ul>
