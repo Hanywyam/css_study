@@ -7,9 +7,11 @@ h6 { display: none;}
 body {
   font-size: 1rem;
   line-height: 1.7;
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", "Apple Color Emoji", Dotum, 돋움, sans-serif;
   text-align: center;
   word-break: keep-all;
   overflow-wrap: break-word;
+  letter-spacing: 0.5px;
   min-width:380px;
   max-width: 545px;
 }
@@ -85,7 +87,7 @@ header .utill  .svg_chat {
 /**** main 영역 ****/
 main {}
 
-/* .sub_ctts /  .processTable : h2 설정 */
+/* .sub_ctts / .processTable : h2 설정 */
 main .title_bt {
   font-size: 1.6rem;
   font-weight: 700;
@@ -101,9 +103,12 @@ main .title_bt h2 {
   box-sizing: border-box;
 }
 
-main .title_bt:nth-child(1) h1::after {
+main .title_bt h2::after {
   content: "";
-  background-color: #d2de32;
+  display: block;
+  border-bottom: 3px solid #000;
+  width: 65px;
+  margin: 10px auto;
 }
 
 /* main 1 : 메인 컨텐츠 이미지 */
@@ -163,20 +168,33 @@ main .main_arrow .svg_arr {
 
   fill: #146D63;
   width: 10px; height: 10px;
-  padding: 20px 10px;
+  padding: 20px 10px 50px;
   margin-bottom: 10px; 
 }
 
-
-
-
-
-
-
+/* main 3 : youtube 영역 */
 
 main .youtube_ctn {
   background-color: #F8F9FA;
 }
+
+.youtube_ctn .youtube_wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+.youtube_ctn .youtube_wrap h3 {  
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 60px auto 20px;
+}
+
+.youtube_ctn .youtube_wrap p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
 
 main .jobVenn_wrap {
   background-color: #146D63;
