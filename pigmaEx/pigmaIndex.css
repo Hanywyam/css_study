@@ -1,13 +1,21 @@
 @charset "utf-8";
+
+/* font-family: 'Catamaran', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700;800&display=swap');
+
+/* css 변수 선언 */
+@import url(./common/cssVariable.css);
+
 /* article title del */
 h6 { display: none;}
 
 
 /**** body 영역 ****/
+
 body {
   font-size: 1rem;
   line-height: 1.7;
-  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", "Apple Color Emoji", Dotum, 돋움, sans-serif;
+  font-family: var(--font-ko);
   text-align: center;
   word-break: keep-all;
   overflow-wrap: break-word;
@@ -18,6 +26,7 @@ body {
 
 
 /**** header 영역 ****/
+
 .header_wrapper {
   width: 100%; 
 }
@@ -31,9 +40,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: sticky;
+  top: 0;
 }
 
 /* logo 영역 */
+
 header h1 {
   text-align: center;
 }
@@ -42,9 +55,10 @@ header h1 .logo {
   width: 80%;
   object-fit: contain;
 }
+
 /* navigation 영역 */
-header nav {
-}
+
+header nav {}
 
 header nav .main_menu a {
   display: block;
@@ -65,6 +79,7 @@ header nav .sub_menu {
 }
 
 /* utill 영역 */
+
 header .utill {
   background-color: #146D63;
   width: 50px; height: 42px;
@@ -85,13 +100,15 @@ header .utill  .svg_chat {
 
 
 /**** main 영역 ****/
+
 main {}
 
 /* .sub_ctts / .processTable : h2 설정 */
+
 main .title_bt {
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-family: var(--font-en);
+  font-weight: bold;
+  font-size: 1.8rem;
   text-transform: uppercase;
 
   display: flex;
@@ -111,7 +128,8 @@ main .title_bt h2::after {
   margin: 10px auto;
 }
 
-/* main 1 : 메인 컨텐츠 이미지 */
+/* main 1 : main_ctts 메인 컨텐츠 이미지 */
+
 main .main_overlay_bg .main_bg {
   text-indent: -9999px;
   width: 100%; height: 422px;
@@ -143,7 +161,8 @@ main .main_arrow .svg_arr {
   width: 40%;  height: 40%;
 }
 
-/* main 2 : 서브 컨텐츠 이미지 */
+/* main 2 : sub_ctts 서브 컨텐츠 이미지 */
+
 .sub_ctts-img {
   width: 100%;
   min-height: 360px;
@@ -172,10 +191,14 @@ main .main_arrow .svg_arr {
   margin-bottom: 10px; 
 }
 
-/* main 3 : youtube 영역 */
+/* main 3 : youtube_ctn youtube 영역 */
 
 main .youtube_ctn {
-  background-color: #F8F9FA;
+  /* background-color: #F8F9FA; 
+  너무 안보여서 임시 배경색 */
+  background-color: #ddd;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .youtube_ctn .youtube_wrap {
@@ -185,9 +208,10 @@ main .youtube_ctn {
 
 
 .youtube_ctn .youtube_wrap h3 {  
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin: 60px auto 20px;
+  font-family: var(--font-en);
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin: 10px auto 20px;
 }
 
 .youtube_ctn .youtube_wrap p {
@@ -197,18 +221,105 @@ main .youtube_ctn {
   letter-spacing: normal;
 }
 
+.youtube_wrap .video_box .youtube {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.youtube_wrap .youtube_imgBox {
+  display: inline-flex;
+}
+
+.youtube_wrap .youtube_imgBox li {
+}
+
+.youtube_wrap .youtube_imgBox a {
+  display: block;
+  width: 75px; height: 42px;
+  margin: 10px;
+}
+
+.youtube_wrap .youtube_imgBox li a .imgBox {
+  width: 75px; height: 42px;
+  object-fit: cover;
+}
+
+/* main 4 : img_ctn 이미지 + 설명 영역 */
+
+.img_ctn .img_wrap1 {
+  display: block;
+  margin: 50px 10px;
+}
+
+.img_ctn .img_wrap1 img {
+  width: 90%;
+  object-fit: cover;
+
+  display: block;
+  margin: 0 auto;
+}
+
+.img_ctn section:nth-of-type(2) h3 {
+  font-family: var(--font-en);
+  font-weight: 800;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  margin: 50px 10px;
+}
+
+.img_ctn h3 em {
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+}
+
+/* img 목록 */
+.img_wrap2 ul {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.img_wrap2 li {
+  width: 49%; 
+  margin: 5px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  /* gap: 5px 5px; */
+}
+
+.img_wrap2 li img {  
+  width: 100%;
+  object-fit: cover;
+}
+
+.img_ctn h4 {
+  width: 60%;
+  margin: 50px 20px;
+  text-align: start;
+  font-weight: 900;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.img_ctn .img_txtBox li {
+}
+
+.img_ctn .img_txtBox li i::before {
+  content: "";
+}
 
 main .jobVenn_wrap {
   background-color: #146D63;
 }
 
 main .processTable {
-  background-color: #F8F9FA;
+  /* background-color: #F8F9FA; 
+  너무 안보여서 임시 배경색 */
+  background-color: #ddd;
 }
 
 
-/* 일단 이미지 숨김 */
-.img_wrap2 {display: none;}
 
 
 /**** footer 영역 ****/
@@ -227,13 +338,22 @@ footer .instagram_box p {
 }
 
 .instagram_img {
-  width: 280px; height: 45px;
+  width: 80%; height: 45px;
+  margin: 0 auto;
+}
+
+.instagram_img ul {
+  width: 100%;
+  display: flex;
+}
+
+.instagram_img li {
+  margin: 5px;
 }
 
 .instagram_img li img {
-  /* object-fit: cover; 
-  몰라 안되니까 일단 숨겨*/
-  display: none;
+  width: 100%;
+  object-fit: cover; 
 }
 
 footer .adresBox {
