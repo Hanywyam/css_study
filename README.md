@@ -513,6 +513,8 @@ rem 단위값은 root, 즉 최상위 요소 html의 font-size를 기준으로 �
 5. 단위 viewport
 6. vw VS percent
 
+
+
 ## 230915 ##
 
 **flex**
@@ -526,10 +528,120 @@ rem 단위값은 root, 즉 최상위 요소 html의 font-size를 기준으로 �
 7. align-content
 8. align-self
 
-flexEx1
-flexEx2
-flexEx3
-flexEx4
-flexEx5
-flexEx6
-flexEx7
+- flexEx1
+- flexEx2
+- flexEx3
+- flexEx4
+- flexEx5
+- flexEx6
+- flexEx7
+
+
+
+## 230918 ##
+
+- flexEx3
+- flexEx4
+- flexEx5
+- flexEx6
+- flexEx7
+- flexEx8
+- flexEx9
+
+1. inline-flex
+2. 수열선택자
+
+
+
+## 230919 ##
+
+수열선택자Ex
+
+#### 1. backgrond ####
+
+- backgrond-img, backgrond-repeat
+- backgrond-position
+- backgrond-attachment
+- backgrond-size
+- backgrond
+- backgrond-multi
+
+#### 2. 선형 그라디언트 linear-gradient ####
+- linear-gradient
+
+#### 3. 비율조절 object-fit ####
+
+#### 4. 오브젝트위치object-position ####
+
+#### 5. 가변비디오 ####
+
+#### 6. 가로/세로 비율 설정 aspect-radio ####
+
+#### 7. video-ratio ####
+
+- bgEx1
+- bgEx2
+- bgEx3
+
+
+
+## 230920 ##
+
+- index-webEx
+
+#### 1. flexItem : order ####
+
+#### 2. flexItem : flex-grow ####
+
+#### 3. flexItem : flex-shrink ####
+
+#### 4. flexItem : flex-basis ####
+
+- flexitemEx1
+- flexitemEx2
+
+
+
+## 230921 ##
+
+#### position ####
+- position 요소의 배치
+	- 1. static; 
+	- 기본값. 아무런 특성이 없기 때문에 주로 다른 포지션 값이 적용된 요소를 '초기화' 하고자 할 때 사용
+	- 2. relative; 
+	- 일반적인 흐름에 따라 자기 자신을 기준으로 위치 지정. top, right, bottom, left 위치 특성과 함께 사용되거나 생략될 수 있음.
+	- 3. absolute; 
+	- 일반적인 흐름에서 벗어나며 포지션이 적용된 가장 가까운 부모 요소를 기준으로 위치 지정. top, right, bottom, left 위치 특성과 함께 사용.
+	- 4. fixed; 
+	- 일반적인 흐름에서 벗어나며 브라우저를 기준으로 위치 지정. top, right, bottom, left 위치 특성과 함께 사용. transform, perspective, filter 특성이 부모 요소에 적용되어 있으면 그 요소를 기준으로 삼음.
+	- 5. sticky; 
+	- 일반적인 흐름을 가지나 top, right, bottom, left의 값에 따라 offset 적용(스크롤 이벤트)
+
+- positionEx1
+- positionEx2
+
+
+
+## 230922 ##
+
+- positionEx3
+- positionEx4
+
+- flexNavEx
+- layout_stickyEx
+
+#### 1. z-index ####
+
+
+
+## 230926 ##
+
+#### novp ####
+#### vp ####
+
+
+
+## 230927 ##
+
+#### css변수 ####
+

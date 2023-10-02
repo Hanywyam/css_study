@@ -193,6 +193,8 @@ main .youtube_ctn {
 .youtube_ctn .youtube_wrap p {
   font-size: 1.2rem;
   font-weight: 300;
+  padding: 20px 5px;
+  letter-spacing: normal;
 }
 
 
