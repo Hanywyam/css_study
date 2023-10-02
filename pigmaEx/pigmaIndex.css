@@ -17,7 +17,7 @@ body {
   line-height: 1.7;
   font-family: var(--font-ko);
   text-align: center;
-  word-break: keep-all;
+  /* word-break: keep-all; 한글정렬 */
   overflow-wrap: break-word;
   letter-spacing: 0.5px;
   min-width:380px;
@@ -230,8 +230,7 @@ main .youtube_ctn {
   display: inline-flex;
 }
 
-.youtube_wrap .youtube_imgBox li {
-}
+.youtube_wrap .youtube_imgBox li {}
 
 .youtube_wrap .youtube_imgBox a {
   display: block;
@@ -273,19 +272,22 @@ main .youtube_ctn {
 }
 
 /* img 목록 */
-.img_wrap2 ul {
+.img_wrap2 {
   width: 90%;
   margin: 0 auto;
 }
 
-.img_wrap2 li {
-  width: 49%; 
-  margin: 5px;
-
+.img_wrap2 ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  /* gap: 5px 5px; */
+  gap: 5px 5px;
+}
+
+.img_wrap2 li {
+  width: 49%; 
+
+  /* flex-wrap: wrap; */
+  /* justify-content: flex-start; */
 }
 
 .img_wrap2 li img {  
@@ -303,22 +305,123 @@ main .youtube_ctn {
 }
 
 .img_ctn .img_txtBox li {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  border-bottom: #ddd 1px solid;
+}
+
+.img_ctn .img_txtBox li:nth-child(3) {
+  border: none;
+}
+
+.img_ctn .img_txtBox li i{
+  width: 20%;
 }
 
 .img_ctn .img_txtBox li i::before {
-  content: "";
+  content: url(./check-solid.svg);
+  display: block;
+  width: 1.2rem;
+  margin: 20px;
 }
 
-main .jobVenn_wrap {
-  background-color: #146D63;
+.img_ctn .img_txtBox li span {
+  display: block;
+  width: 80%;
+  margin: 20px 0;
+  text-align: start;
+  font-size: 0.9rem;
+  color: #505356;
 }
+
+/* main 5 : .main5_ctts 포인트 설명 */
+
+.main5_ctts .decoImg2 {
+  width: 90%;
+  object-fit: cover;
+
+  display: block;
+  margin: 30px auto;
+}
+
+.main5_txtWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main5_txtWrap .txtWrap {
+  width: 90%;
+  margin: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.main5_txtWrap .txtWrap:nth-child(4) {
+  border-bottom: none;
+}
+
+.main5_txtWrap .txtWrap h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.main5_txtWrap .txtWrap h4 {
+  font-size: 0.9rem;
+}
+
+.main5_txtWrap .txtWrap:nth-of-type(3) h4 {
+  margin-bottom: 30px;
+}
+
+.main5_txtWrap .txtWrap p {
+  background-color: #146D63;
+  color: #fff;
+  margin: 30px 0;
+  padding: 5px 10px;
+  border-radius: 20px 20px;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.main5_txtWrap .txtWrap:nth-of-type(2) p {
+  background-color: #6B6B6B;
+}
+
+/* main 6 : .jobVenn_ctts 벤다이어그램(직군영역설명) */
+
+main .jobVenn_ctts {
+  background-color: rgb(20, 109, 99);
+}
+
+/* main 7 : .processTable process / table */
 
 main .processTable {
-  /* background-color: #F8F9FA; 
-  너무 안보여서 임시 배경색 */
-  background-color: #ddd;
+  background-color: #F8F9FA; 
+  padding: 30px 0 60px;
 }
 
+.processTable .txtBox {
+  width: 80%;
+  margin: 0 auto;
+  text-align: start;
+  font-family: var(--font-en);
+}
+
+.processTable .txtBox h2 {
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: rgba(20, 109, 99, 0.6);
+  margin-top: 30px;
+}
+
+.processTable .txtBox h4 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.processTable .txtBox p {
+  font-size: 0.9rem;
+}
 
 
 
