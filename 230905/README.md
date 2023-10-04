@@ -1,6 +1,6 @@
 1. [1_cssBasic.html](https://hanywyam.github.io/css_study/230905/1_cssBasic.html)
 2. [2_color.html](https://hanywyam.github.io/css_study/230905/2_color.html)
-3. 3_css우선순위.html (https://hanywyam.github.io/css_study/230905/3_css우선순위.html)
+3. [3_css우선순위.html] (https://hanywyam.github.io/css_study/230905/3_css우선순위.html)
 
 1. 아이디 선택자
 - #box
