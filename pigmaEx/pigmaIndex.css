@@ -32,8 +32,7 @@ body {
 }
 
 header {
-  width: 100%; 
-  margin: 0 auto;
+  width: 100%; height: auto;
   padding: 0 12px 0;
   box-sizing: border-box;
 
@@ -197,9 +196,7 @@ main .main_arrow .svg_arr {
 /* main 3 : youtube_ctn youtube 영역 */
 
 main .youtube_ctn {
-  /* background-color: #F8F9FA; 
-  너무 안보여서 임시 배경색 */
-  background-color: #ddd;
+  background-color: #F8F9FA; 
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -218,7 +215,7 @@ main .youtube_ctn {
 }
 
 .youtube_ctn .youtube_wrap p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
   padding: 20px 5px;
   letter-spacing: normal;
@@ -237,7 +234,7 @@ main .youtube_ctn {
 .youtube_wrap .youtube_imgBox a {
   display: block;
   width: 75px; height: 42px;
-  margin-right: 10px;
+  margin: 10px 15px 0 0;
 }
 
 .youtube_wrap .youtube_imgBox li a .imgBox {
