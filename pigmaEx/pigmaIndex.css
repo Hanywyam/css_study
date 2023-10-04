@@ -18,10 +18,10 @@ body {
   font-family: var(--font-ko);
   text-align: center;
   /* word-break: keep-all; 한글정렬 */
+  text-transform: capitalize;
   overflow-wrap: break-word;
   letter-spacing: 0.5px;
-  min-width:380px;
-  max-width: 545px;
+  max-width: 380px;
 }
 
 
@@ -74,7 +74,6 @@ header nav .main_menu .svg_bars {
 }
 
 header nav .sub_menu {
-  /* 클릭하면 드롭 되게 바꿔야 함. */
   display: none;
 }
 
@@ -120,12 +119,16 @@ main .title_bt h2 {
   box-sizing: border-box;
 }
 
-main .title_bt h2::after {
+main .title_bt h2:nth-child(1):after {
   content: "";
   display: block;
   border-bottom: 3px solid #000;
   width: 65px;
   margin: 10px auto;
+}
+
+main .title_bt h2:nth-child(2) {
+  color: #ddd;
 }
 
 /* main 1 : main_ctts 메인 컨텐츠 이미지 */
@@ -227,15 +230,14 @@ main .youtube_ctn {
 }
 
 .youtube_wrap .youtube_imgBox {
-  display: inline-flex;
+  display: flex;
+  justify-content: start;
 }
-
-.youtube_wrap .youtube_imgBox li {}
 
 .youtube_wrap .youtube_imgBox a {
   display: block;
   width: 75px; height: 42px;
-  margin: 10px;
+  margin-right: 10px;
 }
 
 .youtube_wrap .youtube_imgBox li a .imgBox {
@@ -285,9 +287,6 @@ main .youtube_ctn {
 
 .img_wrap2 li {
   width: 49%; 
-
-  /* flex-wrap: wrap; */
-  /* justify-content: flex-start; */
 }
 
 .img_wrap2 li img {  
@@ -391,6 +390,38 @@ main .youtube_ctn {
 
 main .jobVenn_ctts {
   background-color: rgb(20, 109, 99);
+  font-family: var(--font-en);
+  color: #fff;
+  width: 100%;
+  padding: 50px 0;
+}
+
+.jobVenn_ctts h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+
+.jobVenn_ctts h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 3;
+  margin-top: 90px;
+}
+.jobVenn_ctts p {
+  font-size: .8rem;
+}
+
+.jobVenn_ctts .job_Venn {
+  width: 300px; height: 300px;
+  border: 2px solid #fff;
+  border-radius: 50% 50%;
+  margin: -30px auto;
+}
+
+.jobVenn_ctts .job_Venn:nth-last-child(1) {
+  color: #146D63;
+  background-color: #fff;
 }
 
 /* main 7 : .processTable process / table */
@@ -427,26 +458,53 @@ main .processTable {
 .map_wrap {
   width: 90%;
   margin: 0 auto;
+  text-align: left;
+  font-family: var(--font-en);
 }
 
 .map_wrap h4 {  
-  font-family: var(--font-en);
   font-weight: 600;
   font-size: 2.4rem;  
   text-align: start;
   margin: 20px 0;
 }
 
-.map_wrap ul{
-  display: flex;
-}
-
-.map_wrap li{
-  font-size: 1.6rem;
+.map_wrap h4 + ul {
+  font-family: var(--font-ko);
+  font-size: 1.5rem;
   font-weight: 600;
-  margin: 0 10px 50px 0;
+  margin-bottom: 50px;
+  display: flex;
+  padding: 0;
 }
 
+.map_wrap h4 + ul > li:nth-child(1) {
+  padding-right: 20px;
+  color: #146D63;
+}
+
+.map_wrap h4 + ul > li:nth-child(1)::after {
+  content: "";
+  display: block;
+  background-color: #146D63;
+  width: 6px; height: 6px;
+  border-radius: 50% 50%;
+  margin: 10px auto;}
+
+ .map_wrap p ~ ul {
+  margin: 50px 0;
+  font-size: 0.9rem;
+  line-height: 1.8;
+ }
+
+ .map_wrap em {
+  display: block;
+  font-weight: bold;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  
+  letter-spacing: 0.2px;
+ } 
 
 
 /**** footer 영역 ****/
@@ -483,7 +541,10 @@ footer .instagram_box p {
   object-fit: cover; 
 }
 
-footer .adresBox {
+footer .adresBox {  
+  font-family: var(--font-en);
+  color: #6c6b6c;
+  font-size: 0.8rem;
   height: 195px;
   background-color: #1B1B1B;
   padding: 50px;
