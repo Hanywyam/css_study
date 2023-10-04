@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/* font-family: 'Catamaran', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700;800&display=swap');
+
+/* css 변수 선언 */
+@import url(./common/cssVariable.css);
+
+/**** body 영역 ****/
+
+body {
+    font-size: 1rem;
+    line-height: 1.7;
+    font-family: var(--font-ko);
+    text-align: center;
+    text-transform: capitalize;
+    overflow-wrap: break-word;
+    letter-spacing: 0.5px;
+  }
+  
+
+  
+/**** header 영역 ****/
+  
+.header_wrapper {
+  width: 100%; 
+}
+
+
+  
+/**** main 영역 ****/
+
+
+
+/**** footer 영역 ****/
+
+
