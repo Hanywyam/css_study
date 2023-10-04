@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>transition-delay</title>
+    <style>
+        body, ul {
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        .container {
+            border: 5px solid #000;
+            width: 80vw; height: 60vh;
+            font-size: 1.5rem;
+            display: flex;
+        }
+
+        .container li {
+            background-color: #ddd;
+            margin: 0.5rem;
+            height: 40px;
+            flex-shrink: 0;     /* li의 기본 세팅값 삭제 -> 컨텐츠 넘침. 
+            넘치지 않게 하려면? width 값 calc 사용. */
+            width: calc(20% - 1rem); 
+            transition-property: all; 
+            transition-duration: 1s; 
+        }
+
+        /* .container 영역에 마우스를 올리면 ,각 박스가 움직임. */
+        .container:hover li {}
+
+        .container:hover li:nth-child(1) {
+            height: calc(100% - 1rem);
+            transition-delay: 0;}
+        .container:hover li:nth-child(2) {
+            height: calc(100% - 1rem);
+            background-color: tomato;
+            transition-delay: 0.5s;}
+        .container:hover li:nth-child(3) {
+            height: calc(100% - 1rem);
+            background-color: orange;
+            transition-delay: 1s;}
+        .container:hover li:nth-child(4) {
+            height: calc(100% - 1rem);
+            background-color: seagreen;
+            transition-delay: 2s;}
+        .container:hover li:nth-child(5) {
+            height: calc(100% - 1rem);
+            background-color: slateblue;
+            transition-delay: 3s;}
+
+    </style>
+</head>
+<body>
+    <h1>transition-delay</h1>
+    <ul class="container">
+        <li>바로진행</li>
+        <li>0.5초</li>
+        <li>1초</li>
+        <li>2초</li>
+        <li>3초</li>
+    </ul>
+</body>
+</html>

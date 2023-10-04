@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>transform_overlap</title>
+    <style>
+        .box_outer {
+            width: 50vw; height: 50vh;
+            margin: 5vw auto;
+            border: 6px solid #000;
+            font-weight: bold; font-size: 1.4rem; text-align: center;
+        }
+
+        .box_outer .box_inner {
+            background-color: #ff9669;
+            transition: 1s;
+            width: 100%; height: 100%;
+        }
+
+        /* 마우스를 올리면 회전, 크기 변경 */
+        .box_outer:hover .box_inner {
+            /* 
+            css 우선 순위에 따라 같은 특성의 값 중 나중에 작성된 값이 우선 적용.
+            transform: scale(0.5);
+            transform: rotate(-360deg);
+            
+            
+            여러 개의 값 적용시, '띄어 쓰기' 로 구분. 
+            순서에 따라 결과 값이 달라 질 수 있다.*/
+            transform: skewX(15deg) scale(0.5) rotate(360deg);
+        }
+    </style>
+</head>
+    
+<body>
+    <h1>transform 중첩</h1>
+    <div class="box_outer">
+        <div class="box_inner">
+            rotate(); skew(); scale();
+        </div>
+    </div>
+</body>
+</html>

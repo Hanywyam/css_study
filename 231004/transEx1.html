@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>transEx1</title>
+    <style>
+        .container {
+           border: 3px solid #000; 
+           width: 95vw;
+        }
+        .container .item {
+            width: 100px; height: 100px;
+            font-weight: bold; font-style: 1.2rem; text-align: center; color: #FFF;
+            margin: 10px;
+            transition: 1s linear;
+
+            /* 2번의 경우 부모에 포지션값 설정. 다른 흐름을 가져서 틀이 깨짐.
+            position: absolute;
+            left: 0;
+             */
+        }
+
+        .container .item:nth-child(1) {background-color: skyblue;}
+        .container .item:nth-child(2) {background-color: slateblue;}
+
+        .container:hover .item {
+            /* 이동할 수 있는 방법들
+            1번: margin
+            margin-left: 500px; 
+
+            2번: position
+            left: 500px; 
+            둘 다 다른 요소에 영향을 끼침.
+
+            3번: transform
+            다른 요소에 영향을 끼치지 않고 효과를 줄 수 있음. */
+            transform: translateX(calc(95vw - 120px)) rotate(1080deg);
+        }
+    </style>
+    <!-- 내가 쓴 css style
+    <style>
+        .container {
+           text-align: center;
+           font-weight: bold;
+           color: #fff;
+
+           height: 200px;
+           border: 3px solid #000; 
+           display: flex;
+           flex-flow: column;
+        }
+        .container .item {
+            margin: 10px;
+            width: 10%; height: 50%;
+            transition: .5s;
+        }
+
+        .container:hover .item {
+            transform: translate(1000%) rotate(360deg);
+        }
+
+        .container .item:nth-child(1) {
+            background-color: salmon;
+        }
+        .container .item:nth-child(2) {
+            background-color: sandybrown;
+            transition-delay: 1s;
+        }
+    </style>
+     -->
+</head>
+    
+<body>
+    <h1>trans 연습 1</h1>
+    <!-- 
+        1. 컨테이너 위에 마우스를 올리면 굴러서 이동 
+        2. 두번째 박스는 기다렸다가 시작
+    -->
+    <div class="container">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>transitionBasic</title>
+    <style>
+        .box {
+            width: 100px; height: 100px;
+            background-color: #cd5c08;
+            text-align: center;
+
+            /* 움직임 속성 */
+            transition-property: width, height, background-color, font-size;
+
+            /* 움직임 진행시간 : 반드시 함께 작성되어야 한다. */
+            transition-duration: 1s; /* css 속도 단위: s초, ms밀리세컨 초 */
+        }
+
+        .box:hover {
+            width: 500px; height: 500px;
+            background-color: #6a9c89;
+            font-weight: bold;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>transition-property, transition-duration</h1>
+    <div class="box">움직인다 움직인다!</div>
+</body>
+</html>
+

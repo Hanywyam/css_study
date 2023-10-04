@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition-timing-funtion</title>
+    <style>        
+        body, ul {
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        .container {
+            border: 5px solid #000;
+            width: 80vw; height: 60vh;
+            font-size: 1.5rem;
+            display: flex;
+        }
+
+        .container li {
+            background-color: #ddd;
+            margin: 0.4rem;
+            height: 40px;
+            width: 16.666%;
+            transition-property: all;
+            text-decoration: 1s;
+        }
+
+
+    .container:hover li:nth-child(1) {
+      height:calc(100% - 0.8rem);
+      background-color: #186F65;
+      transition-timing-function: linear;/* 동일한 속도로 진행 */
+    }
+    .container:hover li:nth-child(2) {
+      height:calc(100% - 0.8rem);
+      background-color: #B5CB99;
+      transition-timing-function: ease;/* 기본값. 서서히 증가하다 끝에서 느려짐 */
+    }
+    .container:hover li:nth-child(3) {
+      height:calc(100% - 0.8rem);
+      background-color: #FCE09B;
+      transition-timing-function: ease-in;/* 서서히 시작하다 끝날 때 빨라짐 */
+    }
+    .container:hover li:nth-child(4) {
+      height:calc(100% - 0.8rem);
+      background-color: #B2533E;
+      transition-timing-function: ease-out;/* 빠르게 시작하고 끝날 때 느려짐 */
+    }
+    .container:hover li:nth-child(5) {
+      height:calc(100% - 0.8rem);
+      background-color: #FACBEA;
+      transition-timing-function: ease-in-out;/* 서서히 시작하다 빨라지고 끝날 때 느려짐 */
+    }
+    .container:hover li:nth-child(6) {
+      height:calc(100% - 0.8rem);
+      background-color: #D988B9;
+      transition-timing-function: cubic-bezier(0,.53,1,.56);/* 사용자 정의 움직임.
+      움직임은 온라인에서 만들어놓은 library 이용하는게 좋다. */
+    }
+    </style>
+</head>
+<body>
+    <h1>transition-timing-funtion</h1>
+    <h2>움직임 속도 제어</h2>
+    <ul class="container">
+      <li>linear</li>
+      <li>ease</li>
+      <li>ease-in</li>
+      <li>ease-out</li>
+      <li>ease-in-out</li>
+      <li>cubic-bezier()</li>
+    </ul>
+</body>
+</html>
