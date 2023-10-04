@@ -1,3 +1,6 @@
+[pigmaIndex.html](https://hanywyam.github.io/css_study/pigmaEx/pigmaIndex.html)
+[pigmaIndex_PC.html](https://hanywyam.github.io/css_study/pigmaEx/pigmaIndex_PC.html)
+
 ### 230926 ~ 231004  ###
 
 - 231004: UI 아키텍처 설계 평가
