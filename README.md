@@ -2,7 +2,7 @@
 
 ## 230905 ##
 
-#### 1. css 기초 ####
+#### 1. css 기초 (https://hanywyam.github.io/css_study/230905/) ####
 
 * **style sheet 언어.** HTML 문서의 레이아웃과 스타일을 적용 할 수 있다.
 
