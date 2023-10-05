@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transform_perspective</title>
+  <style>
+    section {display: flex;flex-wrap: wrap;text-align: center;}
+    section h2 {width: 100%; flex-shrink: 0;background-color: #ddd;}
+    section > div {width: 200px;height: 200px;background-color: tomato;margin: 50px;font-weight: bold;font-size: 1.5rem;}
+    section .item {
+      width: 100%; height: 100%;
+      background-color: orange;
+      transition: .6s;
+    }
+
+    /* perspective 적용안함 */
+    .wrapper1 .box1:hover .item {transform: translateX(50px);}
+    .wrapper1 .box2:hover .item {transform: translateY(50px);}
+    .wrapper1 .box3:hover .item {transform: translateZ(50px);}
+
+    /* translate, perspective 적용 */    
+    .wrapper2 .box1:hover .item {transform: perspective(200px) translateX(50px);}
+    .wrapper2 .box2:hover .item {transform: perspective(200px) translateY(50px);}
+    .wrapper2 .box3:hover .item {transform: perspective(200px) translateZ(50px);}
+
+    /* rotate, perspective 적용 */
+    .wrapper3 .box1:hover .item {transform: perspective(200px) rotateX(45deg);}
+    .wrapper3 .box2:hover .item {transform: perspective(200px) rotateY(45deg);}
+    .wrapper3 .box3:hover .item {transform: perspective(200px) rotateZ(45deg);}
+  </style>
+</head>
+  
+<body>
+  <h1>transform_perspective() 원근감</h1>
+  <section class="wrapper1">
+    <h2>perspective 적용안함</h2>
+    <div class="box1">
+      <div class="item">x축</div>
+    </div>
+    <div class="box2">
+      <div class="item">y축</div>
+    </div>
+    <div class="box3">
+      <div class="item">z축</div>
+    </div>
+  </section>
+
+  <section class="wrapper2">
+    <h2>translate, perspective 적용</h2>
+    <div class="box1">
+      <div class="item">x축</div>
+    </div>
+    <div class="box2">
+      <div class="item">y축</div>
+    </div>
+    <div class="box3">
+      <div class="item">z축</div>
+    </div>
+  </section>
+
+  <section class="wrapper3">
+    <h2>rotate, perspective 적용</h2>
+    <div class="box1">
+      <div class="item">x축</div>
+    </div>
+    <div class="box2">
+      <div class="item">y축</div>
+    </div>
+    <div class="box3">
+      <div class="item">z축</div>
+    </div>
+  </section>
+</body>
+</html>

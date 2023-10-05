@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>transEx4</title>
+    <!-- home icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- mail icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- chat icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <style>
+        body {
+            background-color: antiquewhite;
+            margin: 0;padding: 0;
+            text-decoration: none;
+            list-style: none;
+            color: inherit;
+        }
+
+        a, ul {
+            margin: 0;padding: 0;
+            text-decoration: none;
+            list-style: none;
+            color: inherit;
+
+        }
+
+        section {
+            background-color: #fff;
+            width: 70vw; height: 30vh;
+            margin: 80px auto 0;
+            position: relative;
+            overflow: hidden;
+            max-width: 600px;
+            height: 300px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+        .container h3 {
+            font-size: 3rem;
+            margin: 0;
+            position: relative;
+        }
+        .container h3::after {
+            content: "";
+            width: 50%; height: 2px;
+            background-color: #000;
+            position: absolute;
+            left: 0;bottom: -5px;
+        }
+        .container p {
+            width: 45%;
+            padding: 10px 0;
+        }
+        .container ul {
+            display: flex;
+        }
+        .container li {            
+            margin-right: 20px;
+        }
+        .container li a {
+            display: block;            
+        }
+
+        .container li:hover a {
+            color: tomato;
+        }
+
+        h4 {
+            padding: 5px 10px;
+            background-color: #000;
+            color: #fff;
+            font-style: italic;
+        }
+
+
+        .img-box img {
+            border: #fff 3px solid;
+            border-radius: 50% 50%;
+            display: block;
+            width: 400px; height: 400px;
+            position: absolute;
+            top: 50%; left: 90%;
+            transform: translate(-50%, -50%);
+            transition: 1s;
+        }
+
+        .img-box img:hover {
+            top: 50%; left: 90%;
+            transition-timing-function: ease;
+            transform: translate(-65%, -50%);
+        }
+    </style>
+</head>
+    
+<body>
+    <!--
+        2. 전체 영역 이미지 이동 마우스 이벤트 
+        1. 하단 아이콘 마우스 이벤트
+     -->
+     <section>
+        <div class="container">
+           <h3>name</h3>
+           <p>안애하가 겨아말은 워를 바개엑은 숱오됴산는다 아힝 아델. 이신급애 더섬매지눅수는 세병가만무가</p>
+           <ul>
+               <li><a href="#">
+                       <span class="material-symbols-outlined">
+                       home
+                       </span>
+                   </a>
+               </li>
+               <li><a href="#">
+                       <span class="material-symbols-outlined">
+                       mail
+                       </span>
+                   </a>
+               </li>
+               <li><a href="#">
+                       <span class="material-symbols-outlined">
+                       chat
+                       </span>
+                   </a>
+               </li>
+           </ul>   
+        </div>
+        <h4>profile</h4>   
+        <div class="img-box">
+            <img src="./nyan-cat-gif-1.gif" alt="gif-cat">
+        </div>
+    </section>
+</body>
+</html>

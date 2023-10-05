@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@keyframes gradient {
+  30% {
+    background-position: 0 50%;
+  }
+  60% {
+    background-position: 100% 50%;
+  }
+  90% {
+    background-position: 0 30%;
+  }
+}
+
+@keyframes txt-clr {
+  100% {
+    
+  }
+  25% {
+    
+  }
+  50% {
+    
+  }
+  75% {
+    
+  }
+}

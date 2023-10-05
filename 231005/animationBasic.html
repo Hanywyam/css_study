@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>animationBasic</title>
+  <style>
+    .box1 {
+      background-color: #6499f9;
+      width: 200px;height: 200px;
+      margin: 100px auto;
+      text-align: center; font-weight: bold;
+
+      /* 에니메이션 이름. 키프레임에 부여한 이름 */
+      animation-name: ani4;
+      /* 진행 시간 */
+      animation-duration: 2s;
+      /* 대기 시간 */
+      animation-delay: 0.5s;
+      /* 움직임 스타일 */
+      animation-timing-function: linear;
+      /* 반복 횟수 */
+      animation-iteration-count: infinite; /* 무한 반복 */
+      /* 끝난 후 위치 */
+      animation-fill-mode: normal;
+      /* 방향 */
+      animation-direction: reverse; /* 역방향 (to -> from) */
+      animation-direction: alternate; /* 순방향 <-> 역방향 (1>2>3>2>1 순) */
+      animation-direction: alternate-reverse; /* 역방향 <-> 순방향 (3>2>1>2>3 순) */
+    }
+
+    
+    .box2 {
+      background-color: #6499f9;
+      width: 200px;height: 200px;
+      margin: 100px auto;
+      text-align: center; font-weight: bold;
+
+      /* 에니메이션 이름. 키프레임에 부여한 이름 */
+      animation-name: ani3;
+      /* 진행 시간 */
+      animation-duration: 2s;
+      /* 대기 시간 */
+      animation-delay: 0.5s;
+      /* 움직임 스타일 */
+      animation-timing-function: linear;
+      /* 반복 횟수 */
+      animation-iteration-count: infinite; /* 무한 반복 */
+      animation-iteration-count: 3; /* 3회 진행 후 멈춤 */
+      /* 끝난 후 위치 */
+      animation-fill-mode: backwards;
+      /* 방향 */
+      animation-direction: reverse; /* 역방향 (to -> from) */
+      animation-direction: alternate; /* 순방향 <-> 역방향 (1>2>3>2>1 순) */
+      animation-direction: alternate-reverse; /* 역방향 <-> 순방향 (3>2>1>2>3 순) */
+    }
+    
+    .box3 {
+      background-color: #6499f9;
+      width: 200px;height: 200px;
+      margin: 100px auto;
+      text-align: center; font-weight: bold;
+
+      /* 에니메이션 이름. 키프레임에 부여한 이름 */
+      animation-name: ani2;
+      /* 진행 시간 */
+      animation-duration: 2s;
+      /* 대기 시간 */
+      animation-delay: 0.5s;
+      /* 움직임 스타일 */
+      animation-timing-function: linear;
+      /* 반복 횟수 */
+      animation-iteration-count: infinite; /* 무한 반복 */
+      animation-iteration-count: 3; /* 3회 진행 후 멈춤 */
+      /* 끝난 후 위치 */
+      animation-fill-mode: backwards;
+      /* 방향 */
+      animation-direction: reverse; /* 역방향 (to -> from) */
+      animation-direction: alternate; /* 순방향 <-> 역방향 (1>2>3>2>1 순) */
+      animation-direction: alternate-reverse; /* 역방향 <-> 순방향 (3>2>1>2>3 순) */
+    }
+
+    
+    
+    .box4 {
+      background-color: #6499f9;
+      width: 200px;height: 200px;
+      margin: 100px auto;
+      text-align: center; font-weight: bold;
+
+      /* 에니메이션 이름. 키프레임에 부여한 이름 */
+      animation-name: ani1;
+      /* 진행 시간 */
+      animation-duration: 2s;
+      /* 대기 시간 */
+      animation-delay: 0.5s;
+      /* 움직임 스타일 */
+      animation-timing-function: linear;
+      /* 반복 횟수 */
+      animation-iteration-count: infinite; /* 무한 반복 */
+      animation-iteration-count: 3; /* 3회 진행 후 멈춤 */
+      /* 끝난 후 위치 */
+      animation-fill-mode: backwards;
+      /* 방향 */
+      animation-direction: reverse; /* 역방향 (to -> from) */
+      animation-direction: alternate; /* 순방향 <-> 역방향 (1>2>3>2>1 순) */
+      animation-direction: alternate-reverse; /* 역방향 <-> 순방향 (3>2>1>2>3 순) */
+    }
+
+    /* 애니메이션을 적용시키기 위해 미리 만들어 놓은 움직임. 작성 위치는 상관없음 */
+    @keyframes ani1 {/* 사용자 정의 이름. class나 id 처럼 직접 이름 적용 */
+      from {/* 움직임 시작 */
+        width: 400px;
+        height: 400px;
+      } to {/* 움직임 끝 */
+        width: 600px; height: 600px;
+        font-size: 2rem;
+      }
+    }
+
+    @keyframes ani2 {
+      0% {
+        width: 200px; height: 200px;
+      } 100% {
+        transform: scale(2);
+        background-color: blueviolet;
+      }
+    }
+
+    @keyframes ani3 {
+      100% {
+        transform: translateX(400px) rotate(360deg);
+        background-color: #186f65;
+      }
+    }
+
+    @keyframes ani4 {
+      10%, 70% {
+        background-color: #186f65;
+      } 50% {
+        background-color: aqua;
+        transform: rotate(180deg);
+      } 100% {
+        transform: rotate(-180deg);
+      }
+    }
+  </style>
+</head>
+  
+<body>
+  <h1>animation 기본</h1>
+  <p>스스로 움직임</p>
+  <div class="box1">애니메이션</div>
+  <div class="box2">애니메이션</div>
+  <div class="box3">애니메이션</div>
+  <div class="box4">애니메이션</div>
+</body>
+</html>

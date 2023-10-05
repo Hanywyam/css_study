@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>transEx5</title>
+    <!-- reset -->
+    <link rel="stylesheet" href="../common/minireset.min.css">
+    <style>
+        body {text-align: center;}
+        .products {
+            margin: 0 auto;
+            border: 3px solid #000;
+            display: flex;
+
+            width: 70%;
+            max-width: 1000px;
+        }
+        .products li {
+            /* width: 33.333%; */
+            flex-basis: 33.333%;
+            margin: 1vw;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+        }
+
+        .products li img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        .products li .txt-box {
+            background-color: rgba(0,0,0,0.8);
+            color: #fff;
+            transition: 0.4s;
+            padding: 1vw;
+            aspect-ratio: 1 / 1;
+        }
+
+        .products li:hover .txt-box {
+            transform: translateY(-100%);
+        }
+    </style>
+    <!-- 
+    <style>
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .img-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .img-container ul {
+            margin: 10px;
+            display: flex;
+            background-color: orange;
+            border: 3px solid #000;
+        }
+        .img-container li {
+            width: 33.333%; height: 30vh;
+            margin: 5px;
+            transition: 1s;
+            padding: 10px 40px;
+            text-align: center;
+            line-height: 1.8;
+            box-sizing: border-box;
+            color: #fff;
+            background-color: rgb(0, 0, 0, 0.5);
+        }
+        .img-container :is(h2, h3) {
+            font-weight: bold;
+        }
+
+        .img-container h3 {
+            text-align: right;
+        }
+
+        .img-container li:nth-child(1) {
+            background: url(./images/shoes1.jpg) no-repeat 50% / 100%;
+        }
+        .img-container li:nth-child(2) {
+            background: url(./images/shoes2.jpg) no-repeat 50% / 100%;
+        }
+        .img-container li:nth-child(3) {
+            background: url(./images/shoes3.jpg) no-repeat 50% / 100%;
+        }
+
+        .img-container ul:hover li {            
+            background-color: rgb(0, 0, 0, 0.5);
+        }
+    </style>
+     -->
+</head>
+
+<body>
+    <h1>transEx5</h1>
+    <ul class="products">
+        <li>
+            <img src="./images/shoes1.jpg" alt="신발1">
+            <div class="txt-box">
+                <h3>나이키 덩크 로우 레트로</h3>
+                <p class="desx">하드우드를 위해 태어나 스트리트로 무대를 옮겨온 나이키 덩크 로우 레트로</p>
+                <p class="price">가격 129,000원</p>
+            </div>
+            
+        </li>
+        <li>
+            <img src="./images/shoes2.jpg" alt="신발2">
+            <div class="txt-box">
+                <h3>나이키 인빈서블 3</h3>
+                <p class="desx">러닝 내내 최상의 쿠셔닝을 선사하는 인빈서블 3은 발아래 최고의 편안함을 선사</p>
+                <p class="price">가격 209,000원</p>
+            </div>
+        </li>
+        <li>
+            <img src="./images/shoes3.jpg" alt="신발3">
+            <div class="txt-box">
+                <h3>나이키 덩크 로우 레트로</h3>
+                <p class="desx">하드우드를 위해 태어나 스트리트로 무대를 옮겨온 나이키 덩크 로우 레트로</p>
+                <p class="price">가격 129,000원</p>
+            </div>
+        </li>
+    </ul>
+    <!-- 
+        2. 이미지에 마우스 올리면 가격정보 레이어가 아래에서 위로 올라옴
+        1. 크기가 일정값 이상 커지지 않음. 
+
+    <h1>trans 연습 5</h1>
+    <div class="img-container">
+        <ul>
+            <li>
+                <h2>나이키 에어포스 1</h2>
+                <p>지난번에 기회를 놓쳤어도 걱정하지 마세요.</p>
+                <h3>139,000 원</h3>
+                <img src="./images/shoes1.jpg" alt="신발1">
+            </li>
+            <li>
+                <h2>나이키 에어포스 1</h2>
+                <p>지난번에 기회를 놓쳤어도 걱정하지 마세요.</p>
+                <h3>139,000 원</h3>
+                <img src="./images/shoes2.jpg" alt="신발2">
+            </li>
+            <li>
+                <h2>나이키 에어포스 1</h2>
+                <p>지난번에 기회를 놓쳤어도 걱정하지 마세요.</p>
+                <h3>139,000 원</h3>
+                <img src="./images/shoes3.jpg" alt="신발3">
+            </li>
+        </ul>
+    </div>    
+    -->
+</body>
+</html>
