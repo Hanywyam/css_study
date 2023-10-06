@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>aniEx3(T)</title>
+  <link rel="stylesheet" href="./aniEx3animation.css">
+  <style>
+    body {margin: 0;text-align: center;}
+    .container {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container .bicycle-wrapper {
+      position: relative;
+      animation: move 5s infinite linear;
+    }
+
+    .container .bicycle-wrapper .wheel {
+      position: absolute;
+      left: -91px; bottom: -88px;
+
+      animation: spin infinite linear 1s;
+    }
+
+    .container .bicycle-wrapper .wheel:last-child {
+      left: auto;
+      /* 기존 left 무력화
+      position에서 left-right, top-bottom 중복 설정이 불가해서 값이 안먹음. 
+      기존 값을 무력화해줘야 적용가능. */
+      right: -91px;
+    }
+
+    .container .fireworks {
+      position: absolute;
+      top: 20px; right: 50px;
+
+      animation: scale 3s infinite alternate;
+    }
+  </style>
+</head>   
+  
+<body>
+  <div class="container">
+    <div class="bicycle-wrapper">
+      <img src="./images/bicycle.png" alt="자전거" class="bicycle">
+      <img src="./images/wheel.png" alt="자전거 바퀴" class="wheel">
+      <img src="./images/wheel.png" alt="자전거 바퀴" class="wheel">
+    </div>
+    <img src="./images/fireworks.png" alt="불꽃놀이" class="fireworks">
+  </div>
+</body>
+</html>

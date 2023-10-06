@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+@keyframes scale {
+  0% {transform: rotate(0); opacity: 0;}
+  50% {transform: scale(2) rotate(360deg); opacity: 1;}
+}
+
+@keyframes move {
+  0% {opacity: 0; left: -10%;}
+  10% {opacity: 1; left: 0;}
+  80% {opacity: 1; left: 100%;}
+  100% {opacity: 0; left: 110%;}
+}
+
+@keyframes spin {
+  100% {transform: rotate(360deg);}
+}

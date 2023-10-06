@@ -13,16 +13,35 @@
 }
 
 @keyframes txt-clr {
-  100% {
-    
+  0% {
+    text-shadow: 5px 5px 0 blue;
   }
   25% {
-    
+    text-shadow: -5px -1px 0 red;
   }
   50% {
-    
+    text-shadow: 5px 1px 0 yellow;
   }
   75% {
-    
+    text-shadow: 1px 5px 0 white;
   }
+  100% {
+    text-shadow: 5px -5px 0 green;
+  }
+}
+
+@keyframes mov1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+@keyframes mov2 {
+  0% {
+    transform: rotate(360deg) translateX(-100%);}
+  100% {
+    transform: rotate(360deg) translateX(100%);}
 }
