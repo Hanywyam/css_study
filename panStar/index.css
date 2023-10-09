@@ -29,6 +29,7 @@ h6 {
 
 .header-wrp {
   /* color: #fff; */
+  /* opacity: 0; */
   width: 100%; height: 98px;
 
   display: flex;
@@ -194,7 +195,7 @@ h6 {
   margin: 10px;
 }
 
-/* titleBox 전체 설정 */
+/* titleBox : 전체 설정 */
 .titleBox {
   text-align: center;
   padding: 30px;
@@ -291,18 +292,18 @@ h6 {
   position: relative;
 }
 
-.intro2-lnb li:nth-child(1):before {
+.intro2-lnb li:nth-child(1)::before {
   position: absolute;
-  bottom: 0; right: 0;
-  width: 100px; height: 2px;
   color: #f18d00;
+  right: 50%; top: -100%;
+  width: 100px; height: 2px;
 }
 
 /* intro2 링크 안 내용 */
 .intro2-slide {
   margin: 0 auto;
   text-align: center;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 .intro2-slide .link1-slide h4 {
   font-size: 2rem;
@@ -316,13 +317,126 @@ h6 {
   font-size: 0.9rem;
 }
 .intro2-slide .slide-imgBox {
+  margin-right: 50px;
 }
 
+.intro2ctnr {position: relative;}
 
+.slide-mainImg {
+  position: absolute;
+  height: 70vh;
+  transform: translate(92%, -70%);
+}
 
-.slide-mainImg {display: none;}
+.intro2ctnr .more-btn a {
+  position: absolute;
+  background-color:#f18d00 ;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  left: 85%;  
+}
 
+/* 4. 스케줄 / 카카오맵 */
+/* 스케줄 네비링크 */
+.sch-lnb ul {
+  display: flex;
+  justify-content: center;
+
+  font-family: var(--font-en);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.sch-lnb li {
+  margin: 30px;
+}
+
+.sch-lnb li:hover {
+  color: #f5821f;
+}
+
+/* 카카오맵 */
+.main4-MAP {
+  width: 100%; height: 70vh;
+  line-height: 70vh;
+  background-color: #eeeeee;
+
+  text-align: center;
+  font-size: 2rem;
+
+  position: relative;
+}
+
+.main4-sch_MAP .more-btn a {
+  position: absolute;
+  background-color:#f18d00 ;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.more-btn a:hover {
+  animation: btn-eff  .5s;
+}
+
+@keyframes btn-eff {
+  100% {
+    border-radius: 20px;}
+}
+
+/* 5. Contact Us / 게시판 */
+.main5-wrap {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  width: 80%; 
+  height: 50vh;
+}
+
+main5-box1 {
+  width: 35%;
+}
+main5-box2 {
+  width: 35%;
+}
+main5-box3 {
+  width: 30%;
+}
 
 /**** footer 영역 ****/
 
+footer {
+  width: 100%;
+  background-color: #272727;
+  color: #777777;
+  font-size: 0.9rem;
+  line-height: 2;
+}
 
+.logo-wrap {
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.logo-wrap .ft_txtBox {
+  display: flex;
+}
+.logo-wrap .ft_txtBox li {
+  margin: 20px;
+}
+
+.ft_address {
+  width: 80%;
+  font-style: normal;
+}
