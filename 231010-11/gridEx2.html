@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>gridEx2</title>
+  <style>
+    .container {
+      width: 90%;
+      height: 60vh;
+      margin: 50px auto;
+      border: 6px solid #000;
+      font-weight: bold;
+      font-size: 1.4rem;
+      display: grid;
+      /* grid-template-rows: 100px minmax(100px, auto) 50px; */
+      grid-auto-rows: 100px 1fr 50px;
+    }
+
+    .container .item:nth-child(1) {
+      background-color: navy;
+      color: #fff;
+    }
+
+    .container .item:nth-child(2) {
+      background-color: skyblue;
+    }
+
+    .container .item:nth-child(3) {}
+  </style>
+</head>
+
+<body>
+  <!-- header / footer 고정 , main 가변 -->
+  <div class="container">
+    <div class="item">header-고정</div>
+    <div class="item">main-가변</div>
+    <div class="item">footer-고정</div>
+  </div>
+</body>
+
+</html>

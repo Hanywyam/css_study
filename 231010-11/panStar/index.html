@@ -117,13 +117,13 @@
   <article class="location">
     <h2 class="main-title">location</h2>
     <p class="main-des">팬스타고속화물페리는 빠르고 안전함은 물론, 뛰어난 정시성을 자랑합니다. 주요 선박의 운항일정을 간편하게 확인해 보세요.</p>
-    <ul class="lication-list flex">
-      <li><a href="#">SANSTAR DREAM</a></li>
+    <ul class="location-list flex">
+      <li><a href="#" class="on">SANSTAR DREAM</a></li>
       <li><a href="#">PANSTAR GENIE</a></li>
       <li><a href="#">PANSTAR GENIE No.2</a></li>
       <li><a href="#">PANSTAR DREAM</a></li>
     </ul>
-    <div class="lication-kakao">지도</div>
+    <div class="location-kakao" id="map">지도</div>
     <a href="#" class="more-btn">more detail</a>
   </article>
 
@@ -137,7 +137,7 @@
         <p class="press-date">2023-10-10</p>
         <a href="#" class="ghost-btn">자세히보기</a>
       </section>
-      <section class="notice">
+      <section class="notice flex">
         <h3>Notice</h3>
         <a href="#" class="ghost-btn">소식더보기</a>
         <ul class="notice-list">
@@ -158,7 +158,7 @@
 
   <!-- footer -->
   <footer>
-    <ul class="footer-banner">
+    <ul class="footer-banner flex">
       <li><a href="#"></a><img src="./assets/images/logo-enterprise.png" alt="앤터프라이스"></li>
       <li><a href="#"></a><img src="./assets/images/logo-line.png" alt="라인"></li>
       <li><a href="#"></a><img src="./assets/images/logo-star.png" alt="스타"></li>
@@ -168,15 +168,15 @@
       <li><a href="#"></a><img src="./assets/images/logo-trading.png" alt="트레이딩"></li>
     </ul>
     <div class="footer-bottom">
-      <div class="footer-wrapper">
+      <div class="flex">
         <h1>로고</h1>
-        <ul class="footer-utill">
+        <ul class="footer-utill flex">
           <li><a href="#">법적고지</a></li>
           <li><a href="#">개인정보처리방법</a></li>
           <li><a href="#">이메일 수집거부</a></li>
         </ul>
       </div>
-      <div class="footer-wrapper">
+      <div class="flex">
         <address>
           <p>서울특별시 중구 무교로 20, 어린이재단빌딩 5층
             부산광역시 중구 해관로 30, 팬스타크루즈 플라자 빌딩 3층</p>
@@ -190,6 +190,40 @@
       </div>
     </div>
   </footer>
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=5f690d2cc129d9a170e6fd0a77821dab"></script>
+  <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+      mapOption = {
+        center: new kakao.maps.LatLng(37.56682, 126.97865), // 지도의 중심좌표
+        level: 3, // 지도의 확대 레벨
+        mapTypeId: kakao.maps.MapTypeId.ROADMAP // 지도종류
+      };
+
+    // 지도를 생성한다 
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    // 마우스 휠과 모바일 터치를 이용한 지도 확대, 축소를 막는다
+    map.setZoomable(false);
+
+    // 지도 타입 변경 컨트롤을 생성한다
+    var mapTypeControl = new kakao.maps.MapTypeControl();
+
+    // 지도의 상단 우측에 지도 타입 변경 컨트롤을 추가한다
+    map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+    // 지도에 확대 축소 컨트롤을 생성한다
+    var zoomControl = new kakao.maps.ZoomControl();
+
+    // 지도의 우측에 확대 축소 컨트롤을 추가한다
+    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+    // 지도에 마커를 생성하고 표시한다
+    var marker = new kakao.maps.Marker({
+      position: new kakao.maps.LatLng(37.56682, 126.97865), // 마커의 좌표
+      map: map // 마커를 표시할 지도 객체
+    });
+
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,396 @@
+@charset "utf-8";
+
+/* google icon */
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0);
+
+/**** common / header / footer ****/
+@import url(./assets/styles/common.css);
+@import url(./header.css);
+@import url(./footer.css);
+
+/**** contents ****/
+/** main-video **/
+.main-video {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  color: #fff;
+  position: relative;
+
+  background: url(./assets/images/main_diag1.png) no-repeat 0 0,
+    url(./assets/images/main_diag2.png) no-repeat 0 0,
+    url(./assets/images/main_diag3.png) no-repeat 0 40%,
+    url(./assets/images/main_diag4.png) no-repeat 0 100%,
+    url(./assets/images/main_diag5.png) no-repeat 0 100%,
+    url(./assets/images/main_diag6.png) no-repeat 100% 100%,
+    url(./assets/images/main_diag7.png) no-repeat 100% 100%,
+    url(./assets/images/main_bg_check.png);
+}
+.main-video .youtube {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  z-index: -1;
+  position: relative;
+}
+
+.main-video .main-video-txt {
+  position: absolute;
+  left: 7vw;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: left;
+  font-style: italic;
+}
+
+.main-video .main-video-txt h2 {
+  font-size: var(--font-size-vid-title1);
+  font-family: var(--main--font--en);
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: 1px 1px 1px #000;
+}
+.main-video .main-video-txt h2 span {
+  font-size: var(--font-size-vid-title2);
+  font-weight: 500;
+  display: block;
+  text-indent: 30px;
+}
+.main-video .main-video-txt p {
+  /* width: 15vw; */
+  width: 43%;
+  margin: 20px 0;
+  line-height: 1.8;
+}
+.main-video .main-widget {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font--size-14);
+}
+
+.main-video .main-widget li {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 10px 0;
+}
+.main-video .main-widget li:hover {
+  background-image: linear-gradient(45deg, var(--point-color), orange);
+}
+
+.main-video .main-widget li a {
+  display: block;
+  background: no-repeat 50% 20%;
+  padding-top: 46px;
+}
+
+.main-video .main-widget li:first-child a {
+  background-image: url(./assets/images/main_reserve_icon1_2108.png);
+}
+.main-video .main-widget li:last-child a {
+  background-image: url(./assets/images/main_reserve_icon2_2108.png);
+}
+
+/** glance **/
+.glance .glance-list {
+  justify-content: center;
+  max-width: 1700px;
+  margin: 70px auto;
+  line-height: 1.7;
+}
+
+/* 이미지 스프라이트(Image Sprite)로 아이콘 배치할랫는데 영역이 너무 넓어서 불가능 그냥 이미지를 넣기로 했습니다. */
+.glance .glance-list li {
+  width: 20%;
+  border-right: 1px solid #ddd;
+  background: no-repeat 50% 15%;
+  padding: 100px 0 0;
+}
+.glance .glance-list li:nth-child(1) {
+  background-image: url(./assets/images/icon_mg_calendar.png);
+}
+.glance .glance-list li:nth-child(2) {
+  background-image: url(./assets/images/icon_mg_user.png);
+}
+.glance .glance-list li:nth-child(3) {
+  background-image: url(./assets/images/icon_mg_clock.png);
+}
+.glance .glance-list li:nth-child(4) {
+  background-image: url(./assets/images/icon_mg_ship.png);
+  border: none;
+}
+.glance .glance-list h3 {
+  font-weight: 300;
+}
+.glance .glance-list h3::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 1px;
+  background-color: #000;
+  margin: 20px auto;
+}
+.glance .glance-list h3 strong {
+  font-size: var(--font-size-count);
+  font-family: var(--main--font--en);
+  font-weight: 700;
+}
+.glance .glance-list h4 {
+  color: #022974;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.glance .glance-list p {
+  font-size: var(--font-size-14);
+}
+
+/** business **/
+.business .business-wrapper {
+  position: relative;
+}
+.business .business-wrapper .business-text {
+  width: 50%;
+  background-color: #eee;
+  position: relative;
+}
+.business .business-wrapper .business-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #eee;
+  width: 100px;
+  height: 100%;
+}
+.business .business-wrapper .business-text .business-menu {
+  justify-content: center;
+  margin: 50px 0;
+}
+.business .business-wrapper .business-text .business-menu a {
+  margin: 10px;
+  display: block;
+  position: relative;
+}
+.business .business-wrapper .business-text .business-menu a.active::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: var(--point-color);
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.business .business-wrapper .business-text h3 {
+  font-size: var(--font-size-title);
+}
+.business .business-wrapper .business-text p {
+  color: #666;
+  width: 60%;
+  margin: 20px auto;
+  line-height: 1.6;
+  font-size: var(--font--size-14);
+}
+
+.business .business-wrapper .business-text .business-img-list {
+  justify-content: center;
+}
+.business .business-wrapper .business-text .business-img-list li {
+  margin: 0.5vw 0.5vw 2vw;
+}
+
+.business .business-wrapper .business-img {
+  width: 50%;
+  position: relative;
+  top: 50px;
+}
+
+.business .business-wrapper .business-img img {
+  height: 60vh;
+  object-fit: cover;
+}
+
+.business .business-wrapper .more-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.location {
+  background: url(./assets/images/bg_worldmap.png) no-repeat 50% 100%;
+}
+.location .location-list {
+  justify-content: center;
+}
+.location .location-list a {
+  display: block;
+  font-family: var(--main--font--en);
+  font-weight: 700;
+  margin: 20px 10px;
+}
+.location .location-list a:hover,
+.location .location-list a.on /* <-스크립트로 컬러색상 홀딩 */ {
+  color: var(--point-color);
+}
+.location .location-kakao {
+  /* 가로는 %, 세로는 vh를 많이 쓴다.
+  반대로 가로 vw, 세로 %는 컨텐츠가 넘쳐서 잘 안씀. */
+  width: 80%;
+  margin: 20px auto 50px;
+  background-color: #ddd;
+  aspect-ratio: 4 / 1;
+}
+
+/** contact **/
+.contact .contact-wrapper {
+  justify-content: center;
+  gap: 2.5vw;
+  max-width: 1600px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+.contact .contact-wrapper .press {
+  /* flex-grow: 2; */
+  width: 40%;
+  color: #fff;
+  padding-bottom: 80px;
+  transition: 0.3s;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(./assets/images/1.png) no-repeat 50% / cover;
+}
+.contact .contact-wrapper .press:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url(./assets/images/1.png) no-repeat 50% / cover;
+}
+/* 배경이미지가 있을 때 마우스 이벤트를 적용하고 싶으면
+bg는 중복 적용 안되기 때문에 축약형으로 값을 작성해야 한다. */
+
+.contact .contact-wrapper .press h3 {
+  background-color: var(--point-color);
+  font-size: var(--font--size-18);
+  width: 130px;
+  padding: 10px;
+}
+.contact .contact-wrapper .press h4 {
+  margin: 20px 80px;
+  overflow: hidden;
+  font-size: var(--font-size-title);
+
+  /* 한 줄 말줄임: "..." 
+  text-overflow: ellipsis; / 말줄임, 줄바꿈이 있으면 안됨 
+  white-space: nowrap;     / 자동 줄바꿈 금지 
+  width: 300px;
+  */
+  /* 여러 줄 말줄임 */
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; /* 여러 줄일 때 텍스트 자르는 줄 */
+  -webkit-box-orient: vertical; /* 박스 진행 방향 */
+}
+/* 
+  -webkit- 벤더 : 정식 버전으로 출시 되기 전 개발자들이 사용할 수 있게 만들어 놓은 약속어
+  기타 벤더 : (-ms-), -o-, -moz- ...등
+*/
+.contact .contact-wrapper .press .press-date {
+  margin: 30px auto 10px;
+}
+
+.contact .contact-wrapper .notice {
+  /* align-self: start; <- 하나만 정렬도 가능
+  .contact-wrapper == flex-container 에 전체 정렬 설정 했음. */
+  /* flex-grow: 2; */
+  width: 40%;
+  text-align: left;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.contact .contact-wrapper .notice h3 {
+  font-family: var(--main--font--en);
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.contact .contact-wrapper .notice .ghost-btn {
+  border-color: #666;
+}
+.contact .contact-wrapper .notice .notice-list {
+  width: 100%;
+  margin: 30px 0;
+}
+.contact .contact-wrapper .notice .notice-list li {
+  border-bottom: 1px solid #ddd;
+  padding: 16px 6px;
+  list-style: inside emoji;
+  font-size: var(--font--size-14);
+  color: #999;
+}
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style */
+@counter-style hyphen {
+  system: cyclic; /* 같은 값 반복. 기본값. */
+  symbols: "-";
+  suffix: " "; /* 머릿말 기호 다음 처리 방식. */
+}
+/* 이모지도 넣을 수 있음 */
+@counter-style emoji {
+  system: cyclic; /* 같은 값 반복. 기본값. */
+  symbols: "🎃";
+  suffix: " "; /* 머릿말 기호 다음 처리 방식. */
+}
+.contact .contact-wrapper .notice .notice-list li a {
+  /* 한 줄 일때 말줄임. 정해진 범위가 있어야 적용 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  display: inline-block;
+  width: 50%;
+}
+.contact .contact-wrapper .notice .notice-list li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.contact .contact-wrapper .notice .notice-list li .notice-date {
+  float: right;
+  /* 요소의 방향을 제어
+  요소의 진행방향 설정. left, right 두 값만 있음.
+  부모 요소의 높이 값을 인식하지 못하기 때문에 최근엔 잘 사용하지 않으며, 사용 시 .clearfix값이나 overflow값이 필요하다.
+  */
+}
+.contact .contact-wrapper .notice .notice-list li .notice-date::before {
+  font-family: "Material Symbols Outlined";
+  content: "schedule";
+  vertical-align: bottom;
+  margin-right: 4px;
+}
+.contact .contact-wrapper .recuit {
+  /* flex-grow: 1; */
+  align-self: stretch;
+  width: 20%;
+  height: auto;
+
+  text-align: left;
+  padding: 20px 30px;
+  position: relative;
+
+  background: url(./assets/images/bg_main_recruit.png) no-repeat 50% / cover;
+}
+
+.contact .contact-wrapper .recuit h3 {
+  color: var(--point-color);
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  font-family: var(--main--font--en);
+}
+.contact .contact-wrapper .recuit p {
+}
+.contact .contact-wrapper .recuit .more-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}

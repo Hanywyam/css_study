@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>gridBasic1</title>
+  <style>
+    /* 
+      grid: row(행) / column(열)
+      grid-container 속성
+      : grid-template, grid-area, gap, justify-content, align-item...
+      grid-item 속성
+      : grid-row, grid-column, justify-self, align-self...
+    */
+
+    .container {
+      width: 90%;
+      margin: 50px auto;
+      border: 6px solid #000;
+    }
+
+    .container .item {
+      background-color: olivedrab;
+      margin: 4px;
+      color: #fff;
+    }
+
+    .box1 {
+      display: grid;
+      /* 행 row */
+      /* 1행 2행 3행 4행의 높이(세로) 값 제어 */
+      grid-template-rows: 100px 200px 150px 50px;
+      grid-template-rows: 23% 23% 40% 40%;
+      /* %의 높이 비율은
+      부모 요소의 높이 값이 지정되어 있지 않으면, 아이템들끼리 상대 비율로 적용. 컨텐츠 제어가 어려움. */
+      grid-template-rows: 10vw 15vw 25vw;
+      /* 값이 설정되지 않으면 마지막 행은 기본값(아이템값) 적용 */
+      grid-template-rows: 10vh 6rem;
+      grid-template-rows: 1fr 2fr 2fr 3fr;
+
+      /* 
+        fr(fraction) 비율, 분수
+        1행 : 1/8
+        2행 : 2/8
+        3행 : 2/8
+        4행 : 3/8
+      */
+    }
+
+    .box2 {
+      display: grid;
+      /* 열 column */
+      /* 1열 2열 3열 4열의 너비(가로) 값 제어 */
+      grid-template-columns: 100px 200px 150px 50px;
+      /* 2열 */
+      grid-template-columns: 30vh 10em;
+      grid-template-columns: 1fr 1fr;
+      /* 3열 */
+      grid-template-columns: 50% 150px 10vw;
+      /* 4열 */
+      grid-template-columns: 2fr 3fr 1fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-columns: 50%;
+    }
+
+    .box3 {
+      display: grid;
+      /* 3행 3열 */
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      /* 100px 뺀 나머지로 fr 적용 */
+      grid-template-columns: 1fr 2fr 100px 1fr;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>gridBasic1</h1>
+  <p>2차원(행과 열, row:column)의 레이아웃 시스템으로 부모 요소(grid container)와 자식 요소(grid item)로 구성되어 있다</p>
+  <a href="https://developer.mozilla.org/ko/docs/Glossary/Grid" target="_blank">MDN Grid</a>
+
+  <div class="container box1">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+  <div class="container box2">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+  <div class="container box3">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+</body>
+
+</html>

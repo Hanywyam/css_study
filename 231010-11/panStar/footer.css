@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/* footer.css */
+
+/**** footer ****/
+footer {
+  background-color: #2a2a2a;
+  color: #999;
+  margin-top: 6vw;
+}
+
+footer .footer-banner {
+  background-color: #ddd;
+  padding: 30px 0;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer .footer-bottom {
+  max-width: 1600px;
+  margin: 0 auto;
+  font-size: 12px;
+  padding: 30px 10px;
+}
+footer .footer-bottom .flex h1 {
+  /* logo 는 무조건 contain :절대 잘리지 않게 */
+  background: url(./assets/images/logo.png) no-repeat 0 50% / contain;
+  text-indent: -9999px;
+  width: 18.421vw; /*350px*/
+  height: 5.128vh; /*40px*/
+
+  filter: grayscale(100%) contrast(60%);
+  /* css filter 효과 : 포토샵과 같이 filter효과를 적용할 수 있다.
+  https://developer.mozilla.org/ko/docs/Web/CSS/filter
+  https://developer.mozilla.org/ko/docs/Web/CSS/filter-function */
+}
+
+footer .footer-bottom .flex .footer-utill {
+  margin-left: auto;
+  font-size: var(--font-size-14);
+  gap: 20px;
+}
+footer .footer-bottom > .flex:nth-child(2) {
+  margin: 30px 0 50px;
+  justify-content: space-between;
+}
+footer .footer-bottom .flex address {
+  text-align: left;
+  line-height: 2;
+}
+footer .footer-bottom .flex address .copyright {
+  margin-top: 20px;
+  color: #616161;
+  font-weight: 300;
+}
+footer .footer-bottom #family-site {
+  align-self: flex-start;
+  appearance: none; /* radio, checkbox, range, select의 기본 스타일 숨김 */
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+}
