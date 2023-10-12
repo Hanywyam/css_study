@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/* == (min-width: 768px;) */
+@media (width >=768px) {
+  h1 {
+    background-color: teal;
+    color: #fff;
+    padding: 20px;
+  }
+
+  h1 strong {
+    display: inline;
+  }
+
+  h2 {
+    background-color: sienna;
+    color: #fff;
+    padding: 20px;
+  }
+
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+}

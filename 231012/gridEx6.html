@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>gridEx6</title>
+  <style>
+    body {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      display: grid;
+      gap: 0.2ch;
+      /* grid-auto-rows: repeat(auto, 300px); */
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-auto-rows: 10vw;
+    }
+
+    .container .item {
+      display: grid;
+      place-items: center;
+    }
+
+
+    .container .item:nth-child(odd) {
+      background-color: skyblue;
+    }
+
+    .container .item:nth-child(even) {
+      background-color: tan;
+    }
+
+    .container .item:first-child {
+      background-color: darkslateblue;
+      color: #fff;
+      grid-row: 1 / 3;
+      grid-column: 1 / 3;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <h1>gridEx6</h1> -->
+  <div class="container">
+    <div class="item item1">item01</div>
+    <div class="item item2">item02</div>
+    <div class="item item3">item03</div>
+    <div class="item item4">item04</div>
+    <div class="item item5">item05</div>
+    <div class="item item6">item06</div>
+    <div class="item item7">item07</div>
+    <div class="item item8">item08</div>
+    <div class="item item9">item09</div>
+    <div class="item item10">item10</div>
+    <div class="item item11">item11</div>
+    <div class="item item12">item12</div>
+    <div class="item item13">item13</div>
+    <div class="item item14">item14</div>
+    <div class="item item15">item15</div>
+    <div class="item item16">item16</div>
+    <div class="item item17">item17</div>
+    <div class="item item18">item18</div>
+    <div class="item item19">item19</div>
+    <div class="item item20">item20</div>
+    <div class="item item21">item21</div>
+    <div class="item item22">item22</div>
+    <div class="item item23">item23</div>
+    <div class="item item24">item24</div>
+    <div class="item item25">item25</div>
+    <div class="item item26">item26</div>
+    <div class="item item27">item27</div>
+    <div class="item item28">item28</div>
+    <div class="item item29">item29</div>
+    <div class="item item30">item30</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 내가 쓴 css style 
+  <link rel="stylesheet" href="./mqEx1-m.css">
+  <link rel="stylesheet" href="./mqEx1-t.css">
+  <link rel="stylesheet" href="./mqEx1-p.css">
+  -->
+  <title>mqEx1</title>
+  <style>
+    body {
+      margin: 0;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .container {
+      display: grid;
+      grid-auto-rows: 40vh;
+    }
+
+    .container .item {
+      transition: .4s;
+    }
+
+    .container .item1 {
+      background-color: #2929c9;
+    }
+
+    .container .item2 {
+      background-color: #75c2f6;
+    }
+
+    .container .item3 {
+      background-color: #f4d160;
+    }
+
+    /* 768px */
+    @media (width >=768px) {
+      .box {
+        /* grid-template-columns: 1fr 2fr; */
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .item2 {
+        grid-column: 2 / 4;
+      }
+
+      .item3 {
+        grid-column: 1 / span 3;
+      }
+    }
+
+    /* 1200px */
+    @media (width >=1200px) {
+      .container {
+        grid-auto-rows: 100vh;
+        grid-template-columns: 2fr minmax(100px, 3fr) 1fr;
+      }
+
+      .container .item2,
+      .container .item3 {
+        grid-column: auto;
+        /* 결과값 초기화 */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+  </div>
+</body>
+
+</html>

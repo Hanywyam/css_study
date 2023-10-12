@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>mediaQueries2</title>
+  <style>
+    /* PC 기준 */
+    ::selection {
+      background-color: orangered;
+      color: #fff;
+    }
+
+    body {
+      background-color: #ddd;
+      font-size: 1.2rem;
+    }
+
+    h1 {
+      border-bottom: 3px solid #000;
+    }
+
+    ul {
+      padding: 20px;
+      margin: 20px;
+      border: 3px solid #000;
+    }
+
+    /* 스크린 가로 크기가 최대 1200 이하이면 적용 */
+    @media (max-width: 1200px) {
+      body {
+        background-color: lightblue;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-color: #beadfa;
+      }
+    }
+
+    @media (max-width: 414px) {
+      body {
+        background-color: transparent;
+        font-size: 14px;
+      }
+
+      h1 {
+        border: #000 1px solid;
+        background-color: navy;
+        color: #fff;
+      }
+    }
+
+
+    /* 내맘대로 li 스타일 바꿈ㅎㅎ */
+    li {
+      list-style: inside emoji;
+    }
+
+    @counter-style emoji {
+      system: cyclic;
+      /* 같은 값 반복. 기본값. */
+      symbols: "🎃";
+      suffix: " ";
+      /* 머릿말 기호 다음 처리 방식. */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>미디어쿼리 Media Queries</h1>
+  <ul>
+    <li>@media () {}</li>
+    <li>모바일 우선인 경우 min-width</li>
+    <li>*** min-width 혹은 모바일 우선 작업시 <strong>반드시 가로 크기가 작은 순서</strong>대로 작성 *** </li>
+    <li>PC 우선인 경우 max-width</li>
+    <li>***max-width 혹은 피씨 우선 작업 시 <strong>반드시 가로 크기가 큰 순서</strong>대로 작성***</li>
+  </ul>
+</body>
+
+</html>

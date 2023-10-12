@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>gridBasic10</title>
+  <style>
+    body {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      width: 80%;
+      margin: 50px auto;
+      border: 6px solid #000;
+      display: grid;
+      gap: 0.2ch;
+      grid-auto-rows: 100px;
+    }
+
+    .container .item:nth-child(odd) {
+      background-color: darkmagenta;
+      color: #fff;
+    }
+
+    .container .item:nth-child(even) {
+      background-color: darkkhaki;
+    }
+
+    .box1 {
+      /* 기본값을 auto-fit: 아이템을 늘려 채움 */
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .box2 {
+      /* 최대한 한줄에 아이템을 다 넣어버려~ */
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .box3 {
+      /* 영역이 남으면 다 채움 */
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    /* 
+    허용되지 않는 값
+    : 비율의 값이 들어가면 안됨.
+
+    repeat(auto-fill, 1fr);
+    repeat(auto-fill, auto);
+    repeat(auto-fit, 1fr);
+    repeat(auto-fit, auto);
+
+    2열 이상
+    auto repeat(auto-fill, 100px);
+    1fr repeat(auto-fill, 100px);
+    auto repeat(auto-fit, 100px);
+    1fr repeat(auto-fit, 100px);
+    */
+  </style>
+</head>
+
+<body>
+  <h1>gridBasic10</h1>
+  <div class="container box1">
+    <div class="item">01</div>
+    <div class="item">02</div>
+    <div class="item">03</div>
+    <div class="item">04</div>
+    <div class="item">05</div>
+    <div class="item">06</div>
+    <div class="item">07</div>
+    <div class="item">08</div>
+    <div class="item">09</div>
+    <div class="item">10</div>
+    <div class="item">11</div>
+    <div class="item">12</div>
+    <div class="item">13</div>
+    <div class="item">14</div>
+    <div class="item">15</div>
+    <div class="item">16</div>
+    <div class="item">17</div>
+    <div class="item">18</div>
+    <div class="item">19</div>
+    <div class="item">20</div>
+    <div class="item">21</div>
+    <div class="item">22</div>
+  </div>
+  <h2>auto-fill: 최대한 많은 아이템을 채움. 확장 시키지 않으며 여백이 남을 수 있음.</h2>
+  <div class="container box2">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+  <h2>auto-fit: 아이템의 크기를 늘려 채움.</h2>
+  <div class="container box3">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>gridEx4</title>
+  <style>
+    body {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    .container {
+      width: 80%;
+      height: 60vh;
+      margin: 50px auto;
+      border: 6px solid #000;
+      display: grid;
+      grid-template: 100px minmax(100px, auto) 100px / 200px 3fr 1fr;
+    }
+
+    .container .box1 {
+      background-color: tomato;
+      grid-column: 1 / 4;
+    }
+
+    .container .box2 {
+      background-color: orange;
+    }
+
+    .container .box3 {
+      background-color: gray;
+    }
+
+    .container .box4 {
+      background-color: mediumblue;
+    }
+
+    .container .box5 {
+      background-color: darkslateblue;
+      grid-column: 1 / 4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box box1">header-고정</div>
+    <div class="box box2">nav-고정</div>
+    <div class="box box3">main-가변</div>
+    <div class="box box4">aside-가변</div>
+    <div class="box box5">footer-고정</div>
+  </div>
+</body>
+
+</html>

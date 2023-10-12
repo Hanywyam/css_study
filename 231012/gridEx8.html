@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>gridEx8</title>
+  <style>
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      border: 2px solid #000;
+      width: 80vw;
+      margin: 20px auto;
+      padding: 2vw;
+      box-sizing: border-box;
+      box-shadow: 0 5px#6528f7, 0 10px#8452f8, 0 15px#ad8cfa, 0 20px#c6b2f5, 0 25px 5px #ebe6f8;
+    }
+
+    .container .wrapper1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 3fr;
+      place-items: end center;
+      border-bottom: #000 1px solid;
+      padding-bottom: 2vw;
+    }
+
+    .container .wrapper2 .circle-item {
+      list-style: none;
+      background-color: #ddd;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1vw;
+      padding: 1vw;
+    }
+
+    .container .wrapper2 .circle-item .item {
+      color: #fff;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+    }
+
+    .container .wrapper2 .circle-item .item:nth-child(odd) {
+      background-color: #940b92;
+    }
+
+    .container .wrapper2 .circle-item .item:nth-child(even) {
+      background-color: #da0c81;
+    }
+
+    /* 내가 쓴 cssS
+    .container {
+      margin: 20px auto;
+      width: 80%;
+      display: grid;
+    }
+
+    .box1 {
+      border: 1px solid #000;
+      display: grid;
+      grid-template-rows: 1fr 3fr;
+      padding: 20px;
+    }
+
+    .box1 .wrapper1 {
+      background-color: #ddd;
+      border-bottom: 1px solid #000;
+      display: grid;
+      grid-template-columns: 1fr 1fr 3fr;
+    }
+
+    .box1 .wrapper2 {
+      background-color: #ddd;
+      margin-top: 20px;
+    }
+
+    .box1 .wrapper2 .circle-item {
+      height: calc(100% - 20px);
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template: repeat(2, minmax(100px, 1fr)) / repeat(3, minmax(100px, 1fr));
+    }
+
+    .box1 .wrapper2 .circle-item .item {
+      border-radius: 50%;
+    }
+
+    .box1 .wrapper2 .circle-item .item:nth-child(odd) {
+      background-color: slateblue;
+    }
+
+    .box1 .wrapper2 .circle-item .item:nth-child(even) {
+      background-color: skyblue;
+    }
+
+     */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box box1">
+      <div class="wrapper1">
+        <ul>
+          <li>list1</li>
+          <li>list2</li>
+          <li>list3</li>
+          <li>list4</li>
+        </ul>
+        <ul>
+          <li>list1</li>
+          <li>list2</li>
+          <li>list3</li>
+          <li>list4</li>
+        </ul>
+        <address>경기도 수원시 팔달구 더조은컴퓨터아카데미</address>
+      </div>
+
+      <div class="wrapper2">
+        <ul class="circle-item">
+          <li class="item">item1</li>
+          <li class="item">item2</li>
+          <li class="item">item3</li>
+          <li class="item">item4</li>
+          <li class="item">item5</li>
+          <li class="item">item6</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

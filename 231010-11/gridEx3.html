@@ -4,7 +4,74 @@
 <head>
   <meta charset="UTF-8">
   <title>gridEx3</title>
-  <style></style>
+  <style>
+    .container {
+      width: 90%;
+      height: 60vh;
+      margin: 50px auto;
+      border: 6px solid #000;
+      font-weight: bold;
+      font-size: 1.4rem;
+      display: grid;
+
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 10vh;
+    }
+
+    .container .item1 {
+      background-color: #d6d46d;
+      grid-column: 1 / 13;
+    }
+
+    .container .item2 {
+      background-color: #9a4444;
+      grid-column: 3 / 5;
+      grid-row: 4 / 5;
+    }
+
+    .container .item3 {
+      background-color: #de8f5f;
+      grid-column: 1 / span 6;
+      grid-row: 3 / 4;
+
+    }
+
+    .container .item4 {
+      background-color: #f4dfb6;
+      grid-column: 4 / span 4;
+    }
+
+    /* 
+    .item1 {
+      background-color: red;
+    }
+
+    .item1 .marge {
+      grid-column: 1 / 13;
+    }
+
+    .item2 {
+      background-color: orange;
+    }
+
+    .item2 .marge {
+      grid-row: 3 / 8;
+      grid-column: 2 /3;
+    }
+
+    .item3 {
+      background-color: yellowgreen;
+    }
+
+    .item3 .marge {}
+
+    .item4 {
+      background-color: violet;
+    }
+
+    .item4 .marge {}
+     */
+  </style>
 </head>
 
 <body>
@@ -14,14 +81,6 @@
     <div class="item2 marge">span2</div>
     <div class="item3 marge">span3</div>
     <div class="item4 marge">span4</div>
-    <div class="item5">span5</div>
-    <div class="item6">span6</div>
-    <div class="item7">span7</div>
-    <div class="item8">span8</div>
-    <div class="item9">span9</div>
-    <div class="item10">span10</div>
-    <div class="item11">span11</div>
-    <div class="item12">span12</div>
   </div>
 </body>
 
