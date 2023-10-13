@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>mqEx3</title>
+  <style>
+    /* 기본(모바일) */
+    body {
+      margin: 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .container {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: #F4DFB6;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1vw;
+      padding: 10vw;
+      box-sizing: border-box;
+    }
+
+    .container li {
+      background-color: #D6D46D;
+      width: calc(50% - 1vw);
+    }
+
+    .container .none {
+      display: none;
+    }
+
+    @media (width>=414px) {
+
+      /* 3열 */
+      .container li {
+        width: calc(33.33333% - 1vw);
+        background-color: #DA0C81;
+      }
+
+      .container li:last-child {
+        display: none;
+      }
+    }
+
+    @media (width>=768px) {
+
+      /* 4열 */
+      .container li {
+        width: calc(25% - 1vw);
+      }
+
+      .container li.bg {
+        display: block;
+        background-color: #BEADFA;
+      }
+    }
+
+    @media (width >=960px) {
+      .container {
+        width: 90vw;
+        margin: 0 auto;
+        font-size: 2rem;
+      }
+
+      /* 5열 */
+      .container li {
+        box-sizing: border-box;
+        width: calc(20% - 1vw);
+        padding: .5vw;
+      }
+
+      .container .none {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="container">
+    <li>txt1</li>
+    <li>txt2</li>
+    <li>txt3</li>
+    <li class="none">txt4</li>
+    <li>txt5</li>
+    <li>txt6</li>
+    <li>txt7</li>
+    <li>txt8</li>
+    <li>txt9</li>
+    <li class="bg">txt10</li>
+  </ul>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* 'Playfair', serif; */
+@import url("https://fonts.googleapis.com/css2?family=Playfair:opsz,wght@5..1200,400;5..1200,700&display=swap");
+
+/* common */
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Playfair", -apple-system, BlinkMacSystemFont, georgia, serif;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  background: url(./images/mt2.jpg) no-repeat fixed 50% / cover;
+  /* bg: fixed 넣으면 영역에 상관없이 전체페이지에 꽉 차게됨.
+  높이값을 100vh로 주면 풀페이지의 경우 높이가 한정되서 작업이 어려우므로 fixed로 배경 채우는걸 추천 */
+  color: #fff;
+}
+nav .global-nav {
+  /* display: flex; */
+  flex-flow: column wrap;
+  display: none;
+}
+nav .global-nav.active {
+  /* 이벤트 값은 종속선택자로 작성(띄어쓰기X) */
+  display: flex;
+}
+nav a {
+  display: block;
+  border-bottom: 1px solid #fff;
+  height: 40px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-btn {
+  background-color: rgba(46, 52, 139, 0.3);
+  position: relative;
+}
+.mobile-btn::after {
+  content: "";
+  background: url(./images/ellipsis.svg) no-repeat 50% / contain;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+/* 'Montserrat', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&display=swap");
+
+/* "SpoqaHanSan", sans-serif; */
+@import url(./SpoqaHanSan.css);

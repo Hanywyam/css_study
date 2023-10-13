@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mqEx4</title>
+  <!-- reset -->
+  <link rel="stylesheet" href="../common/minireset.min.css">
+  <!-- 모바일 우선 -->
+  <link rel="stylesheet" href="./mqEx4.css">
+  <!-- 
+  <link rel="stylesheet" href="./mqEx4-t.css" media="(width>=768px)">
+  <link rel="stylesheet" href="./mqEx4-p.css" media="(width>=1200px)">
+   -->
+  <link rel="stylesheet" href="./mqEx4-t.css">
+  <link rel="stylesheet" href="./mqEx4-p.css">
+</head>
+
+<body>
+  <nav>
+    <menu class="global-nav active">
+      <li><a href="#">home</a></li>
+      <li><a href="#">about</a></li>
+      <li><a href="#">service</a></li>
+      <li><a href="#">product</a></li>
+      <li><a href="#">contact</a></li>
+    </menu>
+    <a href="#" class="mobile-btn">menu</a>
+  </nav>
+
+  <!-- 자바스크립트 -->
+  <script>
+    const mobileBtn = document.querySelector('.mobile-btn')
+    const globalBtn = document.querySelector('.global-nav')
+    // 자바스크립트의 변수 대입
+
+    mobileBtn.addEventListener('click', () => globalBtn.classList.toggle('active'));
+  </script>
+</body>
+
+</html>

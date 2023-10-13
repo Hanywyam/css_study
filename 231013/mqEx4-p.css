@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@media (width>=1200px) {
+  body {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  nav .global-nav {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  nav .global-nav li {
+    max-width: 200px;
+  }
+  nav .global-nav li:hover {
+    background-color: rgba(46, 52, 139, 0.3);
+    transition: 0.3s;
+  }
+
+  nav a {
+    border: none;
+    border-right: 1px solid #fff;
+    justify-content: center;
+  }
+  nav .global-nav li:last-child a {
+    border-right: none;
+  }
+}

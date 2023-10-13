@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* variable.css 변수 선언 */
+:root {
+  --main--font--ko: "SpoqaHanSan", -apple-system, BlinkMacSystemFont,
+    "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  --main--font--en: "Montserrat", -apple-system, BlinkMacSystemFont,
+    "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+
+  --font--size-h2: 3rem;
+  --font--size-h3: 2.188rem;
+  --font--size-24: 1.5rem;
+  --font--size-20: 1.25rem;
+  --font--size-18: 1.125rem;
+}
