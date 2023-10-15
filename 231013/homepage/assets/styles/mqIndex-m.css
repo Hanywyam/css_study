@@ -1,0 +1,385 @@
+@charset "utf-8";
+/* mqIndex-m.css */
+
+
+/**** 헤더 
+  ============================= ****/
+  header {
+    /* position: fixed; */
+    z-index: 9999;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #fff;
+  }
+  
+  header .logo-wrap ul {
+    padding: 0 12px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .logo-wrap .logo {
+    background: url(../images/logo.png) no-repeat 0 50% / contain;
+    width: 75px;
+    height: 60px;
+    text-indent: -9999px;
+  }
+  header .logo-wrap .menu-icon {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
+  
+  header .global-nav {
+    display: none;
+    /* flex-flow: column wrap; */
+  }
+  header .global-nav.active {
+    /* display: flex; */
+  }
+  
+  /**** 메인 
+    ============================= ****/
+  /* main1 : 메인(top)페이지 이미지 롤링
+      ============================= */
+  
+  .main1 {
+    background: url(../images/hero-bg.png) no-repeat 50% / cover;
+    height: 100vh;
+    animation: bg-color 5s infinite;
+  }
+  
+  @keyframes bg-color {
+    30% {
+      background-color: inherit;
+    }
+    60% {
+      background-color: rgba(250, 134, 114, 0.1);
+    }
+    90% {
+      background-color: rgba(46, 139, 87, 0.1);
+    }
+  }
+  .main1 .main1-txt {
+    font-family: var(--main--font--en);
+    padding: 90px 12px 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    /* letter-spacing: 3px; */
+  }
+  
+  .main1 .main1-txt p {
+    font-size: var(--font--size-18);
+    letter-spacing: 5px;
+    color: #00000080;
+  }
+  .main1 .main1-txt h2 {
+    font-size: var(--font--size-h2);
+    text-align: center;
+    margin: 30px 0;
+  }
+  .main1 .main1-txt a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #333;
+    /* text-indent: -9999px; */
+    position: relative;
+  }
+  .main1 .main1-txt a::after {
+    content: "▶";
+    color: #fff;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-size: var(--font--size-24);
+    top: 12px;
+    left: 20px;
+  }
+  
+  .main1 .main1-img {
+    margin: 0 auto;
+    background: url(../images/hero-1.png) no-repeat 0 50% / cover;
+    width: 90%;
+    height: 360px;
+    animation: img-rolling 5s infinite;
+    position: relative;
+  }
+  
+  @keyframes img-rolling {
+    30% {
+      background: url(../images/hero-1.png) no-repeat 0 50% / cover;
+      right: 0%;
+    }
+    60% {
+      background: url(../images/hero-4.png) no-repeat 0 50% / cover;
+      right: 0%;
+    }
+    90% {
+      background: url(../images/hero-5.png) no-repeat 0 50% / cover;
+      right: 0%;
+    }
+  }
+  
+  .main1 .main1-img ul {
+    display: flex;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .main1 .main1-img li a {
+    display: block;
+    margin: 10px 5px;
+    color: #888;
+  }
+  .main1 .main1-img li a:hover {
+    color: #000;
+  }
+  /* main2 : 브랜딩 소개글
+      ============================= */
+  .main2 {
+    padding: 32px 26px;
+    text-transform: none;
+    line-height: 1.8;
+    color: #212529;
+  }
+  .main2 h3 {
+    font-family: var(--main--font--en);
+    font-size: var(--font--size-24);
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+  .main2 .main2-txtBox {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .main2 .main2-txtBox .txtBox {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+  }
+  /* main3 : 마우스 이벤트 이미지들
+      ============================= */
+  .main3-imgBox {
+    display: grid;  
+  }
+  .main3-imgBox .imgBox1 img:hover {
+    animation: overlay .3s ;
+  }
+  .main3-imgBox .imgBox2 {}
+  .main3-imgBox .imgBox3 {}
+  .main3-imgBox .imgBox4 {}
+  .main3-imgBox .imgBox5 {}
+  .main3-imgBox .imgBox6 {}
+  .main3-imgBox .imgBox7 {}
+  
+  @keyframes overlay {
+    50% {
+      background: url(../images/1.jpg) rgba(255, 255, 255, .5);
+    }
+  }
+  
+  /* main4 : Our Business
+      ============================= */
+  .main4 {
+    margin: 32px 26px;
+  }
+  .main4-boxWrap .box {
+    margin: 0 12px;
+  }
+  .main4-boxWrap .txtBox {
+    padding: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 2;
+  }
+  .main4-boxWrap .txtBox h3 {
+    font-family: var(--main--font--en);
+    font-weight: 700;
+  }
+  /* main5 : Our Youtube
+      ============================= */
+  .main5 {
+    background-color: #f8f9fa;
+  }
+  
+  .main5 .main5-txt {
+    display: flex;
+    flex-flow: column;
+    padding: 32px 26px;
+  }
+  .main5 .main5-txt h2 {
+    font-family: var(--main--font--en);
+    font-size: var(--font--size-h3);
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  .main5 .main5-txt p {
+    font-weight: 100;
+    color: #212529;
+    line-height: 1.6;
+  }
+  .main5 .youtube {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+  }
+  /* main6 : Our Service
+      ============================= */
+  .main6 {
+    margin: 32px 26px;
+    position: relative;
+    width: 90%;
+    height: 800px;
+  }
+  .main6-imgBox .imgBox {
+    margin-bottom: 24px;
+    box-shadow: 0 5px 10px #ddd;
+    position: absolute;
+  }
+  .main6-imgBox .imgBox h3 {
+    font-family: var(--main--font--en);
+    font-weight: 700;
+    margin: 24px 24px 10px;
+  }
+  .main6-imgBox .imgBox p {
+    line-height: 1.6;
+    margin: 0 24px;
+    padding-bottom:24px;
+  }
+  .main6-imgBox .dot-list {
+    display: flex;
+    position: absolute;
+    left:50%; bottom: 50px;
+    transform: translateX(-50%);
+  }
+  .main6-imgBox .dot-list li {
+    color: teal;
+    transform: scale(50%);
+  }
+  /* main7 : client
+      ============================= */
+  .main7-img {
+    padding: 32px 26px;
+    background-color: #f8f9fa;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+  }
+  .main7-img li {
+    margin: 12px;
+  }
+  .main7-img:nth-of-type() img{
+    filter: grayscale(100%);
+  }
+  /* main8 : Location
+      ============================= */
+  .main8 {      
+    width: 80%;
+    margin: 32px auto;
+  }
+  .main8 h2 {
+    font-family: var(--main--font--en);
+    font-size: var(--font--size-h3);
+    font-weight: 700;
+    text-align: center;
+    margin: 32px 24px;
+  }
+  .main8 .location-nav {
+    margin: 32px auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--font--size-20);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .main8 .location-nav li:first-child {
+    width: 50%;
+    border-bottom: 3px solid #000;
+  }
+  .main8 .location-nav li:last-child {
+    width: 50%;
+    border-bottom: 1px solid #ddd;
+  }
+  .main8 .location-nav a {
+    display: block;
+    padding: 10px;
+  }
+  .main8 #map {
+    aspect-ratio: 3 / 3;
+  }
+  .main8 .location-info {
+    line-height: 1.8;
+    text-transform: none;
+  }
+  .main8 .location-info span {
+    font-weight: 700;
+    display: block;
+  }
+  .main8 .location-info li {
+    padding: 15px 0;
+    border-bottom: #ddd 1px solid;
+  }
+  .main8 .location-info li:last-child {
+    border-bottom: #000 1px solid;
+  }
+  /* main9 : Let's talk
+      ============================= */
+  .main9 {
+    width: 100%; height: 50vh;
+    padding: 32px 26px;
+    color: #fff;
+    font-family: var(--main--font--en);
+    font-size: var(--font--size-20);
+    line-height: 1.7;
+    text-align: center;
+    background-color: rgba(106, 90, 205, 0.5);
+    background: linear-gradient(rgba(0, 140, 255, 0.3), rgba(0, 153, 255, 0.5)), url(../images/img-bg.jpg) no-repeat 50% / cover;
+  }
+  .main9 h2 {
+    font-size: var(--font--size-h3);
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .main9 .ghost-btn {
+    padding: 10px 10px;
+    margin: 15px;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+  }
+  /**** 푸터 
+    ============================= ****/
+  .ft-address {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 80px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .ft-address .ft-logo {
+    width: 100%; height: 100px;
+    margin: 50px 12px;
+    text-indent: -9999px;
+    background: url(../images/logo.png) no-repeat 0 50% / contain;
+  }
+  .ft-address .ftBox {
+    line-height: 1.7;
+    margin: 50px 12px;
+  }
+  .ft-address .ftBox h5 {
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+  }
+  .ft-address .ft-contact {}
+  .ft-address .ft-location {}
+  .ft-address .ft-social ul {
+    display: flex;
+  }
