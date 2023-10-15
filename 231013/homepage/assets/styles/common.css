@@ -270,5 +270,83 @@ header .global-nav.active {
   margin: 0 auto;
   aspect-ratio: 16 / 9;
 }
+/* main6 : Our Service
+    ============================= */
+.main6 {
+  margin: 32px 26px;
+  position: relative;
+  width: 90%;
+  height: 800px;
+}
+.main6-imgBox .imgBox {
+  margin-bottom: 24px;
+  box-shadow: 0 5px 10px #ddd;
+  position: absolute;
+}
+.main6-imgBox .imgBox h3 {
+  font-family: var(--main--font--en);
+  font-weight: 700;
+  margin: 24px 24px 10px;
+}
+.main6-imgBox .imgBox p {
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0 24px;
+  padding-bottom:24px;
+}
+.main6-imgBox .dot-list {
+  display: flex;
+  position: absolute;
+  left:50%; bottom: 50px;
+  transform: translateX(-50%);
+}
+.main6-imgBox .dot-list li {
+  color: teal;
+  transform: scale(50%);
+}
+/* main7 : client
+    ============================= */
+.main7-img {
+  padding: 32px 26px;
+  background-color: #f8f9fa;
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+}
+.main7-img li {
+  margin: 12px;
+}
+.main7-img:nth-of-type() img{
+  filter: grayscale(100%);
+}
+/* main8 : Location
+    ============================= */
+.main8 {      
+  width: 80%;
+  margin: 32px auto;
+}
+.main8 h2 {
+  font-family: var(--main--font--en);
+  font-size: var(--font--size-h3);
+  font-weight: 700;
+  text-align: center;
+  margin: 32px 24px;
+}
+.main8 .location-nav {
+  margin: 32px auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--font--size-20);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.main8 .location-nav li:first-child {
+  width: 50%;
+  border-bottom: 3px solid #000;
+}
+.main8 .location-nav li:last-child {
+  width: 50%;
+  border-bottom: 1px solid #ddd;
+}
 /**** 푸터 
   ============================= ****/
