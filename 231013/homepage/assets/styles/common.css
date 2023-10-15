@@ -14,6 +14,32 @@ h6 {
   display: none;
 }
 
+.title-box {
+  text-align: center;
+  line-height: 2;
+  margin: 0 12px 100px;
+  text-transform: none;
+}
+.title-box h2 {
+  font-family: var(--main--font--en);
+  font-size: var(--font--size-h3);
+  font-weight: 700;
+  position: relative;
+}
+
+.title-box h2::after {
+  position: absolute;
+  display: block;
+  width: 10px; height: 2px;
+  background-color: #000;
+  bottom: 0;left: 50%;
+  transform: translateX(-50%);
+}
+.title-box p {
+  font-size: var(--font--size-20);
+  font-weight: 100;
+}
+
 /**** 헤더 
   ============================= ****/
 header {
@@ -175,6 +201,74 @@ header .global-nav.active {
 .main2 .main2-txtBox .txtBox {
   padding: 16px;
   border-bottom: 1px solid #ddd;
+}
+/* main3 : 마우스 이벤트 이미지들
+    ============================= */
+.main3-imgBox {
+  display: grid;  
+}
+.main3-imgBox .imgBox1 img:hover {
+  animation: overlay .3s ;
+}
+.main3-imgBox .imgBox2 {}
+.main3-imgBox .imgBox3 {}
+.main3-imgBox .imgBox4 {}
+.main3-imgBox .imgBox5 {}
+.main3-imgBox .imgBox6 {}
+.main3-imgBox .imgBox7 {}
+
+@keyframes overlay {
+  50% {
+    background: url(../images/1.jpg) rgba(255, 255, 255, .5);
+  }
+}
+
+/* main4 : Our Business
+    ============================= */
+.main4 {
+  margin: 32px 26px;
+}
+.main4-boxWrap .box {
+  margin: 0 12px;
+}
+.main4-boxWrap .txtBox {
+  padding: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 300;
+  line-height: 2;
+}
+.main4-boxWrap .txtBox h3 {
+  font-family: var(--main--font--en);
+  font-weight: 700;
+}
+/* main5 : Our Youtube
+    ============================= */
+.main5 {
+  background-color: #f8f9fa;
+}
+
+.main5 .main5-txt {
+  display: flex;
+  flex-flow: column;
+  padding: 32px 26px;
+}
+.main5 .main5-txt h2 {
+  font-family: var(--main--font--en);
+  font-size: var(--font--size-h3);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.main5 .main5-txt p {
+  font-weight: 100;
+  color: #212529;
+  line-height: 1.6;
+}
+.main5 .youtube {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
 }
 /**** 푸터 
   ============================= ****/
