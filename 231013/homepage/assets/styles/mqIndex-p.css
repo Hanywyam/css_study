@@ -1,2 +1,86 @@
 @charset "utf-8";
 /* mqIndex-p.css */
+
+@media (width>=958px) {
+    
+/**** 헤더 
+  ============================= ****/
+  header .logo-wrap {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 5px 5px #eee;
+  }
+  header .logo-wrap ul{
+    width: 100%;
+    padding: 0 32px;
+  }
+  header .logo-wrap .menu-icon{
+    display: none;
+  }
+  header .logo-wrap .global-nav {
+    display: flex;
+    text-transform: uppercase;
+  }
+  header .logo-wrap .global-nav a {
+    display: block;
+    padding: 0 15px;
+    font-size: var(--font--size-18);
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #212529;
+  }
+  header .logo-wrap .global-nav a:hover{
+    background-color: #69a9c5;
+    color: #fff;
+    font-weight: 400;
+  }
+  /**** 메인 
+    ============================= ****/
+  /* main1 : 메인(top)페이지 이미지 롤링
+      ============================= */
+  .main1 {
+    height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main1 .main1-txt { 
+    height: 80vh;
+    justify-content: space-around;
+    align-items: start;
+  }
+  .main1 .main1-txt h2 {
+    font-size: 72px;
+    font-weight: 200;
+    text-align: left;
+  }
+  .main1 .main1-img {
+    height: 80vh;
+  }  
+  
+  /* main2 : 브랜딩 소개글
+  ============================= */
+  .main2 h3 {
+    font-size: 32px;
+  }
+  .main2 .main2-txtBox {
+    flex-flow: row wrap;
+    padding: 0 100px;
+  }
+  .main2 .main2-txtBox .txtBox {
+    width: 50%;
+    padding: 40px;
+  }
+  .main2 .txtBox1,
+  .main2 .txtBox3 {
+    border-right: 1px solid #ddd;
+  }
+
+  .main2 .txtBox3,
+  .main2 .txtBox4 {
+    border-bottom: none;
+  } 
+
+
+}
