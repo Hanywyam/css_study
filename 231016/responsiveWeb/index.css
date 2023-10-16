@@ -1,0 +1,223 @@
+@charset "utf-8";
+
+/*** contetns ***/
+/* main-slide */
+.main-slide {
+  height: 90vh;
+  text-align: center;
+  border-bottom: 1px solid var(--color-dark-gray);
+  background-color: orange;
+}
+
+/* main-intro */
+.main-intro {
+}
+.main-intro .main-intro-wrapper {
+  /* grid-auto-rows: 48vh; */
+}
+.main-intro .main-intro-wrapper li {
+  border-bottom: 1px solid var(--color-light-gray);
+  padding: 3.723vw 3.723vw 7vw;
+}
+.main-intro .main-intro-wrapper li:last-child {
+  border-bottom: none;
+}
+.main-intro .main-intro-wrapper li h3 {
+  font-family: var(--main-title-en);
+  font-weight: 700;
+  font-size: var(--main-font-24);
+  margin: 20px 0 30px;
+}
+
+/* main-grid */
+.main-grid {
+}
+.main-grid .main-grid-wrapper {
+  gap: 6px;
+}
+.main-grid .main-grid-wrapper li {
+  background: no-repeat 50% / cover;
+  transition: 0.4s;
+  height: 41.379vh;
+}
+.main-grid .main-grid-wrapper .main-grid-bg1 {
+  background-image: url(./images/1.jpg);
+}
+.main-grid .main-grid-wrapper .main-grid-bg2 {
+  background-image: url(./images/2.jpg);
+}
+.main-grid .main-grid-wrapper .main-grid-bg3 {
+  background-image: url(./images/3.jpg);
+}
+.main-grid .main-grid-wrapper .main-grid-bg4 {
+  background-image: url(./images/4.jpg);
+  height: 20.5vh;
+}
+.main-grid .main-grid-wrapper .main-grid-bg5 {
+  background-image: url(./images/5.jpg);
+  height: 20.5vh;
+}
+.main-grid .main-grid-wrapper .main-grid-bg6 {
+  background-image: url(./images/6.jpg);
+}
+.main-grid .main-grid-wrapper .main-grid-bg7 {
+  background-image: url(./images/7.jpg);
+}
+.main-grid .main-grid-wrapper h3 {
+  font-weight: 700;
+  font-family: var(--main-title-en);
+  font-size: var(--main-font-24);
+  display: grid;
+  place-items: center;
+  transition: 0.3s;
+  height: 100%;
+  /* 요소 뒤 영역 그래픽 효과를 적용 */
+  backdrop-filter: grayscale(50%) blur(1px) saturate(80%);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* main-business */
+.main-business {
+}
+.main-business .main-business-list {
+  gap: 5vw;
+  text-align: center;
+}
+.main-business .main-business-list figcaption {
+  width: 80%;
+  margin: 0 auto;
+}
+.main-business .main-business-list strong {
+  display: block;
+  font-weight: 700;
+  margin: 20px 0 5px;
+}
+
+/* main-youtube */
+.main-youtube {
+  background-color: var(--color-light-gray);
+}
+.main-youtube .main-youtube-text {
+}
+.main-youtube .main-youtube-text .main-title {
+  text-align: left;
+}
+.main-youtube .main-youtube-text .main-title::after {
+  content: "";
+  height: 0;
+}
+.main-youtube .main-youtube-video {
+  padding: 50px 0 30px;
+}
+.main-youtube .main-youtube-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+/* main-service */
+.main-service {
+}
+.main-service .main-service-gallery {
+  overflow: hidden;
+  margin: 50px 5vw 100px;
+}
+.main-service .main-service-gallery li {
+  flex-shrink: 0;
+  width: 100%;
+}
+.main-service .main-service-gallery li .service-gallery-text {
+  padding: 3vw;
+}
+.main-service .main-service-gallery li .service-gallery-text h4 {
+  font-weight: 700;
+}
+
+/* main-location */
+.main-location {
+}
+.main-location .location-menu {
+  position: relative;
+  /* li를 나란히 배치해서 영역 포개기 */
+}
+.main-location .main-title::after {
+  content: none;
+  /* content: none; 을 넣으면
+  before 또는 after 에 적용된 값을 없앤다. */
+}
+.main-location .location-menu li .tab-box {
+  padding-top: 100px;
+  display: none;
+}
+
+.main-location .location-menu li h3 {
+  font-weight: 700;
+  font-family: var(--main-title-en);
+  font-size: var(--main-font-24);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-dark-gray);
+  padding: 6px 0;
+  text-align: center;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main-location .location-menu .location-office-info {
+  margin: 50px 0 100px;
+}
+.main-location .location-menu .location-office-info li {
+  border-bottom: 1px solid var(--color-dark-gray);
+  padding: 15ox 10px 10px;
+}
+.main-location .location-menu .location-office-info li:last-child {
+  border-bottom-width: 3px;
+}
+.main-location .location-menu .location-office-info li strong {
+  font-weight: 700;
+  display: block;
+}
+.main-location .location-menu .location-office .location-map .kakao-map {
+  border: var(--main-color) 1px solid;
+  width: 100%;
+  height: 400px;
+}
+.main-location .location-menu .location-factory h3 {
+  left: 50%;
+}
+.main-location .location-menu li.active .tab-box {
+  display: block;
+}
+.main-location .location-menu li.active h3 {
+  border-bottom: 3px solid var(--main-color);
+}
+/* main-talk */
+.main-talk {
+  background: fixed url(./images/img-bg.jpg) no-repeat 50% / cover;
+  color: #fff;
+  text-align: center;
+}
+.main-talk .color-layer {
+  background-color: var(--color-layer);
+  opacity: 0.7;
+  /* opacity: 
+  함께 있는 컨텐츠까지 투명도가 적용된다. */
+  place-items: center;
+}
+.main-talk .color-layer h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 80px auto 30px;
+}
+.main-talk .color-layer p {
+  width: 70%;
+  margin: 0 auto;
+  font-size: var(--main-font-18);
+  font-weight: 300;
+}
+.main-talk .color-layer .ghost-btn {
+  border: 2px solid #fff;
+  font-weight: 600;
+  margin: 30px auto 80px;
+  padding: 10px 30px;
+  justify-self: center;
+  text-transform: uppercase;
+}
