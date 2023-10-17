@@ -28,6 +28,10 @@
   --color-layer: #1abc9c;
 }
 
+/* swiper */
+--swiper-theme-color: #fff;
+--swiper-navigation-size: 33px;
+
 /*** 드래그 ***/
 ::selection {
   background-color: var(--color-layer);
@@ -244,4 +248,46 @@ footer .copyright .footer-policy {
 footer .copyright .footer-policy li:first-child::after {
   content: "/";
   margin-right: 5px;
+}
+
+/**** PC ****/
+@media screen and (width>=1200px) {
+  .main-title {
+    margin-top: 80px;
+    font-size: 2.7rem;
+  }
+  .space {
+    margin: 0 10vw;
+  }
+  /* header */
+  header {
+    height: 80px;
+  }
+  header h1 {
+    height: 28px;
+    margin: 0 1.667vw;
+  }
+  header nav .mobile-btn {
+    display: none;
+  }
+  header nav .global-nav {
+    display: flex;
+    position: static;
+    /* 더이상 포지션이 적용되지 않는다. */
+  }
+  header nav .global-nav a {
+    border-bottom: none;
+    height: 79px;
+    padding: 0 30px;
+  }
+  header nav .global-nav a:hover {
+    background-color: var(--color-layer);
+    color: #fff;
+  }
+  /* footer */
+  footer .footer-info {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }

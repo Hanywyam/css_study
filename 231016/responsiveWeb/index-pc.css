@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+html {
+  font-size: 18px;
+}
+
+/**** contents ****/
+/* main-slide */
+.main-slide {
+  height: 95vh;
+}
+/* main-intro */
+.main-intro .main-intro-wrapper {
+  grid-template-columns: 1fr 1fr;
+  margin: 60px 5vw;
+}
+.main-intro .main-intro-wrapper li:nth-child(odd) {
+  border-right: var(--color-light-gray) 1px solid;
+}
+.main-intro .main-intro-wrapper li:nth-child(3) {
+  border-bottom: none;
+}
+/* main-grid */
+.main-grid .main-grid-wrapper {
+  gap: 0;
+  gap: initial;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-auto-rows: 33vh;
+}
+.main-grid .main-grid-wrapper li {
+  height: auto;
+  overflow: hidden;
+}
+.main-grid .main-grid-wrapper .main-grid-bg1 {
+  grid-row: span 2;
+}
+.main-grid .main-grid-wrapper .main-grid-bg4 {
+  height: auto;
+  grid-column: 2 / 4;
+}
+.main-grid .main-grid-wrapper .main-grid-bg5 {
+  height: auto;
+}
+.main-grid .main-grid-wrapper h3 {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+.main-grid .main-grid-wrapper li:hover h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* main-business */
+.main-business .main-business-list {
+  grid-template-columns: 1fr 1fr;
+  gap: 2vw;
+  margin: 100px 10vw;
+}
+/* main-youtube */
+.main-youtube .main-youtube-text {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  padding-top: 100px;
+}
+.main-youtube .main-youtube-text .main-title {
+  margin: 0;
+}
+/* main-service */
+.main-service .main-service-gallery {
+  gap: 1vw;
+  overflow: initial;
+}
+.main-service .main-service-gallery li {
+  width: 20vw;
+  left: 50%;
+  transform: scale(0.8) translateX(-50%);
+  box-shadow: 0px 0px 15px #eee;
+}
+.main-service .main-service-gallery li.on {
+  left: 40%;
+  transform: scale(1) translateX(-40%);
+}
+/* main-location */
+.main-location .location-menu .location-office-info li strong {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.main-talk .color-layer .ghost-btn:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--color-layer);
+  transition: 0.5s;
+}

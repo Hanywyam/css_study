@@ -9,11 +9,18 @@
   <!-- og -->
   <!-- 초기화 -->
   <link rel="stylesheet" href="../common/styles/reset.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <!-- style -->
   <link rel="stylesheet" href="./style.css">
   <!-- index -->
   <link rel="stylesheet" href="./index.css">
   <!-- pc -->
+  <link rel="stylesheet" media="(width>=1200px)" href="./index-pc.css">
+
+  <!-- kakao Map js -->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -41,7 +48,17 @@
   <!-- contents -->
   <!-- main-slide -->
   <section class="main-slide">
-    <div class="swiper"></div>
+    <div class="swiper main-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide main-bg1">Slide 1</div>
+        <div class="swiper-slide main-bg2">Slide 2</div>
+        <div class="swiper-slide main-bg3">Slide 3</div>
+        <div class="swiper-slide main-bg4">Slide 4</div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
   </section>
 
   <!-- main-intro -->
@@ -146,7 +163,7 @@
         <a href="#"><img src="./images/img-05.jpg" alt="Branding"></a>
         <div class="service-gallery-text">
           <h4>Branding</h4>
-          <p>나는 별 하나에 계절이 계집애들의 묻힌 같이 차 멀리 까닭입니다</p>
+          <p>나는 별 하나에 계절이 묻힌 같이 차 멀리 까닭입니다</p>
         </div>
       </li>
       <li>
@@ -156,7 +173,7 @@
           <p>가을로 불러 내린 별 흙으로 사랑과 밤을 말 못 듯합니다</p>
         </div>
       </li>
-      <li><a href="#"><img src="./images/img-07.jpg" alt="Analysis"></a>
+      <li class="on"><a href="#"><img src="./images/img-07.jpg" alt="Analysis"></a>
         <div class="service-gallery-text">
           <h4>Analysis</h4>
           <p>이 이제 가을 하나에 내린 까닭이요, 듯합니다</p>
@@ -266,6 +283,28 @@
   </footer>
 
   <a href="#" class="up-to">위로</a>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const swiper = new Swiper(".main-swiper", {
+      // 여백 삭제
+      // spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
 
 </html>

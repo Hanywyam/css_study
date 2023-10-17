@@ -8,6 +8,25 @@
   border-bottom: 1px solid var(--color-dark-gray);
   background-color: orange;
 }
+.main-slide .main-swiper {
+}
+.main-slide .main-swiper .swiper-slide {
+  background: no-repeat 50% / cover;
+  height: 90vh;
+  text-indent: -9999px;
+}
+.main-slide .main-swiper .main-bg1 {
+  background: url(https://placeholder.com/1000x600/d6d46d/000?text=img1);
+}
+.main-slide .main-swiper .main-bg2 {
+  background: url(https://placeholder.com/1000x600/940b92/000?text=img2);
+}
+.main-slide .main-swiper .main-bg3 {
+  background: url(https://placeholder.com/1000x600/da0c81/000?text=img3);
+}
+.main-slide .main-swiper .main-bg4 {
+  background: url(https://placeholder.com/1000x600/e95793/000?text=img4);
+}
 
 /* main-intro */
 .main-intro {
